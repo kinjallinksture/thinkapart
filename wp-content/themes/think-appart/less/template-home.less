@@ -1,0 +1,242 @@
+@import 'variables.less';
+
+@import 'modules/services.less';
+@import 'modules/logos.less';
+@import 'modules/offices.less';
+@import 'modules/aboutHome.less';
+
+.module-cover-home{
+	width: 100%;
+	padding: 0 @lateral-space-extra-small;
+	margin-bottom: 50px;
+
+	.video-container{
+		&.playing{
+			margin-left: calc(~"@{lateral-space-extra-small} * -1");
+			width: calc(~"100% + @{lateral-space-extra-small} * 2");
+		}
+	}
+}
+
+.module-approach{
+	padding: 170px @lateral-space;
+	display: flex;
+	justify-content: space-between;
+	.text-container{
+		width: 70%;
+		.button-container{
+			margin-top: 70px;
+		}
+	}
+}
+
+.module-latest-works{
+	padding: 170px @lateral-space;
+	.columns-container{
+		display: flex;
+		justify-content: space-between;
+		.column{
+			width: 47%;
+			.module-title{
+				margin-top: 30px;
+				margin-bottom: 200px;
+			}
+			.work-container{
+				position: relative;
+				display: block;
+				border-radius: 20px;
+				overflow: hidden;
+				margin-bottom: 70px;
+				&:after{
+					content: '';
+					display: block;
+					padding-bottom: 115.95%;
+				}
+				&:hover{
+					.text-container{
+						opacity: 1;
+					}
+				}
+				.text-container{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity .6s;
+				}
+			}
+		}
+	}
+	.buttons-container{
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+	}
+}
+
+.module-jobs{
+	padding: 170px @lateral-space 350px;
+	display: flex;
+	justify-content: space-between;
+	.module-title{
+		position: relative;
+	}
+	.text-container{
+		position: relative;
+		width: 70%;
+		.button{
+			margin-top: 70px;
+		}
+	}
+	.shapes-container{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		pointer-events: none;
+		.shape{
+			position: absolute;
+			&.shape-1{
+				width: 167px;
+				height: 167px;
+				right: calc(~"@{lateral-space} + 200px");
+				bottom: calc(~"@{lateral-space} + 350px");
+			}
+			&.shape-2{
+				width: 306px;
+				height: 306px;
+				right: calc(~"@{lateral-space} + 240px");
+				bottom: calc(~"@{lateral-space} + 140px");
+			}
+			&.shape-3{
+				width: 252px;
+				height: 274px;
+				right: calc(~"@{lateral-space} - 10px");
+				bottom: calc(~"@{lateral-space} + 210px");
+			}
+			&.shape-4{
+				width: 227px;
+				height: 227px;
+				right: calc(~"@{lateral-space} + 210px");
+				bottom: calc(~"@{lateral-space} - 70px");
+			}
+			&.shape-5{
+				width: 199px;
+				height: 199px;
+				right: @lateral-space;
+				bottom: @lateral-space;
+			}
+		}
+	}
+}
+
+@media (min-width: 1441px) {
+
+}
+
+@media (max-width: 800px) {
+	.module-cover-home{
+		.video-container{
+			border-radius: 20px;
+			&:not(.height-auto){
+				&:after{
+					padding-bottom: 138.5%;
+				}
+			}
+		}
+	}
+
+	.module-approach{
+		padding: 90px @lateral-space;
+		flex-direction: column;
+		.module-title{
+			margin-bottom: 20px;
+		}
+		.text-container{
+			width: 100%;
+			.button-container{
+				margin-top: 50px;
+				text-align: center;
+			}
+		}
+	}
+
+	.module-latest-works{
+		padding: 90px @lateral-space;
+		.columns-container{
+			.column{
+				.module-title{
+					margin-top: 0;
+					margin-bottom: 0;
+					padding-bottom: 50%;
+				}
+				.work-container{
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+
+	.module-jobs{
+		padding: 90px @lateral-space;
+		flex-direction: column;
+		.module-title{
+			margin-bottom: 20px;
+		}
+		.text-container{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			.button{
+				margin-top: 300px;
+			}
+		}
+		.shapes-container{
+			.shape{
+				position: absolute;
+				transform: translate(50%);
+				&.shape-1{
+					width: 85px;
+					height: 85px;
+					right: 50%;
+					bottom: 400px;
+				}
+				&.shape-2{
+					width: 155px;
+					height: 155px;
+					right: 70%;
+					bottom: 280px;
+				}
+				&.shape-3{
+					width: 128px;
+					height: 140px;
+					right: 27%;
+					bottom: 300px;
+				}
+				&.shape-4{
+					width: 115px;
+					height: 115px;
+					right: 70%;
+					bottom: 160px;
+				}
+				&.shape-5{
+					width: 125px;
+					height: 125px;
+					right: 27%;
+					bottom: 170px;
+				}
+			}
+		}
+	}
+
+}

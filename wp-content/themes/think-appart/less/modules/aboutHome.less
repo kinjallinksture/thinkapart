@@ -1,0 +1,126 @@
+
+
+.module-about-home{
+	overflow: hidden;
+	padding: 100px 0;
+	.title-container{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0 @lateral-space;
+		margin-bottom: 100px;
+		.module-title{
+			max-width: 700px;
+		}
+		.button{
+			flex-shrink: 0;
+			margin-top: 15px;
+			margin-left: 50px;
+		}
+	}
+	.images-container{
+		margin-bottom: 70px;
+		transition: transform ease-out;
+		.image-container{
+			border-radius: 20px;
+			overflow: hidden;
+			user-select: none;
+			&:after{
+				content: '';
+				display: block;
+				padding-bottom: 120%;
+			}
+		}
+	}
+	.more-info-container{
+		padding: 0 @lateral-space;
+		.more-info-title{
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			cursor: pointer;
+			.arrow{
+				margin-left: 20px;
+				transition: transform .6s;
+			}
+		}
+		&.opened{
+			.more-info-title{
+				.arrow{
+					transform-origin: center;
+					transform: rotateX(180deg);
+				}
+			}
+			.more-info-content{
+				height: auto;
+			}
+		}
+		.more-info-content{
+			overflow: hidden;
+			height: 0;
+			.more-info-content-wrapper{
+				padding: 70px 0 50px;
+				display: flex;
+				justify-content: space-between;
+				.column{
+					width: 45%;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					.title{
+						margin-bottom: 20px;
+					}
+					.text{
+						&:not(:last-child){
+							margin-bottom: 30px;
+						}
+					}
+					.button-container{
+						display: flex;
+						justify-content: center;
+						justify-self: flex-end;
+						margin-top: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.module-about-home{
+		padding: 90px @lateral-space;
+		.title-container{
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 60px;
+			padding: 0;
+			.button{
+				margin-top: 40px;
+				margin-left: 0;
+			}
+		}
+		.images-container{
+			margin-bottom: 50px;
+		}
+		.more-info-container{
+			padding: 0;
+			.more-info-title{
+				justify-content: center;
+			}
+			.more-info-content{
+				.more-info-content-wrapper{
+					padding: 50px 0 0;
+					flex-direction: column;
+					.column{
+						width: 100%;
+						margin-bottom: 50px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

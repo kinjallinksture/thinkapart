@@ -1,0 +1,81 @@
+[25-Apr-2024 03:53:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/customer/www/thinkappart.com/public_html/wp-content/plugins/updraftplus/admin.php:1302) in /home/customer/www/thinkappart.com/public_html/wp-admin/includes/misc.php on line 1439
+[05-Nov-2024 02:52:52 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php:85
+Stack trace:
+#0 /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php(85): implode(Array, ' UNION ALL ')
+#1 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): jg_duplicate_post_as_draft('')
+#2 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /home/customer/www/thinkappart.com/public_html/wp-admin/admin.php(419): do_action('admin_action_jg...')
+#5 {main}
+  thrown in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php on line 85
+[05-Nov-2024 02:53:00 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php:85
+Stack trace:
+#0 /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php(85): implode(Array, ' UNION ALL ')
+#1 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): jg_duplicate_post_as_draft('')
+#2 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /home/customer/www/thinkappart.com/public_html/wp-admin/admin.php(419): do_action('admin_action_jg...')
+#5 {main}
+  thrown in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php on line 85
+[05-Nov-2024 03:00:21 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php:85
+Stack trace:
+#0 /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php(85): implode(Array, ' UNION ALL ')
+#1 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): jg_duplicate_post_as_draft('')
+#2 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /home/customer/www/thinkappart.com/public_html/wp-admin/admin.php(419): do_action('admin_action_jg...')
+#5 {main}
+  thrown in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php on line 85
+[22-Nov-2024 04:12:43 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 84
+[22-Nov-2024 04:12:43 UTC] PHP Warning:  Attempt to read property "post_content" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 48
+[22-Nov-2024 04:12:43 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 49
+[22-Nov-2024 04:12:43 UTC] PHP Warning:  Attempt to read property "post_title" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62
+[22-Nov-2024 04:12:43 UTC] PHP Warning:  Attempt to read property "post_excerpt" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62
+[23-Nov-2024 11:22:43 UTC] PHP Fatal error:  Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php:85
+Stack trace:
+#0 /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php(85): implode(Array, ' UNION ALL ')
+#1 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): jg_duplicate_post_as_draft('')
+#2 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /home/customer/www/thinkappart.com/public_html/wp-admin/admin.php(419): do_action('admin_action_jg...')
+#5 {main}
+  thrown in /home/customer/www/thinkappart.com/public_html/wp-content/themes/think-appart/includes/duplicate-posts.php on line 85
+[28-Nov-2024 07:31:01 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: No translation entry found for query: s:34:" trid = %d AND language_code = %s ";a:2:{i:0;s:5:"24368";i:1;s:2:"es";} in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/classes/records/class-wpml-tm-icl-translations.php:193
+Stack trace:
+#0 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/classes/records/class-wpml-tm-icl-translations.php(65): WPML_TM_ICL_Translations->select_translation_id(' trid = %d AND ...', Array)
+#1 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/classes/records/class-wpml-tm-icl-translations.php(43): WPML_TM_ICL_Translations->build_from_trid(Array)
+#2 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/classes/records/class-wpml-tm-records.php(155): WPML_TM_ICL_Translations->__construct(Object(WPML_TM_Records), Array, 'trid_lang')
+#3 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-post-actions.class.php(67): WPML_TM_Records->icl_translations_by_trid_and_lang('24368', 'es')
+#4 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/functions-load-tm.php(947): WPML_TM_Post_Actions->save_post_actions(10865, Object(WP_Post), false)
+#5 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): wpml_tm_save_post(10865, Object(WP_Post), false)
+#6 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/post-translation/wpml-post-translation.class.php(213): do_action('wpml_tm_save_po...', 10865, Object(WP_Post), false)
+#9 /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/post-translation/wpml-admin-post-actions.class.php(123): WPML_Post_Translation->after_save_post('24368', Array, 'th', 'en')
+#10 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(326): WPML_Admin_Post_Actions->save_post_actions(10865, Object(WP_Post))
+#11 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#12 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#13 /home/customer/www/thinkappart.com/public_html/wp-includes/post.php(5060): do_action('save_post', 10865, Object(WP_Post), true)
+#14 /home/customer/www/thinkappart.com/public_html/wp-includes/post.php(5162): wp_insert_post(Array, false, true)
+#15 /home/customer/www/thinkappart.com/public_html/wp-admin/includes/post.php(453): wp_update_post(Array)
+#16 /home/customer/www/thinkappart.com/public_html/wp-admin/includes/post.php(2161): edit_post(Array)
+#17 /home/customer/www/thinkappart.com/public_html/wp-admin/includes/misc.php(1355): wp_autosave(Array)
+#18 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(326): heartbeat_autosave(Array, Array)
+#19 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#20 /home/customer/www/thinkappart.com/public_html/wp-admin/includes/ajax-actions.php(3503): apply_filters('heartbeat_recei...', Array, Array, 'services')
+#21 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(324): wp_ajax_heartbeat('')
+#22 /home/customer/www/thinkappart.com/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#23 /home/customer/www/thinkappart.com/public_html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#24 /home/customer/www/thinkappart.com/public_html/wp-admin/admin-ajax.php(192): do_action('wp_ajax_heartbe...')
+#25 {main}
+  thrown in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/classes/records/class-wpml-tm-icl-translations.php on line 193
+[28-Nov-2024 08:36:43 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 84
+[28-Nov-2024 08:36:43 UTC] PHP Warning:  Attempt to read property "post_content" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 48
+[28-Nov-2024 08:36:43 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 49
+[28-Nov-2024 08:36:43 UTC] PHP Warning:  Attempt to read property "post_title" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62
+[28-Nov-2024 08:36:43 UTC] PHP Warning:  Attempt to read property "post_excerpt" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62
+[28-Nov-2024 08:48:17 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 84
+[28-Nov-2024 08:48:17 UTC] PHP Warning:  Attempt to read property "post_content" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 48
+[28-Nov-2024 08:48:17 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 49
+[28-Nov-2024 08:48:17 UTC] PHP Warning:  Attempt to read property "post_title" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62
+[28-Nov-2024 08:48:17 UTC] PHP Warning:  Attempt to read property "post_excerpt" on null in /home/customer/www/thinkappart.com/public_html/wp-content/plugins/sitepress-multilingual-cms/inc/actions/wpml-tm-action-helper.class.php on line 62

@@ -1,0 +1,72 @@
+@import 'variables.less';
+
+@import 'modules/form.less';
+@import 'modules/offices.less';
+
+.module-cover-contact{
+	.media-container{
+		position: absolute;
+		top: @lateral-space-extra-small;
+		left: @lateral-space-extra-small;
+		width: calc(~"100% - 2 * @{lateral-space-extra-small}");
+		height: calc(~"100% - 2 * @{lateral-space-extra-small}");
+		border-radius: 22px;
+		overflow: hidden;
+		.image{
+			border-radius: 22px;
+		}
+	}
+	.text-container{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 50px @lateral-space;
+		min-height: @100vh-menu;
+		.text{
+			margin-top: 25px;
+			margin-bottom: 45px;
+			max-width: 500px;
+			width: 60%;
+		}
+	}
+}
+
+.module-banner-buttons{
+	padding: 70px @lateral-space;
+	display: flex;
+	justify-content: center;
+	.button{
+		margin-right: 36px;
+		&:last-child{
+			margin: 0;
+		}
+	}
+}
+
+
+
+@media (max-width: 800px) {
+	
+	.module-cover-contact{
+		.text-container{
+			.text{
+				margin-top: 20px;
+				margin-bottom: 40px;
+				width: 90%;
+			}
+		}
+	}
+
+	.module-banner-buttons{
+		flex-direction: column;
+		align-items: center;
+		padding: 50px @lateral-space;
+		.button{
+			margin-right: 0;
+			margin-bottom: 36px;
+		}
+	}
+}

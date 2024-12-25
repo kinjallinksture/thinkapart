@@ -1,0 +1,327 @@
+.module-form {
+  padding: 130px var(--lateral-space);
+}
+.module-form .tagline {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.module-form .title-container {
+  text-align: center;
+  margin-bottom: 130px;
+}
+.module-form .title-container .typed-text-hidden {
+  display: none;
+}
+.module-form .title-container .typed {
+  display: inline;
+}
+.module-form .title-container .typed-cursor {
+  display: inline;
+}
+.module-form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.module-form .form-container .wpcf7-spinner {
+  display: none;
+}
+.module-form .form-container .input-container {
+  position: relative;
+  width: 45%;
+  margin-bottom: 60px;
+}
+.module-form .form-container .input-container.input-big {
+  width: 100%;
+}
+.module-form .form-container .input-container.input-submit {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.module-form .form-container .input-container .input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #181818;
+}
+.module-form .form-container .input-container .input::-webkit-input-placeholder {
+  color: inherit;
+}
+.module-form .form-container .input-container .input.input-phone,
+.module-form .form-container .input-container .input.input-country {
+  padding-left: 60px;
+}
+.module-form .form-container .input-container .input-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.module-form .form-container .input-container .input-file {
+  position: relative;
+  padding-right: 50px;
+}
+.module-form .form-container .input-container .input-file::-webkit-file-upload-button {
+  display: none;
+}
+.module-form .form-container .input-container .input-file:after {
+  content: url('./img/icon-file.svg');
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 34px;
+  right: 0;
+  bottom: 20px;
+}
+@-webkit-keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@media (max-width: 800px) {
+  .module-form {
+    padding: 50px var(--lateral-space) 90px;
+  }
+  .module-form .title-container {
+    margin-bottom: 70px;
+  }
+  .module-form .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .module-form .form-container .input-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .module-form .form-container .input-container.input-submit {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .module-form .form-container .input-container .input {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+.module-display {
+  padding: 25px 0;
+}
+.module-offices {
+  padding: 170px var(--lateral-space);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.module-offices .text-container {
+  width: 50%;
+}
+.module-offices .text-container .module-title {
+  margin-bottom: 70px;
+}
+.module-offices .text-container .steps-container .step {
+  cursor: pointer;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.module-offices .text-container .steps-container .step.active {
+  pointer-events: none;
+  color: #FFFFFF;
+}
+.module-offices .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+}
+.module-offices .buttons-container .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+.module-offices .buttons-container .button:last-child {
+  margin-right: 0;
+}
+.module-offices .slider-container {
+  position: relative;
+  width: 32%;
+}
+.module-offices .slider-container .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 16px;
+  padding: 30px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.module-offices .slider-container .slide.background-green a:hover {
+  color: #FFFFFF;
+}
+.module-offices .slider-container .slide .country {
+  margin-bottom: 50px;
+}
+.module-offices .slider-container .slide .time {
+  margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .module-offices {
+    padding: 90px var(--lateral-space);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .module-offices .text-container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .module-offices .text-container .module-title {
+    margin-bottom: 20px;
+  }
+  .module-offices .slider-container {
+    width: 70%;
+  }
+  .module-offices .buttons-container {
+    margin-top: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .module-display {
+    padding: 15px 0;
+  }
+}
+.module-cover-contact .media-container {
+  position: absolute;
+  top: var(--lateral-space-extra-small);
+  left: var(--lateral-space-extra-small);
+  width: calc(100% - 2 * var(--lateral-space-extra-small));
+  height: calc(100% - 2 * var(--lateral-space-extra-small));
+  border-radius: 22px;
+  overflow: hidden;
+}
+.module-cover-contact .media-container .image {
+  border-radius: 22px;
+}
+.module-cover-contact .text-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 50px var(--lateral-space);
+  min-height: calc((100 * var(--vh)) - var(--menu-height));
+}
+.module-cover-contact .text-container .text {
+  margin-top: 25px;
+  margin-bottom: 45px;
+  max-width: 500px;
+  width: 60%;
+}
+.module-banner-buttons {
+  padding: 70px var(--lateral-space);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.module-banner-buttons .button {
+  margin-right: 36px;
+}
+.module-banner-buttons .button:last-child {
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .module-cover-contact .text-container .text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  .module-banner-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px var(--lateral-space);
+  }
+  .module-banner-buttons .button {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+}
+
+
+/* recaptcha center align */
+.recaptcha-holder {
+  display: flex; 
+  justify-content: center;
+}

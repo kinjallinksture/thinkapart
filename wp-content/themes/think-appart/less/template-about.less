@@ -1,0 +1,154 @@
+@import 'variables.less';
+
+@import 'modules/awards.less';
+@import 'modules/aboutHome.less';
+
+.modules-about{
+	.module{
+		margin: 150px 0;
+	}
+	.module-awards{
+		padding: 0 @lateral-space;
+	}
+}
+
+.module-title-text{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 0 @lateral-space;
+	.title{
+		width: 50%;
+	}
+	.text{
+		width: 45%;
+	}
+}
+
+.module-image{
+	padding: 0 @lateral-space;
+	display: flex;
+	&.image-position-right{
+		justify-content: flex-end;
+	}
+	.image-container{
+		width: auto;
+		max-width: 80%;
+		.image{
+			border-radius: 20px;
+			max-height: 400px;
+		}
+	}
+}
+
+.module-team{
+	padding: 230px @lateral-space;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background: linear-gradient(180deg, rgba(0, 211, 168, 0) 0%, #00D3A8 100%);
+	grid-gap: 130px 85px;
+	.item{
+		.image-container{
+			border-radius: 20px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			&:after{
+				content: '';
+				display: block;
+				padding-bottom: 100%;
+			}
+		}
+		.name{
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.module-about-home{
+	.title-container{
+		.module-title{
+			width: 100%;
+			text-align: center;
+			max-width: none;
+		}
+	}
+}
+
+.module-link-section{
+	padding: 0 @lateral-space;
+	display: flex;
+	justify-content: space-between;
+	.text-container{
+		width: 45%;
+		.tagline{
+			margin-bottom: 50px;
+		}
+		.button{
+			margin-top: 70px;
+		}
+	}
+	.images-container{
+		width: 50%;
+		.image-container{
+			border-radius: 20px;
+			overflow: hidden;
+			& + .image-container{
+				margin-top: 32px;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 800px) {
+
+	.modules-about{
+		.module{
+			margin: 70px 0;
+		}
+	}
+
+	.module-title-text{
+		flex-direction: column;
+		.title{
+			width: 100%;
+			&:not(.empty){
+				& + .text:not(.empty){
+					margin-top: 30px;
+				}
+			}
+		}
+		.text{
+			width: 100%;
+		}
+	}
+
+	.module-team{
+		padding: 70px @lateral-space;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		.item{
+			.image-container{
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.module-link-section{
+		flex-direction: column;
+		.text-container{
+			width: 100%;
+			margin-bottom: 40px;
+			.tagline{
+				margin-bottom: 30px;
+			}
+			.button{
+				margin-top: 40px;
+			}
+		}
+		.images-container{
+			width: 100%;
+		}
+	}
+}

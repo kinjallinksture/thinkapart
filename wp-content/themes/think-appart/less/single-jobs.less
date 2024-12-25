@@ -1,0 +1,103 @@
+@import 'variables.less';
+
+@import 'modules/logos.less';
+@import 'modules/form.less';
+@import 'modules/awards.less';
+@import 'modules/services.less';
+@import 'modules/process.less';
+@import 'modules/sliderScroll.less';
+@import 'modules/review.less';
+@import 'modules/coverSingleServices.less';
+
+.module-cover-single-jobs{
+	padding: 100px @lateral-space 150px;
+	.title-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 100px;
+		.location{
+			margin-bottom: 30px;
+		}
+	}
+	.text-container{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		.title{
+			width: 35%;
+		}
+		.text{
+			width: 56%;
+		}
+	}
+}
+
+.module-about-jobs{
+	padding: 150px @lateral-space;
+	display: flex;
+	justify-content: space-between;
+	.title-container{
+		width: 25%;
+	}
+	.text-container{
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		.content{
+			margin-bottom: 100px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		.text{
+			width: 80%;
+		}
+		.image-container{
+			border-radius: 20px;
+			overflow: hidden;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.module-cover-single-jobs{
+		padding: 50px @lateral-space 70px;
+		.title-container{
+			margin-bottom: 50px;
+			.location{
+				margin-bottom: 20px;
+			}
+		}
+		.text-container{
+			flex-direction: column;
+			.title{
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			.text{
+				width: 100%;
+			}
+		}
+	}
+
+	.module-about-jobs{
+		padding: 70px @lateral-space;
+		flex-direction: column;
+		.title-container{
+			width: 100%;
+			margin-bottom: 50px;
+		}
+		.text-container{
+			width: 100%;
+			.content{
+				margin-bottom: 50px;
+			}
+			.text{
+				width: 100%;
+			}
+		}
+	}
+}

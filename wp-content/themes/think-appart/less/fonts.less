@@ -1,0 +1,198 @@
+/************************************/
+/*********  FONT FAMILIES	*********/
+/************************************/
+// Graphik
+@font-face {
+	font-family: 'Graphik';
+	src: url(../assets/fonts/Graphik-Light-Web.woff2) format('woff2'),
+		 url(../assets/fonts/Graphik-Light-Web.woff) format('woff');
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik';
+	src: url(../assets/fonts/Graphik-Regular-Web.woff2) format('woff2'),
+		 url(../assets/fonts/Graphik-Regular-Web.woff) format('woff');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik';
+	src: url(../assets/fonts/Graphik-Medium-Web.woff2) format('woff2'),
+		 url(../assets/fonts/Graphik-Medium-Web.woff) format('woff');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik';
+	src: url(../assets/fonts/Graphik-Semibold-Web.woff2) format('woff2'),
+		 url(../assets/fonts/Graphik-Semibold-Web.woff) format('woff');
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik';
+	src: url(../assets/fonts/Graphik-Bold-Web.woff2) format('woff2'),
+		 url(../assets/fonts/Graphik-Bold-Web.woff) format('woff');
+	font-weight: 700;
+	font-display: swap;
+}
+
+// Noto_Sans_SC
+@font-face {
+	font-family: 'Noto_Sans_SC';
+	src: url('../assets/fonts/Noto_Sans_SC/NotoSansSC-Light.otf') format('opentype');
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto_Sans_SC';
+	src: url('../assets/fonts/Noto_Sans_SC/NotoSansSC-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto_Sans_SC';
+	src: url('../assets/fonts/Noto_Sans_SC/NotoSansSC-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto_Sans_SC';
+	src: url(../assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf) format('opentype');
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Noto_Sans_SC';
+	src: url(../assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf) format('opentype');
+	font-weight: 700;
+	font-display: swap;
+}
+// NotoSansThai
+@font-face {
+	font-family: 'NotoSansThai';
+	src: url('../assets/fonts/NotoSansThai/NotoSansThai-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NotoSansThai';
+	src: url('../assets/fonts/NotoSansThai/NotoSansThai-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NotoSansThai';
+	src: url('../assets/fonts/NotoSansThai/NotoSansThai-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NotoSansThai';
+	src: url(../assets/fonts/NotoSansThai/NotoSansThai-SemiBold.ttf) format('truetype');
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NotoSansThai';
+	src: url(../assets/fonts/NotoSansThai/NotoSansThai-Bold.ttf) format('truetype');
+	font-weight: 700;
+	font-display: swap;
+}
+
+html{
+	*{
+		font-family: "Graphik";
+		font-weight: 400;
+	}
+	&[lang="zh-hans"]{
+		*:not(.fa):not(.fa-brands){
+			font-family: "Noto_Sans_SC";
+		}
+	}
+	&[lang="th"]{
+		*:not(.fa):not(.fa-brands){
+			font-family: "NotoSansThai";
+		}
+	}
+}
+
+.font-claim{
+	font-size: 64px;
+	line-height: 85px;
+	font-weight: 300;
+}
+
+.font-h1{
+	font-size: 55px;
+	line-height: 73px;
+	font-weight: 300;
+}
+
+.font-h2{
+	font-size: 45px;
+	line-height: 50px;
+	font-weight: 300;
+}
+
+.font-h3p{
+	font-size: 30px;
+	line-height: 33px;
+	font-weight: 400;
+}
+
+.font-h3{
+	font-size: 25px;
+	line-height: 40px;
+	font-weight: 400;
+}
+
+.font-p{
+	font-size: 21px;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+.font-p2{
+	font-size: 19px;
+	line-height: 28px;
+	font-weight: 300;
+}
+
+.font-p3{
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: 400;
+}
+
+.font-light{
+	font-weight: 300;
+}
+.font-regular{
+	font-weight: 400;
+}
+.font-medium{
+	font-weight: 500;
+}
+.font-semibold{
+	font-weight: 600;
+}
+.font-bold{
+	font-weight: 700;
+}
+.font-uppercase{
+	text-transform: uppercase;
+}

@@ -1,0 +1,223 @@
+@import 'variables.less';
+
+@import 'modules/logos.less';
+@import 'modules/form.less';
+@import 'modules/awards.less';
+@import 'modules/services.less';
+@import 'modules/process.less';
+@import 'modules/sliderScroll.less';
+@import 'modules/review.less';
+@import 'modules/coverSingleServices.less';
+
+.module-cover-single-landings{
+	&.type-text{
+		.circle-container{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+	&.type-image,&.type-video{
+		.media-container{
+			position: absolute;
+			top: @lateral-space-extra-small;
+			left: @lateral-space-extra-small;
+			width: calc(~"100% - 2 * @{lateral-space-extra-small}");
+			height: calc(~"100% - 2 * @{lateral-space-extra-small}");
+			border-radius: 22px;
+			overflow: hidden;
+			.image{
+				border-radius: 22px;
+			}
+		}
+	}
+	.text-container{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 50px @lateral-space;
+		min-height: @100vh-menu;
+		.image-container{
+			max-width: 200px;
+			margin-bottom: 50px;
+		}
+		.text{
+			margin-top: 25px;
+			margin-bottom: 45px;
+			max-width: 500px;
+			width: 60%;
+		}
+	}
+}
+
+.module-banner-text-button{
+	& + .module-slider-images{
+		padding-top: 0;
+	}
+}
+
+.module-slider-scroll .steps-container .step{
+	width: 70px;
+}
+
+.module-slider-images{
+	padding: @lateral-space-extra-small;
+	.slider-container{
+		position: relative;
+		border-radius: 24px;
+		overflow: hidden;
+		--swiper-pagination-bullet-size: 12px;
+		--swiper-pagination-bullet-inactive-color: @white;
+		--swiper-pagination-bullet-inactive-opacity: .5;
+		--swiper-pagination-color: @white;
+		.image-container{
+			&:before{
+				content: '';
+				display: block;
+				padding-bottom: 56.25%;
+			}
+			&:not(.swiper-slide-active){
+				opacity: 0 !important;
+			}
+			.image{
+				border-radius: 24px;
+			}
+		}
+		.swiper-pagination{
+			bottom: @lateral-space-extra-small;
+		}
+	}
+}
+
+.module-areas-of-intervention-grid{
+	padding: 150px @lateral-space;
+	.title-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 80px;
+		.image-container{
+			max-width: 60%;
+			margin-bottom: 80px;
+			.image{
+				max-height: 400px;
+			}
+		}
+	}
+	.grid-container{
+		display: grid;
+		grid-template-columns: repeat(3, 30%);
+		grid-row-gap: 80px;
+		justify-content: space-between;
+		text-align: center;
+		.image-container{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			.image{
+				object-fit: contain;
+			}
+		}
+		.title{
+			margin: 16px 0;
+		}
+		.text{
+			margin: 0 auto;
+			width: 90%;
+		}
+	}
+	.shapes-container{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 270px;
+		height: 300px;
+		overflow: hidden;
+		pointer-events: none;
+		margin-bottom: 50px;
+		.shape{
+			position: absolute;
+			&.shape-1{
+				width: 74px;
+				height: 74px;
+				right: 100px;
+				bottom: 220px;
+			}
+			&.shape-2{
+				width: 135px;
+				height: 135px;
+				right: 130px;
+				bottom: 130px;
+			}
+			&.shape-3{
+				width: 112px;
+				height: 121px;
+				right: 0;
+				bottom: 160px;
+			}
+			&.shape-4{
+				width: 100px;
+				height: 100px;
+				right: 120px;
+				bottom: 30px;
+			}
+			&.shape-5{
+				width: 110px;
+				height: 110px;
+				right: 0;
+				bottom: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.module-cover-single-landings{
+		&.type-text{
+			.circle{
+				top: 45%;
+			}
+		}
+		.text-container{
+			.title{
+				width: 90%;
+			}
+			.text{
+				margin-top: 20px;
+				margin-bottom: 40px;
+				width: 90%;
+			}
+		}
+	}
+
+	.module-areas-of-intervention-grid{
+		padding: 70px @lateral-space;
+		.title-container{
+			margin-bottom: 50px;
+			.image-container{
+				max-width: 80%;
+				margin-bottom: 50px;
+				.image{
+					max-height: 250px;
+				}
+			}
+		}
+		.grid-container{
+			grid-template-columns: 1fr;
+			grid-row-gap: 30px;
+			.image-container{
+				width: 100px;
+				height: 70px;
+				display: inline-block;
+				.image{
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}

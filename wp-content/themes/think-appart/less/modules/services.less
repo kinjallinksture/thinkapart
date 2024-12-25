@@ -1,0 +1,87 @@
+
+
+.module-services{
+	padding: 170px @lateral-space;
+	background-color: var(--color-bg, @black);
+	color: var(--color-font, @white);
+	transition: background-color .6s;
+	.module-title{
+		margin-bottom: 23px;
+		transition: color .6s;
+	}
+	.service-container{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 27px 0;
+		border-bottom: 1px solid;
+		transition: color .6s, border .6s;
+		&:hover{
+			color: var(--color-hover, @green);
+			.icon-plus{
+				stroke: var(--color-hover, @green);
+			}
+			.image-wrapper{
+				opacity: 1;
+				transform: scale(1.0);
+			}
+		}
+		.icon-plus{
+			flex-shrink: 0;
+			width: 30px;
+			height: 30px;
+			stroke: var(--color-font, @white);
+			transition: stroke .6s;
+		}
+		.image-wrapper{
+			position: absolute;
+			width: 340px;
+			right: 100px;
+			opacity: 0;
+			pointer-events: none;
+			transform: scale(0.7);
+			transition: opacity .6s, transform .4s;
+			&:after{
+				content: '';
+				display: block;
+				padding-bottom: 66.77%;
+			}
+			.image-container{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+		}
+	}
+	.button-container{
+		margin-top: 100px;
+	}
+}
+
+@media (max-width: 800px) {
+	.module-services{
+		padding: 90px @lateral-space;
+		.service-container{
+			padding: 15px 0;
+			.icon-plus{
+				margin-left: 20px;
+				width: 16px;
+				height: 16px;
+			}
+			.image-wrapper{
+				width: 180px;
+				right: 0px;
+				bottom: 18px;
+			}
+		}
+		.button-container{
+			margin-top: 50px;
+			text-align: center;
+		}
+	}
+}

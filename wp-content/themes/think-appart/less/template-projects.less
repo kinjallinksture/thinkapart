@@ -1,0 +1,50 @@
+@import 'variables.less';
+
+@import 'modules/works.less';
+
+.module-filter-works{
+	margin-top: 100px;
+	padding: 0 @lateral-space-extra-small;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: -24px;
+	.filter-work{
+		cursor: pointer;
+		&:not(:first-child){
+			margin-bottom: 24px;
+			margin-left: 24px;
+			border-left: 1px solid @black;
+			padding-left: 24px;
+		}
+		&.active{
+			pointer-events: none;
+			font-weight: 500;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.module-filter-works{
+		margin-top: 50px;
+		padding: 0 @lateral-space-extra-small;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		.filter-work{
+			cursor: pointer;
+			padding-left: 15px;
+			padding-right: 15px;
+			&:not(:first-child){
+				margin-left: 0;
+				padding-left: 15px;
+				padding-right: 15px;
+				// border: none;
+			}
+			&.active{
+				pointer-events: none;
+				font-weight: 500;
+			}
+		}
+	}	
+}

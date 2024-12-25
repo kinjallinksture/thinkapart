@@ -1,0 +1,288 @@
+@import 'variables.less';
+
+@import 'modules/form.less';
+
+.module-cover-single-post{
+	padding: 150px @lateral-space 0;
+	margin-bottom: -200px;
+	text-align: center;
+	.title-container{
+		max-width: 700px;
+		width: 80%;
+		margin: 0 auto 100px;
+		.breadcrumb-container{
+			margin-bottom: 50px;
+		}
+		.title{
+			margin-bottom: 30px;
+		}
+	}
+	.image-container{
+		overflow: hidden;
+		z-index: 1;
+		&.border-rounded{
+			border-radius: 20px;
+		}
+	}
+}
+
+.post-content{
+	.module{
+		padding-top: 300px;
+		margin-bottom: -200px;
+		&:last-child{
+			margin-bottom: 0;
+			padding-bottom: 100px;
+		}
+		&.image-none{
+			margin-bottom: 0;
+			+ .module{
+				padding-top: 100px;
+			}
+		}
+	}
+}
+
+.module-content{
+	padding-left: @lateral-space;
+	padding-right: @lateral-space;
+	display: flex;
+	flex-direction: column;
+	&.text-full{
+		.title{
+			text-align: center;
+		}
+		.text{
+			columns: 2;
+		}
+	}
+	&.text-left{
+		--text-width : 60%;
+	}
+	&.text-center{
+		--text-width : 60%;
+		text-align: center;
+		.title{
+			align-self: center;
+		}
+		.text{
+			align-self: center;
+		}
+	}
+	&.image-left{
+		.image-container{
+			width: 60%;
+		}
+	}
+	&.image-center{
+		.image-container{
+			width: 60%;
+			align-self: center;
+		}
+	}
+	&.image-right{
+		.image-container{
+			width: 60%;
+			align-self: flex-end;
+		}
+	}
+	.title{
+		margin-bottom: 60px;
+		&.size-text{
+			width: var(--text-width, 100%);
+		}
+	}
+	.text{
+		width: var(--text-width, 100%);
+		margin-bottom: 100px;
+		p{
+			margin-bottom: 20px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.image-container{
+		overflow: hidden;
+		z-index: 1;
+		&.border-rounded{
+			border-radius: 20px;
+		}
+	}
+}
+
+.module-share{
+	padding: 130px @lateral-space;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.logos-container{
+		display: flex;
+		.logo{
+			flex-shrink: 0;
+			width: 82px;
+			height: 82px;
+			border: 1px solid;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 20px;
+			font-size: 22px;
+			font-weight: 400;
+			&:last-child{
+				margin-right: 0;
+			}
+			&:hover{
+				color: @white;
+			}
+		}
+	}
+}
+
+.module-related-services{
+	padding: 130px @lateral-space;
+	text-align: center;
+	.module-title{
+		margin-bottom: 70px;
+	}
+	.services-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: -20px;
+		.button{
+			margin-right: 20px;
+			margin-bottom: 20px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.module-related-posts{
+	padding: 130px @lateral-space;
+	.module-title{
+		text-align: center;
+		margin-bottom: 70px;
+	}
+	.posts-container{
+		display: grid;
+		grid-gap: 40px;
+		grid-template-columns: repeat(2, 1fr);
+		.image-container{
+			border-radius: 20px;
+			overflow: hidden;
+			margin-bottom: 40px;
+			&:after{
+				content: '';
+				display: block;
+				padding-bottom: 67%;
+			}
+		}
+		.title{
+			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.module-cover-single-post{
+		padding: 70px @lateral-space 0;
+		margin-bottom: -100px;
+		.title-container{
+			width: 100%;
+			margin-bottom: 70px;
+		}
+	}
+
+	.post-content{
+		.module{
+			padding-top: 170px;
+			margin-bottom: -100px;
+			&:last-child{
+				margin-bottom: 0;
+				padding-bottom: 100px;
+			}
+			&.image-none{
+				margin-bottom: 0;
+				+ .module{
+					padding-top: 100px;
+				}
+			}
+		}
+	}
+
+	.module-content{
+		&.text-full{
+			.text{
+				columns: 1;
+			}
+		}
+		&.text-left{
+			--text-width : 100%;
+		}
+		&.text-center{
+			--text-width : 100%;
+		}
+		&.image-left{
+			.image-container{
+				width: 100%;
+			}
+		}
+		&.image-center{
+			.image-container{
+				width: 100%;
+			}
+		}
+		&.image-right{
+			.image-container{
+				width: 100%;
+			}
+		}
+		.title{
+			margin-bottom: 40px;
+		}
+		.text{
+			margin-bottom: 70px;
+		}
+	}
+
+	.module-share{
+		padding: 70px @lateral-space;
+		flex-direction: column;
+		text-align: center;
+		.module-title{
+			margin-bottom: 40px;
+		}
+	}
+
+	.module-related-services{
+		padding: 70px @lateral-space;
+		.module-title{
+			margin-bottom: 40px;
+		}
+		.services-container{
+			.button{
+				margin-right: 0;
+			}
+		}
+	}
+
+	.module-related-posts{
+		padding: 70px @lateral-space;
+		.module-title{
+			margin-bottom: 40px;
+		}
+		.posts-container{
+			grid-template-columns: 1fr;
+			.image-container{
+				margin-bottom: 20px;
+			}
+			.title{
+				width: 100%;
+			}
+		}
+	}
+}
