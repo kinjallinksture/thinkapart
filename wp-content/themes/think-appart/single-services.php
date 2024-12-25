@@ -28,7 +28,7 @@ while(have_rows('general')){
 			<p class="breadcrumb-container font-p font-bold"><a class="font-bold" href="<?=get_permalink($id_services_main_page)?>"><?=get_the_title($id_services_main_page)?></a> | <?=get_the_title()?></p>
 			<h1 class="font-h1"><?=get_sub_field('title')?></h1>
 		</div>
-		<div class="image-container">
+		<div class="image-container image-desktop-view">
 			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 		</div>
 		</div>
@@ -75,7 +75,9 @@ while(have_rows('general')){
 		</div> -->
 	</section>
 	<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" <?=$background['other_color']?>>
-		
+		<div class="image-container image-mobile-view">
+			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
+		</div>
 		<div class="screens-wrapper">
 			<div class="screens-container">
 				<?php
