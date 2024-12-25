@@ -22,7 +22,7 @@ while(have_rows('general')){
 		$background['font_color'] = 'white';
 	}
 	?>
-	<section class="module module-cover-single-services">
+	<section class="module module-cover-single-services title-image-main">
 		<div class="title-image-container">
 		<div class="title-container">
 			<p class="breadcrumb-container font-p font-bold"><a class="font-bold" href="<?=get_permalink($id_services_main_page)?>"><?=get_the_title($id_services_main_page)?></a> | <?=get_the_title()?></p>
