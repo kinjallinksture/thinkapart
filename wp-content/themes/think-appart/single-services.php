@@ -9,13 +9,29 @@ $id_projects_main_page = get_field('cpt_projects', 'option')['projects_main_page
 
 while(have_rows('general')){
 	the_row();
+	$image = get_sub_field('image');
+
+	$module_slider_class = 'no-stuck';
+	if(get_sub_field('stuck_texts_section')){
+		$module_slider_class = '';
+	}
+
+	$background = jg_get_info_background_color('main');
+	if($background['color'] == 'white'){
+		$background['color'] = 'black';
+		$background['font_color'] = 'white';
+	}
 	?>
 	<section class="module module-cover-single-services">
+		<div class="title-image-container">
 		<div class="title-container">
 			<p class="breadcrumb-container font-p font-bold"><a class="font-bold" href="<?=get_permalink($id_services_main_page)?>"><?=get_the_title($id_services_main_page)?></a> | <?=get_the_title()?></p>
 			<h1 class="font-h1"><?=get_sub_field('title')?></h1>
 		</div>
-		
+		<div class="image-container">
+			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
+		</div>
+		</div>
 		<!-- Tweaked by TBS - to add link to the AOI when link is filled in -->
 		<div class="areas-container font-p">
 			<p class="title font-bold"><?=get_sub_field('list_areas_title')?></p>
@@ -58,26 +74,8 @@ while(have_rows('general')){
 			?>
 		</div> -->
 	</section>
-
-	<?php
-	$image = get_sub_field('image');
-
-	$module_slider_class = 'no-stuck';
-	if(get_sub_field('stuck_texts_section')){
-		$module_slider_class = '';
-	}
-
-	$background = jg_get_info_background_color('main');
-	if($background['color'] == 'white'){
-		$background['color'] = 'black';
-		$background['font_color'] = 'white';
-	}
-	?>
-
 	<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" <?=$background['other_color']?>>
-		<div class="image-container">
-			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
-		</div>
+		
 		<div class="screens-wrapper">
 			<div class="screens-container">
 				<?php
