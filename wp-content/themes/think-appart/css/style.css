@@ -581,6 +581,7 @@ body .background-black *::selection {
 }
 .image-container {
   position: relative;
+  z-index: 99;
 }
 .image-container .image {
   display: block;
@@ -1705,3 +1706,4 @@ body .background-black *::selection {
   background-color: #F5FAF9;
   border-radius: 10px;;
 }
+

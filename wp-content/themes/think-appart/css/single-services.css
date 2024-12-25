@@ -295,7 +295,7 @@
   min-height: calc(100 * var(--vh));
 }
 .module-slider-scroll.with-top-image {
-  margin-top: 355px;
+  margin-top: 493px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,7 +414,6 @@
   }
   .module-slider-scroll.with-top-image {
     padding-top: 110px;
-    margin-top: 225px;
   }
   .module-slider-scroll.with-top-image .image-container {
     width: auto;
@@ -764,5 +763,79 @@
   }
   .module-question .more-info-container .more-info-content .more-info-content-wrapper {
     padding: 50px 0 0;
+  }
+}
+
+
+
+/* new devopment */
+
+.title-image-main  {
+     
+}
+.title-image-main .title-image-container .image-desktop-view .background-image {
+  position: inherit;
+  height: auto;
+  bottom: inherit;
+  left: 0;
+  top: 0;
+  min-height: 503px;
+  min-width: 100%;
+  width:  47.8vw;
+  border-radius: 20px;
+} 
+.title-image-main .title-image-container .image-desktop-view .background-image img {
+  position: absolute;
+  border-radius: 20px;
+}
+.title-image-main .title-container {
+  width: 100%;
+  max-width: 540px;
+}
+.title-image-main + section {
+  margin-top: -118px !important;
+}
+.title-image-main .font-h1 {
+  min-height: 405px;
+}
+
+.module-slider-scroll.with-top-image img {
+  display: none;
+}
+
+@media (max-width: 1599px) {
+  .title-image-main {
+    padding: 120px 129px 20px;
+  }
+}
+@media (max-width: 1024px)  {
+  .title-image-main .title-container {
+    max-width:500px;
+  }
+  .title-image-main .title-image-container .image-desktop-view .background-image {
+    width:  40vw;
+  } 
+  .title-image-main .font-h1 {
+    min-height: 300px;
+  }
+}
+@media (max-width: 800px) {
+  .module-slider-scroll.with-top-image img {
+    display: block;
+  }
+  .title-image-main .title-image-container .image-desktop-view .background-image img {
+    display: none;
+  }
+  .title-image-main .font-h1 {
+    min-height: 100px;
+  } 
+  .title-image-main .title-image-container .image-desktop-view .background-image {
+    min-height: 0;
+  }
+  .module-slider-scroll.with-top-image {
+    margin-top: 225px !important;
+  }
+  .title-image-main {
+    padding: 40px 19px 20px;
   }
 }
