@@ -26,10 +26,10 @@ while(have_rows('general')){
 				}
 				?>
 			<h1 class="title font-h1 font-regular"><?=get_the_title()?></h1>
+			<div class="image-container <?=$border_rounded?>">
+				<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+			</div>
 			<p class="text font-p font-color-gray"><?=get_sub_field('short_description')?></p>
-		</div>
-		<div class="image-container <?=$border_rounded?>">
-			<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
 		</div>
 	</section>
 	<?php
