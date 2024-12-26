@@ -528,6 +528,13 @@
 		function changeIndex($textContainer, index){
 			$textContainer.removeClass('active');
 			$textContainer[index].classList.add('active');
+			var scrollTop = $(window).scrollTop();
+
+			// Calculate the height you want based on the scroll position
+			var scrollHeight = Math.min(scrollTop / 5, 100); // Adjust the formula to your needs
+
+			// Apply the height to all .line elements inside .text-container with 'active' class
+			$('.text-container.active').css('height', scrollHeight + '%');
 		}
 	}
 
