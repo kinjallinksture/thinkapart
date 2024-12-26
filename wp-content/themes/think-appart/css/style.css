@@ -1083,10 +1083,7 @@ body .background-black *::selection {
           align-items: center;
   padding: 30px var(--lateral-space-extra-small) 20px;
   background-color: #FFFFFF;
-  -webkit-transition: padding 0.4s, -webkit-transform 0.4s;
-  transition: padding 0.4s, -webkit-transform 0.4s;
-  transition: padding 0.4s, transform 0.4s;
-  transition: padding 0.4s, transform 0.4s, -webkit-transform 0.4s;
+  margin: 0 auto;
 }
 .header-container.hidden {
   -webkit-transform: translateY(-100%);
@@ -1709,16 +1706,18 @@ body .background-black *::selection {
 
 
 /* new devlopment */
+.header-container {
+  transition-duration: .4s;
+  width: 100%;
+}
 .header-container.sticky {
   transform: translateY(0);
-  max-width: 992px;
+  width: 992px;
   margin: 0 auto;
   padding-top: 13px;
   padding-bottom: 13px;
   border-radius: 60px;
   top: 16px;
-  transition-duration : .65s;
-  position: sticky;
   z-index: 99;
 }
 .header-container.sticky .button.button-small {
@@ -1730,8 +1729,8 @@ body .background-black *::selection {
   border: 1px solid !important;
 }
 .header-container.sticky .menu-container .menu-item {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .header-container.sticky .menu-container .menu-item .button-black {
   padding: 12px 30px !important;
@@ -1742,3 +1741,96 @@ body .background-black *::selection {
 .header-container.sticky .menu-container .menu-item:last-child {
   margin-right: 0;
 } 
+.header-container.sticky .logo-container .logo {
+  width: 183px;
+}
+.header-container.sticky .logo-container {
+  transition-duration: .65s;
+}
+.header-container.sticky .nav-container {
+  transition-duration: .65s;
+}
+.header-container .button.button-small  {
+  border-color: #000;
+  color: #000;
+  
+} 
+.header-container .button.button-black  {
+  color: white;
+}
+.header-container .button.button-black:hover  {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+}
+.header-container.sticky .button.button-small:hover {
+  background-color: transparent;
+  color: #00D3A8;
+}
+.header-container .button.button-small:hover {
+  border-color: #00D3A8;
+  color: #00D3A8;
+  background-color: transparent;
+} 
+.header-container .nav-container .menu-container .menu-item.current a {
+  color: #00D3A8;
+  border-color: #00D3A8;
+  background-color: transparent;
+}
+.header-container .menu-container .menu-item .phone-number:hover svg {
+  fill: #00D3A8;
+  color: #00D3A8;
+}
+.header-container .menu-container .menu-item .button-black:hover {
+  color: black;
+  border-color: black;
+  background-color: white;
+  border: 1px solid;
+}
+.header-container .service-nav-item .mega_menu_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+    background: #fff;
+    border-radius: 0;
+    position: fixed;
+    padding: 30px 15px 30px 15px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    left: 0;
+    top: 79px;
+    z-index: -1;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.header-container .service-nav-item:hover .mega_menu_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+}
+.mega_menu_item {
+  display: inline-block;
+}
+.header-container .nav-container .menu-container .menu-item.service-nav-item .tbs-active {
+  color: #00D3A8;
+  border-color: #00D3A8;
+  background-color: transparent;
+}
+.header-container .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item {
+  margin: 0 10px;
+  display: flex;
+  align-self: center;
+}
+.header-container .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item img {
+  margin-right: 8px;
+}
+.header-container .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item a {
+  padding: 0 !important;
+  border: 0 !important;
+}
