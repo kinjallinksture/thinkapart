@@ -1708,7 +1708,7 @@ body .background-black *::selection {
 /* new devlopment */
 @media (min-width: 800px) {
   .header-container {
-    transition-duration: .4s;
+    transition-duration: .6s;
     width: 100%;
   }
   .header-container.sticky {
@@ -1808,6 +1808,7 @@ body .background-black *::selection {
       overflow: hidden;
       padding: 0;
       transition: .3s;
+      height: 0;
   }
   .header-container .service-nav-item .mega_menu_content .mega-menu-inner {
     display: flex;
@@ -1844,7 +1845,6 @@ body .background-black *::selection {
   }
   
   .header-container.sticky .service-nav-item .mega_menu_content {
-    display: none;
       background: #fff;
       border-radius: 0 0px 38px 38px;
       position: fixed;
@@ -1852,7 +1852,7 @@ body .background-black *::selection {
       grid-template-columns: 50% auto;
       row-gap: 12px;
       column-gap: 18px;
-      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: none;
       width: 100%;
       left: 0;
       top: 36px;
@@ -1866,6 +1866,7 @@ body .background-black *::selection {
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   .mega_menu_item {
     display: inline-block;
