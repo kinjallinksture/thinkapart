@@ -4,10 +4,18 @@
 
 	$(document).ready(function(){
 		fixVH();
+		function adjustMegaMenuHeight() {
+			$('.service-nav-item').each(function () {
+				if ($('.service-nav-item').is(':hover')) {
+					var contentHeight = $(this).find('.mega-menu-inner').outerHeight(true);
+					$('.mega_menu_content').css('height', contentHeight);
+				}
+			});
+		}
 		$('.service-nav-item').hover(
 			function() {
 				// On hover, set the height based on the content size
-				var contentHeight = $(this).get(0).scrollHeight;
+				var contentHeight = $(this).find('.mega-menu-inner').outerHeight(true); 
 				$('.mega_menu_content').css('height', contentHeight);
 			},
 			function() {
@@ -16,6 +24,10 @@
 			}
 		);
 		$('.mega_menu_content').css('height', '0');
+
+		$(window).on('resize', function () {
+			adjustMegaMenuHeight();
+		});
 	})
 
 	$(window).on('load', function(){
