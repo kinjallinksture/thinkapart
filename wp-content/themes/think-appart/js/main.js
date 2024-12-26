@@ -112,8 +112,7 @@
 		})
 
 		$(window).scroll(function(event){
-			var windowHeight = $(window).height();
-			if ($(window).scrollTop() > windowHeight) {
+			if ($(window).scrollTop() > 100) {
 				$('.header-container').addClass('sticky');
 			} else {
 				$('.header-container').removeClass('sticky');
