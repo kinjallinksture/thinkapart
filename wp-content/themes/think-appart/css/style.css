@@ -581,7 +581,7 @@ body .background-black *::selection {
 }
 .image-container {
   position: relative;
-  z-index: 99;
+  z-index: 9;
 }
 .image-container .image {
   display: block;
