@@ -1707,3 +1707,38 @@ body .background-black *::selection {
   border-radius: 10px;;
 }
 
+
+/* new devlopment */
+.header-container.sticky {
+  transform: translateY(0);
+  max-width: 992px;
+  margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 60px;
+  top: 16px;
+  transition-duration : .65s;
+  position: sticky;
+  z-index: 99;
+}
+.header-container.sticky .button.button-small {
+  padding: 15px 0;
+  border: 0;
+}
+.header-container.sticky .only-desktop a {
+  padding: 12px !important;
+  border: 1px solid !important;
+}
+.header-container.sticky .menu-container .menu-item {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.header-container.sticky .menu-container .menu-item .button-black {
+  padding: 12px 30px !important;
+}
+.header-container.sticky .menu-container .menu-item:first-child {
+  margin-left: 0;
+}
+.header-container.sticky .menu-container .menu-item:last-child {
+  margin-right: 0;
+} 
