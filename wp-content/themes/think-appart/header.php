@@ -106,6 +106,7 @@
 								<!-- MEGA MENU -->
 								<?php if ($menu_item->title == 'Services' || $menu_item->title == 'บริการของเรา' || $menu_item->title == 'Servicios' ) : ?>
 								<div class="mega_menu_content only-desktop">
+									<div class="mega-menu-inner">
 									<?php
 										while(have_rows('mega_menu_content', 'option')){
 											the_row();
@@ -117,6 +118,7 @@
 											<a href="<?php echo esc_url(get_permalink($mega_menu_page_link->ID)); ?>" class="text" rel="noopener noreferrer"><?php echo esc_html(get_the_title($mega_menu_page_link->ID)); ?></a>
 										</div>
 										<?php } ?>
+									</div>
 								</div>
 
 								<nav class="sub_mega_menu_content only-mobile">

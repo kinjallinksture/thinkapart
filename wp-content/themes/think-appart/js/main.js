@@ -8,13 +8,14 @@
 			function() {
 				// On hover, set the height based on the content size
 				var contentHeight = $(this).get(0).scrollHeight;
-				$(this).css('height', contentHeight);
+				$('.mega_menu_content').css('height', contentHeight);
 			},
 			function() {
 				// On hover out, reset the height (if necessary)
-				$(this).css('height', '');
+				$('.mega_menu_content').css('height', '0');
 			}
 		);
+		$('.mega_menu_content').css('height', '0');
 	})
 
 	$(window).on('load', function(){
