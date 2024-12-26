@@ -119,11 +119,6 @@
 			if(diff < 0){ //scroll up
 				$('.header-container').removeClass('sticky');
 				$('.header-container').trigger('show');
-				if(currentScroll < limitToHideMenu){
-					$('.header-container').removeClass('small');
-				}else{
-					$('.header-container').addClass('small');
-				}
 			}else{ //scroll down
 				if(currentScroll > limitToHideMenu){
 					$('.header-container').addClass('sticky');
