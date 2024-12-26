@@ -126,10 +126,6 @@
 				}
 			}
 			lastScrollTop = currentScroll;
-
-			var maxScroll = $('body').innerHeight() - $(window).innerHeight();
-			var percentScroll = Math.min(1, currentScroll/maxScroll);
-			$('body').css('--percent-scroll', (percentScroll*100)+'%');
 		})
 	}
 
