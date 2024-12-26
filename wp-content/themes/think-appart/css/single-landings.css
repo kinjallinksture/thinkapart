@@ -923,7 +923,7 @@
     opacity: 1;
     height: fit-content;
     transition-delay: .3s;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
     margin-top: 32px;
   }
   .module-process .process-container .texts-container .text-container {

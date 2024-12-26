@@ -1727,10 +1727,10 @@ body .background-black *::selection {
     border: 0;
   }
   .header-container.sticky .button.button-black {
-    border-width: 1px;
+    border: 1px solid; 
   }
   .header-container.sticky .only-desktop a {
-    padding: 12px !important;
+    padding: 12px 10px !important;
     border: 1px solid !important;
   }
   .header-container.sticky .menu-container .menu-item {
