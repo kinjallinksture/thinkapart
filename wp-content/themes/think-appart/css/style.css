@@ -1897,6 +1897,12 @@ body .background-black *::selection {
     margin-left: 8px;
     margin-right: 8px;
   }
+  .button.button-small {
+    padding: 10px;
+  }
+  .header-container .menu-container .menu-item {
+    margin-left: 10px;
+  }
 
 }
 
