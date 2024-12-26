@@ -3,7 +3,7 @@
 	var lastScrollTop = 0;
 
 	$(document).ready(function(){
-		//fixVH();
+		fixVH();
 	})
 
 	$(window).on('load', function(){
@@ -82,7 +82,7 @@
 	    });
 	}
 
-	/* function fixVH(){
+	 function fixVH(){
 		var windowLastWidth = 0;
 		var windowLastHeight = 0;
 
@@ -102,8 +102,7 @@
 				windowLastHeight = height;
 			}
 		}
-	} */
-
+	 }
 	function header(){
 		$('.header-container .menu-container .phone-number .text').each(function(i, item){
 			var $item = $(item);
@@ -113,19 +112,12 @@
 		})
 
 		$(window).scroll(function(event){
-			var currentScroll = $(window).scrollTop();
-			var diff = currentScroll - lastScrollTop;
-			var limitToHideMenu = $(window).innerHeight()*.4;
-			if(diff < 0){ //scroll up
+			var windowHeight = $(window).height();
+			if ($(window).scrollTop() > windowHeight) {
+				$('.header-container').addClass('sticky');
+			} else {
 				$('.header-container').removeClass('sticky');
-				$('.header-container').trigger('show');
-			}else{ //scroll down
-				if(currentScroll > limitToHideMenu){
-					$('.header-container').addClass('sticky');
-					$('.header-container').trigger('hide');
-				}
 			}
-			lastScrollTop = currentScroll;
 		})
 	}
 
