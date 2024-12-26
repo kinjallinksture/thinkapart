@@ -3,7 +3,7 @@
 	var lastScrollTop = 0;
 
 	$(document).ready(function(){
-		fixVH();
+		//fixVH();
 	})
 
 	$(window).on('load', function(){
@@ -82,7 +82,7 @@
 	    });
 	}
 
-	function fixVH(){
+	/* function fixVH(){
 		var windowLastWidth = 0;
 		var windowLastHeight = 0;
 
@@ -102,7 +102,7 @@
 				windowLastHeight = height;
 			}
 		}
-	}
+	} */
 
 	function header(){
 		$('.header-container .menu-container .phone-number .text').each(function(i, item){
