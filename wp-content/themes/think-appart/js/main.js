@@ -117,7 +117,7 @@
 			var diff = currentScroll - lastScrollTop;
 			var limitToHideMenu = $(window).innerHeight()*.4;
 			if(diff < 0){ //scroll up
-				$('.header-container').removeClass('hidden');
+				$('.header-container').removeClass('sticky');
 				$('.header-container').trigger('show');
 				if(currentScroll < limitToHideMenu){
 					$('.header-container').removeClass('small');
@@ -126,7 +126,7 @@
 				}
 			}else{ //scroll down
 				if(currentScroll > limitToHideMenu){
-					$('.header-container').addClass('hidden');
+					$('.header-container').addClass('sticky');
 					$('.header-container').trigger('hide');
 				}
 			}
