@@ -807,18 +807,41 @@
   .title-image-main {
     padding: 120px 129px 20px;
   }
+  .module-slider-scroll {
+    padding: 315px 0;
+  }
 }
+
+@media (max-width: 1199px) {
+  .title-image-main {
+    padding: 120px 60px 20px;
+  }
+  .module-slider-scroll {
+    padding: 215px 0;
+  }
+}
+
 @media (max-width: 1024px)  {
   .title-image-main .title-container {
-    max-width:500px;
+    max-width: 440px;
   }
   .title-image-main .title-image-container .image-desktop-view .background-image {
-    width:  40vw;
+    width:  35vw;
+    min-height: 300px;
+    top: 20px;
   } 
   .title-image-main .font-h1 {
     min-height: 300px;
   }
+  .title-image-main {
+    padding: 120px 30px 20px;
+  }
+  .module-slider-scroll {
+    padding: 200px 0;
+  }
+
 }
+
 @media (max-width: 800px) {
   .module-slider-scroll.with-top-image img {
     display: block;
