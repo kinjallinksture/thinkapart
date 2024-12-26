@@ -1124,7 +1124,7 @@ body .background-black *::selection {
 }
 .header-container .menu-container .menu-item .phone-number:hover .text {
   width: var(--width);
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .header-container .menu-container .menu-item .phone-number .text {
   width: 0;
@@ -1795,24 +1795,27 @@ body .background-black *::selection {
     background: #fff;
     border-radius: 0;
     position: fixed;
-    padding: 30px 15px 30px 15px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     width: 100%;
     left: 0;
     top: 79px;
     z-index: -1;
-    height: 0;
     overflow: hidden;
-    visibility: hidden;
+    padding: 0;
+    transition: .3s;
+}
+.header-container .service-nav-item .mega_menu_content .mega-menu-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+    padding: 30px 15px 30px 15px;
 }
 .header-container .service-nav-item:hover .mega_menu_content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: auto;
-    overflow: visible;
-    visibility: visible;
 }
 .mega_menu_item {
   display: inline-block;
@@ -1831,6 +1834,49 @@ body .background-black *::selection {
   margin-right: 8px;
 }
 .header-container .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item a {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.header-container.sticky .service-nav-item .mega_menu_content {
+  display: none;
+    background: #fff;
+    border-radius: 0 0px 38px 38px;
+    position: fixed;
+    padding: 55px 15px 28px 15px;
+    grid-template-columns: 50% auto;
+    row-gap: 12px;
+    column-gap: 18px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    left: 0;
+    top: 36px;
+    z-index: -1;
+}
+.header-container.sticky .service-nav-item:hover .mega_menu_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mega_menu_item {
+  display: inline-block;
+}
+.header-container .nav-container .menu-container .menu-item.service-nav-item .tbs-active {
+  color: #00D3A8;
+  border-color: #00D3A8;
+  background-color: transparent;
+}
+.header-container.sticky .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item {
+  width: 200px;
+  display: flex;
+  align-self: center;
+  margin: 0;
+}
+.header-container.sticky .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item img {
+  margin-right: 8px;
+}
+.header-container.sticky .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item a {
   padding: 0 !important;
   border: 0 !important;
 }
