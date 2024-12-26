@@ -529,12 +529,14 @@
 			$textContainer.removeClass('active');
 			$textContainer[index].classList.add('active');
 			var scrollTop = $(window).scrollTop();
+			var scrollHeight = scrollTop * 0.5; // Change 0.5 to control the rate of growth in pixels
 
-			// Calculate the height you want based on the scroll position
-			var scrollHeight = Math.min(scrollTop / 5, 100); // Adjust the formula to your needs
-
-			// Apply the height to all .line elements inside .text-container with 'active' class
-			$('.text-container.active').css('height', scrollHeight + '%');
+			// Optional: Set a maximum height to prevent it from growing too large
+			var maxHeight = 300; // Set the max height in pixels
+			scrollHeight = Math.min(scrollHeight, maxHeight); 
+		
+			// Apply the calculated height to the .line element inside the .text-container with 'active' class
+			$('.text-container.active .line').css('height', scrollHeight + 'px');
 		}
 	}
 
