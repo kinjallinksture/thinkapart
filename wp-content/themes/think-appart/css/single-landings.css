@@ -905,3 +905,83 @@
   display: flex; 
   justify-content: center;
 }
+
+@media (min-width: 800px) {
+  .module-process .process-container .texts-container .text-container .dot,
+  .module-process .process-container .texts-container .text-container .line {
+    display: none;
+  }
+  .module-process .process-container .texts-container .text-container p {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms ease-out, height 0s linear 300ms;
+  }
+  .module-process .process-container .texts-container .text-container.active p {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: fit-content;
+    transition-delay: .3s;
+    transition: all .4s ease-in;
+    margin-top: 32px;
+  }
+  .module-process .process-container .texts-container .text-container {
+    padding: 25px 30px 25px 24px;
+    border: 1px solid #000000;
+    background-size: 33px;
+    background-position: left center;
+    opacity: 1;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 48px;
+    transition: all .3s ease-in;
+  }
+  .module-process .process-container .texts-container .text-container::after {
+    content: "";
+    background-image: url('../assets/img/services.svg');
+    position: absolute;
+    left: 43px;
+    top: 29px;
+    width: 34px;
+    height: 34px;
+    transition: all .3s ease-in;
+  }
+  .module-process .process-container .texts-container .text-container.active {
+    background-color: white;
+    color: #000;
+    border-color: white;
+    transition: all .3s ease-in;
+  }
+  .module-process .process-container .texts-container .text-container.active::after {
+    content: "";
+    background-image: url('../assets/img/services-active.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 43px;
+    top: 29px;
+    width: 34px;
+    height: 34px;
+  }
+  
+  .module-process .process-container .texts-container .text-container.active::before {
+    background-color:#F6F459;
+  }
+  .module-process .process-container .texts-container .text-container::before {
+    content: "";
+    background-color: #000;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 30px;
+    top: 16px;
+    border-radius: 100%;
+    transition: all .3s ease-in;
+  }
+  .module-process .process-container .texts-container .text-container .title {
+    margin-bottom: 0;
+    margin-left: 90px;
+    transition: all .3s ease-in;
+  }
+  
+}
