@@ -507,7 +507,7 @@
 			var tween = new TimelineMax();
 
 			$textContainer.each(function(i, item){
-				tween.fromTo($(item).find('.line'), 1, {height: '0%'}, {height: '100%', ease: Linear.easeNone, onComplete: function(){
+				tween.fromTo($(item).find('.line'), 1, {height: '0px'}, {height: '100px', ease: Linear.easeNone, onComplete: function(){
 						changeIndex($textContainer, Math.min(i+1, $textContainer.length-1));
 				}, onReverseComplete: function(){
 						changeIndex($textContainer, Math.max(i-1, 0));
@@ -528,15 +528,6 @@
 		function changeIndex($textContainer, index){
 			$textContainer.removeClass('active');
 			$textContainer[index].classList.add('active');
-			var scrollTop = $(window).scrollTop();
-			var scrollHeight = scrollTop * 0.5; // Change 0.5 to control the rate of growth in pixels
-
-			// Optional: Set a maximum height to prevent it from growing too large
-			var maxHeight = 300; // Set the max height in pixels
-			scrollHeight = Math.min(scrollHeight, maxHeight); 
-		
-			// Apply the calculated height to the .line element inside the .text-container with 'active' class
-			$('.text-container.active .line').css('height', scrollHeight + 'px');
 		}
 	}
 
