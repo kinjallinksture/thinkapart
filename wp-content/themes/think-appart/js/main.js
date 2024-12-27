@@ -28,6 +28,17 @@
 		$(window).on('resize', function () {
 			adjustMegaMenuHeight();
 		});
+		
+		$('form.wpcf7-form input[type="checkbox"]').on('change', function() {
+			// Check if the checkbox is checked
+			if ($(this).prop('checked')) {
+				// Add the 'checked' class if the checkbox is checked
+				$(this).addClass('checked');
+			} else {
+				// Remove the 'checked' class if the checkbox is unchecked
+				$(this).removeClass('checked');
+			}
+		});
 	})
 
 	$(window).on('load', function(){
@@ -632,22 +643,56 @@
 			})
 		}
 	}
-
-	function moduleSliderImages(){
-		$('.module-slider-images .slider-container').each(function(i, module){
+	
+	function moduleSliderImages() {
+		$('.module-slider-images .slider-container').each(function (i, module) {
+			var $steps = $(this).find('.steps-container .step');
+		
+			// Initialize Swiper
 			var swiper = new Swiper(module, {
 				slidesPerView: 1,
-				// spaceBetween: 12,
 				effect: "fade",
-				loop: true,
-				pagination: {
-					el: $(module).find('.swiper-pagination')[0],
-					clickable: true,
+				loop: false, // Disable loop for finite progress
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false
 				},
+				on: {
+					init: function () {
+						// Reset progress bar and steps to start at 0%
+						updateSteps(1, $steps.length);
+						updateProgressBar(1, $steps.length);
+					},
+					slideChangeTransitionEnd: function () {
+						// Update progress bar and steps after slide transition ends
+						var current = swiper.activeIndex + 1; // Swiper indices start from 0
+						var total = swiper.slides.length; // Total number of slides
+						updateSteps(current, total);
+						updateProgressBar(current, total);
+					}
+				}
 			});
-		})
-	}
 
+			// Function to update active steps
+			function updateSteps(current, total) {
+				$steps.removeClass('active completed');
+				$steps.each(function (index) {
+					if (index < current - 1) {
+						$(this).addClass('completed'); // Mark steps before the current as completed
+					} else if (index === current - 1) {
+						$(this).addClass('active'); // Highlight the current step
+					}
+				});
+			}
+	
+			// Function to update progress bar
+			function updateProgressBar(current, total) {
+				var progressPercentage = (current / total) * 100;
+				$steps.css('width', progressPercentage + '%');
+			}	
+		});
+	}
+	
 	function moduleOfficesJobs(){
 		var $module = $('.module-offices-jobs');
 		if($module.length > 0){
