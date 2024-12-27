@@ -667,4 +667,9 @@
   .module-form .form-container .input-container .input-button {
     padding: 18px 56px 22px 56px;
   }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label.checked {
+    border-color: #00D3A8;
+    color: #00D3A8;
+    transition: .3s;
+  }
  }
