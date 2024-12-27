@@ -30,13 +30,14 @@
 		});
 		
 		$('form.wpcf7-form input[type="checkbox"]').on('change', function() {
+			var label = $(this).closest('label');
 			// Check if the checkbox is checked
 			if ($(this).prop('checked')) {
 				// Add the 'checked' class if the checkbox is checked
-				$(this).addClass('checked');
+				label.addClass('checked');
 			} else {
 				// Remove the 'checked' class if the checkbox is unchecked
-				$(this).removeClass('checked');
+				label.removeClass('checked');
 			}
 		});
 	})
