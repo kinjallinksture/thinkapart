@@ -672,4 +672,36 @@
     color: #00D3A8;
     transition: .3s;
   }
+  .module-cover-single-post.text-full-width,
+  .module-content.text-full-width {
+    padding-left: 280px;
+    padding-right: 280px;
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .module-cover-single-post.text-full-width .title-full-width,
+  .module-content.text-full-width .title-full-width {
+    width: 90%;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+  .module-image.image-full-width .border-rounded {
+    margin: 80px 134px 76px;
+    object-fit: cover;
+  }
+  .module-image.image-center .border-rounded  {
+    margin: 80px 280px 76px;
+    object-fit: cover;
+  }
+  .module-image .border-rounded img {
+    border-radius: 22px;
+  }
+  .module-content.text-full-width .title-full-width,
+  .module-content.text-full-width .text {
+    margin-bottom: 32px;
+  }
+  .module-content.text-full-width .text:last-child {
+    margin-bottom: 0;
+  }
+   
  }
