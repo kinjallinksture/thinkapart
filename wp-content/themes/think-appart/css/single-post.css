@@ -169,14 +169,12 @@
 }
 .post-content .module:last-child {
   margin-bottom: 0;
-  padding-bottom: 100px;
+  padding-bottom: 130px;
 }
 .post-content .module.image-none {
   margin-bottom: 0;
 }
-.post-content .module.image-none + .module {
-  padding-top: 100px;
-}
+
 .module-content {
   padding-left: var(--lateral-space);
   padding-right: var(--lateral-space);
@@ -474,7 +472,7 @@
 }
 
 .module-author .author-container .author-summary .module-title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   text-transform: capitalize;
 }
 
@@ -502,8 +500,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   gap: 5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 800px) { 
@@ -541,6 +539,65 @@
 }
 
 @media (min-width: 800px) {
-  
-
+  .module-cover-single-post {
+    text-align: left;
+    margin: 0;
+    padding: 150px 170px 70px;
+  }
+  .module-cover-single-post .title-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .module-cover-single-post .title-container .breadcrumb-container {
+    margin-bottom: 40px;
+  }
+  .module-cover-single-post .title-container .title {
+    margin-bottom: 80px;
+    width: 64%;
+  }
+  .module-cover-single-post .image-container.border-rounded img {
+    margin-bottom: 80px;
+    min-height: 616px;
+    height: 100%;
+  }
+  .module-cover-single-post .text  {
+    color: black;
+    font-size: 19px;
+  }
+  .module-content.text-full .title,
+  .module-content .title.size-text {
+    width: 60%;
+    text-align: left;
+  }
+  .post-content .module {
+    padding-top: 70px;
+    margin: 0;
+    background-color:white;
+    color: black;
+    padding-bottom: 70px;
+  }
+  .module-content .text p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+  }
+  .module-content .text .indented-list li {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .module-content .text {
+    margin-bottom: 0;
+  }
+  .module-content .image-container.border-rounded {
+    padding-top: 140px;
+  }
+  .module-author {
+    padding: 130px 170px;
+  } 
+  .module-author .author-container .author-profile img {
+    width: 342px;
+    height: 360px;
+  }
 }
