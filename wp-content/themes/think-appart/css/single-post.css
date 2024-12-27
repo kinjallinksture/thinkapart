@@ -464,7 +464,6 @@
   align-items: center;
   /*border-radius: 20px;*/
   /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
-  padding: 20px;
 }
 
 .module-author .author-container .author-profile img {
@@ -476,11 +475,11 @@
   text-transform: capitalize;
 }
 
-.module-title.font-h1{
-    font-size: 25px;
+.module-title.font-h1 {
+    font-size: 21px;
     font-weight: 600;
 	line-height: 1em;
-	margin-bottom: 10px !important;
+  margin-bottom: 5px !important;
 }
 
 .module-title.font-h2{
@@ -600,4 +599,72 @@
     width: 342px;
     height: 360px;
   }
-}
+  .module-author .author-container .author-summary .text  {
+    font-size: 19px;
+    letter-spacing: 0;
+  }
+  .module-share {
+    padding: 132px 170px 135px;
+  }
+
+  .module-form {
+    padding: 130px 140px;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap {
+    margin-left: 60px;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label {
+    position: relative;
+    display: block;
+    border: 1px solid #000;
+    padding: 14px 32px;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label:hover {
+    border-color: #00D3A8;
+    color: #00D3A8;
+    transition: .3s;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label input {
+    position: absolute;
+    display: none;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-list-item {
+    margin-left: 18px;
+  }
+  .module-form .form-container .input-container .silect-estimate {
+    margin-right: 65px;
+  }
+  .module-form .form-container .input-container .wpcf7-select {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 14px 48px 14px 28px;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: .3s;
+    appearance: none;
+    background-image: url('../assets/img/arrow-down.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    position: relative;
+    right: 10px;
+    background-position-x: 72px;
+  }
+  .module-form .form-container .input-container .silect-budget {
+    margin-right: 35px;
+  }
+  .module-form .form-container .input-container.message .wpcf7-form-control-wrap {
+    margin-left: 0;
+  }
+  .module-form .form-container .input-container .wpcf7-validates-as-required  {
+    position: absolute;
+    top: -20px;
+    width: 330px;
+  }
+  .module-form .form-container .input-container .input-button {
+    padding: 18px 56px 22px 56px;
+  }
+ }
