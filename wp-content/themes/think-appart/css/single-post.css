@@ -541,44 +541,6 @@
 }
 
 @media (min-width: 800px) {
-  .module-cover-single-post {
-    text-align: left;
-    margin: 0;
-    padding: 150px 170px 70px;
-  }
-  .module-cover-single-post .title-container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-  }
-  .module-cover-single-post .title-container .breadcrumb-container {
-    margin-bottom: 40px;
-  }
-  .module-cover-single-post .title-container .title {
-    margin-bottom: 80px;
-    width: 64%;
-  }
-  .module-cover-single-post .image-container.border-rounded img {
-    margin-bottom: 80px;
-    min-height: 616px;
-    height: 100%;
-  }
-  .module-cover-single-post .text  {
-    color: black;
-  }
-  .module-content .text {
-    margin-bottom: 140px;
-  }
-  .post-content .module {
-    padding-top: 70px;
-    margin: 0;
-    background-color:white;
-    color: black;
-    padding-bottom: 70px;
-  }
-  .module-content .image-container.border-rounded img {
-    min-height: 620px;
-    height: 100%;
-    object-fit: cover;
-  }
+  
+
 }
