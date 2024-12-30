@@ -145,14 +145,6 @@ while (have_rows('content')) {
 	}elseif($layout == 'slider_images'){
 		$images = get_sub_field('images');
 		?>
-		<style>
-	    .module-slider-images .steps-container {
-			height: 100%;
-			background-color: #007bff;
-			width: 0%; /* Start with 0% width */
-			transition: width 0.5s ease; /* Smooth transition for progress updates */
-		}
-		</style>
 		<div class="module module-slider-images">
 			<div class="slider-container">
 				<div class="swiper-wrapper">
