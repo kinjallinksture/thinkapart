@@ -20,11 +20,6 @@ while(have_rows('general')){
 		$border_rounded = 'border-rounded';
 	}
 	?>
-	<section class="module-image image-<?=$image_style_general?>">
-		<div class="image-container <?=$border_rounded?>">
-			<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
-		</div>
-	</section>
 	<section class="module module-cover-single-post text-<?=$text_style_general?>">
 		<div class="title-container">
 			<p class="breadcrumb-container font-p font-bold font-color-green">
@@ -37,8 +32,15 @@ while(have_rows('general')){
 				}
 				?>
 			<h1 class="title font-h1 font-regular <?=$title_width?>"><?=get_the_title()?></h1>
-			<p class="text font-p font-color-gray"><?=get_sub_field('short_description')?></p>
 		</div>
+	</section>
+	<section class="module-image image-<?=$image_style_general?>">
+		<div class="image-container <?=$border_rounded?>">
+			<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+		</div>
+	</section>
+	<section class="module-description text-<?=$text_style_general?>">
+		<p class="text font-p font-color-gray"><?=get_sub_field('short_description')?></p>
 	</section>
 	<?php
 }
@@ -64,6 +66,12 @@ while(have_rows('general')){
 				?>
 				<h2 class="title font-h1 size-<?=$title_size?> <?=$title_width?>"><?=$title?></h2>
 				<?php
+			}
+			if( 'full-list-width' === $text_style_general ){
+				?>
+				<div class="short-text font-p"><?=get_sub_field('short_description')?></div>
+				<?php
+
 			}
 			?>
 			<div class="text font-p"><?=get_sub_field('text')?></div>
