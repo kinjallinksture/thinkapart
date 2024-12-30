@@ -95,11 +95,13 @@
 
 	function bindEvents() {
 	    $('.header-container .menu-mobile-button').on('click', function(event) {
+			$('body').toggleClass('show-menu');
 	        $('.header-container .menu-mobile-button').toggleClass('opened');
 	        $('.nav-container').toggleClass('opened');
 	        $('html').toggleClass('overflow-hidden');
 	        if ($('.sub_mega_menu_content').hasClass('opened')) {
 		        $('.sub_mega_menu_content').removeClass('opened');
+				$('body').removeClass('show-menu');
 		    }
 	    });
 	}
@@ -646,52 +648,46 @@
 	}
 	
 	function moduleSliderImages() {
-		$('.module-slider-images .slider-container').each(function (i, module) {
-			var $steps = $(this).find('.steps-container .step');
 		
-			// Initialize Swiper
-			var swiper = new Swiper(module, {
-				slidesPerView: 1,
-				effect: "fade",
-				loop: false, // Disable loop for finite progress
+			const slider = new Swiper(".module-slider-images .slider-container", {
+				speed: 1,
+				watchSlidesProgress: true,
+				loop: true,
 				autoplay: {
-					delay: 5000,
+					delay: 15000,
 					disableOnInteraction: false
 				},
-				on: {
-					init: function () {
-						// Reset progress bar and steps to start at 0%
-						updateSteps(1, $steps.length);
-						updateProgressBar(1, $steps.length);
-					},
-					slideChangeTransitionEnd: function () {
-						// Update progress bar and steps after slide transition ends
-						var current = swiper.activeIndex + 1; // Swiper indices start from 0
-						var total = swiper.slides.length; // Total number of slides
-						updateSteps(current, total);
-						updateProgressBar(current, total);
+				slidesPerView: 1,
+				navigation: {
+					nextEl: ".story__next",
+					prevEl: ".story__prev",
+				},
+				pagination: {
+					el: '.story__pagination',
+					renderBullet: function (index, className) {
+						return '<div class="' + className + '"> <div class="swiper-pagination-progress"></div> </div>';
 					}
+				},
+				on: {
+					autoplayTimeLeft(swiper, time, progress) {
+						let currentSlide = document.querySelectorAll('.module-slider-images .swiper-slide')[swiper.activeIndex];
+						let currentBullet = document.querySelectorAll('.module-slider-images .swiper-pagination-progress')[swiper.realIndex];
+						let fullTime = currentSlide.dataset.swiperAutoplay ? parseInt(currentSlide.dataset.swiperAutoplay) : swiper.params.autoplay.delay;
+			
+						let percentage = Math.min( Math.max ( parseFloat(((fullTime - time) * 100 / fullTime).toFixed(1)), 0), 100) + '%';
+			
+						gsap.set(currentBullet, {width: percentage});
+					},
+					transitionEnd(swiper) {
+
+						let allBullets = $('.module-slider-images .swiper-pagination-progress');
+						let bulletsBefore = allBullets.slice(0, swiper.realIndex);
+						let bulletsAfter = allBullets.slice(swiper.realIndex, allBullets.length);
+						if(bulletsBefore.length) {gsap.set(bulletsBefore, {width: '100%'})}
+						if(bulletsAfter.length) {gsap.set(bulletsAfter, {width: '0%'})}
+					},
 				}
 			});
-
-			// Function to update active steps
-			function updateSteps(current, total) {
-				$steps.removeClass('active completed');
-				$steps.each(function (index) {
-					if (index < current - 1) {
-						$(this).addClass('completed'); // Mark steps before the current as completed
-					} else if (index === current - 1) {
-						$(this).addClass('active'); // Highlight the current step
-					}
-				});
-			}
-	
-			// Function to update progress bar
-			function updateProgressBar(current, total) {
-				var progressPercentage = (current / total) * 100;
-				$steps.css('width', progressPercentage + '%');
-			}	
-		});
 	}
 	
 	function moduleOfficesJobs(){
