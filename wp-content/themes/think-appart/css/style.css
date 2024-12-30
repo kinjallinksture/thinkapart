@@ -1715,8 +1715,8 @@ body .background-black *::selection {
   transform: translateY(0);
   width: 992px;
   margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 60px;
   top: 16px;
   z-index: 99;
@@ -1762,6 +1762,7 @@ body .background-black *::selection {
 } 
 .header-container .button.button-black  {
   color: white;
+  line-height: normal;
 }
 .header-container .button.button-black:hover  {
   color: black;
