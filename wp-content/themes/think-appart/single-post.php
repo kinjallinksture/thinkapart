@@ -8,13 +8,24 @@ $id_blog_main_page = get_option('page_for_posts');
 
 while(have_rows('general')){
 	the_row();
-	$image = get_sub_field('image');
-	$border_rounded = '';
+	$image               = get_sub_field('image');
+	$border_rounded      = '';
+	$text_style_general  = get_sub_field('text_style_general');
+	$image_style_general = get_sub_field('image_style_general');
+	$title_width = '';
+	if( 'full-width' === $text_style_general ){
+		$title_width = 'title-full-width';
+	}
 	if(get_sub_field('image_border_rounded')){
 		$border_rounded = 'border-rounded';
 	}
 	?>
-	<section class="module module-cover-single-post">
+	<section class="module-image image-<?=$image_style_general?>">
+		<div class="image-container <?=$border_rounded?>">
+			<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+		</div>
+	</section>
+	<section class="module module-cover-single-post text-<?=$text_style_general?>">
 		<div class="title-container">
 			<p class="breadcrumb-container font-p font-bold font-color-green">
 				<a class="font-bold" href="<?=get_permalink($id_blog_main_page)?>"><?=get_the_title($id_blog_main_page)?></a>
@@ -25,10 +36,7 @@ while(have_rows('general')){
 					<?php
 				}
 				?>
-			<h1 class="title font-h1 font-regular"><?=get_the_title()?></h1>
-			<div class="image-container <?=$border_rounded?>">
-				<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
-			</div>
+			<h1 class="title font-h1 font-regular <?=$title_width?>"><?=get_the_title()?></h1>
 			<p class="text font-p font-color-gray"><?=get_sub_field('short_description')?></p>
 		</div>
 	</section>
@@ -43,6 +51,10 @@ while(have_rows('general')){
 		$info_c = jg_get_info_background_color();
 		$text_style = get_sub_field('text_style');
 		$image_style = get_sub_field('image_style');
+		$title_width = '';
+		if( 'full-width' === $text_style_general ){
+			$title_width = 'title-full-width';
+		}
 		?>
 		<section class="module module-content text-<?=$text_style?> image-<?=$image_style?> background-<?=$info_c['color']?> font-color-<?=$info_c['font_color']?>"  <?=$info_c['other_color_style']?>>
 			<?php
@@ -50,7 +62,7 @@ while(have_rows('general')){
 			if(!empty($title)){
 				$title_size = get_sub_field('title_size');
 				?>
-				<h2 class="title font-h1 size-<?=$title_size?>"><?=$title?></h2>
+				<h2 class="title font-h1 size-<?=$title_size?> <?=$title_width?>"><?=$title?></h2>
 				<?php
 			}
 			?>

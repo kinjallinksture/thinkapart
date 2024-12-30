@@ -74,7 +74,7 @@ while(have_rows('general')){
 			?>
 		</div> -->
 	</section>
-	<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>">
+	<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" //<?=$background['other_color']?>>
 		<div class="image-container image-mobile-view">
 			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 		</div>
