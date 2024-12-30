@@ -745,12 +745,13 @@
   .module-form {
     padding: 100px 110px;
   }
-  .module-related-posts {
-    padding: 130px 120px;
-  }
   .module-form .form-container .input-container .wpcf7-validates-as-required {
     width: 130px;
   }
+  .module-related-posts {
+    padding: 130px 120px;
+  }
+  
   .module-related-posts .posts-container {
     margin-top: 55px;
   }
