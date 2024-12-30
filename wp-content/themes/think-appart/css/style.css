@@ -1906,8 +1906,9 @@ body .background-black *::selection {
   transition: .3s;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label:hover {
-  border-color: #00D3A8;
-  color: #00D3A8;
+  border-color: black;
+  color: white;
+  background-color: black;
   transition: .3s;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label input {
@@ -1951,8 +1952,9 @@ body .background-black *::selection {
   padding: 18px 56px 22px 56px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label.checked {
-  border-color: #00D3A8;
-  color: #00D3A8;
+  border-color: black;
+  color: white;
+  background-color: black;
   transition: .3s;
 }
 
@@ -1976,6 +1978,7 @@ body .background-black *::selection {
     transition-delay: .3s;
     transition: all .3s ease-in;
     margin-top: 32px;
+    font-size: 19px;
   }
   .module-process .process-container .texts-container .text-container {
     padding: 25px 30px 25px 24px;
@@ -2033,6 +2036,7 @@ body .background-black *::selection {
     margin-bottom: 0;
     margin-left: 90px;
     transition: all .3s ease-in;
+    font-size: 30px;
   }
 }
 
@@ -2065,6 +2069,22 @@ body .background-black *::selection {
 
 .module-slider-scroll.with-top-image img {
   display: none;
+}
+.module-slider-images .slider-container .steps-container .step {
+  background: hsla(0,0%,100%,.5);
+  height: 10px;
+  margin: 0px 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  z-index: 9;
+}
+.module-slider-images .slider-container .steps-container  {
+  display: flex;
+}
+.module-slider-images .slider-container .steps-container .step.active {
+  background-color: white;
+  transition: 3s;
 }
 
 @media (max-width: 1599px) {
