@@ -2074,6 +2074,9 @@ background-color: transparent;
 }
 
 .module-slider-scroll.with-top-image img {
+  display: none;
+}
+.services-detail.with-top-image img {
   display: block;
 }
 .module-slider-images .slider-container .steps-container .swiper-pagination-bullet {
