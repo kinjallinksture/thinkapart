@@ -1422,6 +1422,7 @@ body .background-black *::selection {
     top: 0;
     bottom: 0;
     left: 0;
+    height:  calc(100vh + 10%);
     right: 0;
     background-color: white;
     display: flex;
@@ -1892,7 +1893,7 @@ body .background-black *::selection {
 }
 
 .module-form {
-  padding: 130px 140px;
+  padding: 152px 140px 130px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap {
   margin-left: 60px;
@@ -1919,7 +1920,7 @@ body .background-black *::selection {
 .module-form .form-container .input-container.input-big .wpcf7-list-item {
   margin-left: 18px;
 }
-.module-form .form-container .input-container .silect-estimate {
+.module-form .form-container .input-container .select-estimate {
   margin-right: 65px;
 }
 .module-form .form-container .input-container .wpcf7-select {
@@ -1938,7 +1939,7 @@ body .background-black *::selection {
   right: 10px;
   background-position-x: 72px;
 }
-.module-form .form-container .input-container .silect-budget {
+.module-form .form-container .input-container .select-budget {
   margin-right: 35px;
 }
 .module-form .form-container .input-container.message .wpcf7-form-control-wrap {
@@ -2163,6 +2164,9 @@ body .background-black *::selection {
     margin-left: 18px;
     margin-bottom: 30px;
   }
+  .module-form {
+    padding: 100px 110px 90px;
+}
 }
 @media (max-width: 1199px) {
   .title-image-main {
@@ -2206,9 +2210,9 @@ body .background-black *::selection {
     width: auto;
   }
   .header-container.sticky {
-    width: 750px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .header-container .logo-container .logo {
     width: 130px;
@@ -2232,7 +2236,7 @@ body .background-black *::selection {
   .module-form .form-container .input-container .wpcf7-validates-as-required {
     width: 100px;
   }
-  .module-form .form-container .input-container .silect-estimate {
+  .module-form .form-container .input-container .select-estimate {
     margin-right: 25px;
   }
   .module-form .form-container .input-container {
