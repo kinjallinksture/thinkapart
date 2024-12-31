@@ -2181,11 +2181,13 @@ background-color: transparent;
 .module-slider-scroll .steps-container .swiper-pagination-bullet {
   background: #181818;
 }
-.module-slider-scroll.background-black .steps-container .swiper-pagination-bullet {
+.module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
+.module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet {
   background: white;
   opacity: 1 !important;
 }
-.module-slider-scroll.background-black .steps-container .swiper-pagination-bullet {
+.module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
+.module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet {
   width: 170px;
 }
 .module-slider-scroll .steps-container .swiper-pagination-bullet.active {
