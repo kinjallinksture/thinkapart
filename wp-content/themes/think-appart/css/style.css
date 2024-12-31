@@ -1959,6 +1959,9 @@ body .background-black *::selection {
   background-color: black;
   transition: .3s;
 }
+.module-form.background-yellow .input-container .wpcf7-select {
+background-color: transparent;
+}
 
 @media (min-width: 800px) {
  
@@ -2208,6 +2211,7 @@ body .background-black *::selection {
 @media (max-width: 991px) {
   .header-container {
     width: auto;
+    padding: 30px 15px;
   }
   .header-container.sticky {
     width: 800px;
@@ -2228,7 +2232,7 @@ body .background-black *::selection {
     margin-left: 10px;
   }
   .header-container .button.button-small {
-    padding: 10px 13px;
+    padding: 8px 6px;
   }
   .header-container.sticky .logo-container .logo {
     width: 143px;
