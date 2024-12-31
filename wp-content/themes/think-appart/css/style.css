@@ -2153,7 +2153,7 @@ background-color: transparent;
 .module-slider-images .slider-container .swiper-button-next:after {
   display: none;
 }
-.module-slider-scroll .steps-container .swiper-pagination-bullet.active {
+.module-slider-scroll .steps-container .swiper-pagination-bullet-active {
   height: 2px;
 }
 .module-slider-scroll .steps-container {
