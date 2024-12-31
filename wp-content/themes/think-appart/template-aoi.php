@@ -157,28 +157,19 @@ while (have_rows('content')) {
 			<div class="slider-container">
 				<div class="swiper-wrapper">
 					<?php
-					$n_slides = 0;
 					foreach ($images as $image) {
 						?>
-						<div class="swiper-slide image-container">
+						<div class="story__slide swiper-slide image-container">
 							<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 						</div>
 						<?php
-						$n_slides++;
 					}
 					?>
 				</div>
-				<div class="steps-container">
-					<?php
-					$active = 'active';
-					for ($i=0; $i < $n_slides; $i++) {
-						?>
-						<div class="step <?=$active?>"></div>
-						<?php
-						$active = '';
-					}
-					?>
-				</div>
+				<div class="story__next swiper-button-next"></div>
+				<div class="story__prev swiper-button-prev"></div>
+
+				<div class="story__pagination swiper-pagination"></div>
 			</div>
 		</div>
 		<?php

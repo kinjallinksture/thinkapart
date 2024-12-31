@@ -463,16 +463,14 @@
 			var $screensContainer = $module.find('.screens-container');
 			if($screensContainer.find('.screen').length > 1){
 				var $steps = $module.find('.steps-container .step');
-
+		
 				if($(window).innerWidth() <= 800 || $module.hasClass('no-stuck')){
-					var $steps = $module.find('.steps-container .step');
+					// Initialize Swiper with correct options for version 9.x
 					var swiper = new Swiper($module.find('.screens-wrapper')[0], {
 						slidesPerView: 1,
-						enabled: true,
 						wrapperClass: 'screens-container',
 						slideClass: 'screen',
 						autoHeight: true,
-						// wrapperClass: 'screens-container',
 						breakpoints: {
 							800: {
 								autoHeight: false,
@@ -480,25 +478,23 @@
 						},
 						pagination: {
 							el: '.steps-container',
-							currentClass: 'active',
-							bulletClass: 'step',
-							type: 'custom',
 							clickable: true,
 							renderCustom: function(swiper, current, total){
 								$steps.removeClass('active');
-								$steps[current-1].classList.add('active');
+								$steps.eq(current - 1).addClass('active');
 							}
 						},
 					});
-				}else{
-					var width = $screensContainer.innerWidth()-$(window).innerWidth();
-
-					var tween = new TimelineMax().fromTo($screensContainer, 1, {x: "0px"},{x: -width+"px", ease: Linear.easeNone, onUpdate: function(){
-						var index = Math.round(this.progress()*($steps.length-1));
+				} else {
+					var width = $screensContainer.innerWidth() - $(window).innerWidth();
+		
+					// Adjusted ScrollMagic & TimelineMax code
+					var tween = new TimelineMax().fromTo($screensContainer, 1, {x: "0px"},{x: -width + "px", ease: Linear.easeNone, onUpdate: function(){
+						var index = Math.round(this.progress() * ($steps.length - 1));
 						$steps.removeClass('active');
-						$steps[index].classList.add('active');
-					}})
-
+						$steps.eq(index).addClass('active');
+					}});
+		
 					var scene = new ScrollMagic.Scene({
 						triggerElement: module,
 						triggerHook: 0,
@@ -506,10 +502,11 @@
 					})
 					.setPin(module)
 					.setTween(tween)
-					.addTo(scrollMagicController)
+					.addTo(scrollMagicController);
 				}
 			}
-		})
+		});
+		
 	}
 
 	function moduleProcess(){
