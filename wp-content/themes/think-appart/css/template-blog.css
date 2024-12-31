@@ -202,6 +202,7 @@
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
+  z-index: 9;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
