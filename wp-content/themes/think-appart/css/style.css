@@ -2076,7 +2076,7 @@ background-color: transparent;
 .module-slider-scroll.with-top-image img {
   display: none;
 }
-.module-slider-images .slider-container .steps-container .step {
+.module-slider-images .slider-container .steps-container .swiper-pagination-bullet {
   background: hsla(0,0%,100%,.5);
   height: 10px;
   margin: 0px 20px;
@@ -2088,34 +2088,34 @@ background-color: transparent;
 .module-slider-images .slider-container .steps-container  {
   display: flex;
 }
-.module-slider-images .slider-container .steps-container .step.active {
+.module-slider-images .slider-container .steps-container .swiper-pagination-bullet.active {
   background-color: white;
   transition: 3s;
 }
 
 /* slider */
-.story__slider {
+.module-slider-images .story__slider {
   width: 450px;
   height: 800px;
   border-radius: 6px;
   overflow: hidden;
 }
-.story__slide {
+.module-slider-images .story__slide {
   position: relative;
 }
-.story__slide img {
+.module-slider-images .story__slide img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
 }
-.story__pagination {
+.module-slider-images .story__pagination {
   bottom: unset !important;
   top: 8px !important;
   display: flex;
   padding: 0 4px;
 }
-.story__pagination .swiper-pagination-bullet {
+.module-slider-images .story__pagination .swiper-pagination-bullet {
   flex-grow: 1;
   border-radius:30px;
   height: .2083vw;
@@ -2123,25 +2123,25 @@ background-color: transparent;
   background-color: hsla(0,0%,100%,.5);
   opacity: 1;
 }
-.story__pagination .swiper-pagination-bullet .swiper-pagination-progress {
+.module-slider-images .story__pagination .swiper-pagination-bullet .swiper-pagination-progress {
   height: 100%;
   width: 0%;
   border-radius: 30px;
   background-color: white;
 }
-.story__prev, .story__next {
+.module-slider-images .story__prev, .story__next {
   height: 100%;
   width: 50%;
   top: 0;
   margin-top: 0;
 }
-.story__prev::after, .story__next::after {
+.module-slider-images .story__prev::after, .story__next::after {
   content: none;
 }
-.story__prev {
+.module-slider-images .story__prev {
   left: 0;
 }
-.story__next {
+.module-slider-images .story__next {
   right: 0;
 }
 .module-slider-images .slider-container .swiper-pagination {
