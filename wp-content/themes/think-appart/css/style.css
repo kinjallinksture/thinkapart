@@ -2390,6 +2390,16 @@ background-color: transparent;
   .module-author {
     overflow: hidden !important;
   }
+  .module-slider-scroll .steps-container {
+    bottom: 50px;
+  }
+  .module-slider-scroll .steps-container .swiper-pagination-bullet {
+    width: 70px;
+    margin: 0 10px;
+  }
+  .module-review .steps-container {
+    margin-top: 30px;
+  }
 }
 
 
