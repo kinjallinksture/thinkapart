@@ -262,7 +262,7 @@ while (have_rows('content')) {
 		}
 		?>
 
-		<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" <?=$background['other_color']?>>
+		<section class="module module-slider-scroll services-detail with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" <?=$background['other_color']?>>
 			<div class="image-container">
 				<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 			</div>
