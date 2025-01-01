@@ -2001,15 +2001,12 @@ background-color: transparent;
     visibility: hidden;
     opacity: 0;
     height: 0;
-    transition: visibility 0s linear 300ms, opacity 300ms ease-out, height 0s linear 300ms;
   }
   .module-process .process-container .texts-container .text-container.active p {
     display: block;
     visibility: visible;
     opacity: 1;
     height: fit-content;
-    transition-delay: .3s;
-    transition: all .3s ease-in;
     margin-top: 32px;
   }
   .module-process .process-container .texts-container .text-container p {
@@ -2025,7 +2022,7 @@ background-color: transparent;
     position: relative;
     border-radius: 20px;
     margin-bottom: 48px;
-    transition: all .3s ease-in;
+    transition: .3s;
   }
   .module-process .process-container .texts-container .text-container::after {
     content: "";
@@ -2035,14 +2032,14 @@ background-color: transparent;
     top: 29px;
     width: 34px;
     height: 34px;
-    transition: all .3s ease-in;
   }
   .module-process .process-container .texts-container .text-container.active {
     background-color: white;
     color: #000;
     border-color: white;
-    transition: all .3s ease-in;
+    transition: .3s;
   }
+
   .module-process .process-container .texts-container .text-container.active::after {
     content: "";
     background-image: url('../assets/img/services-active.svg');
@@ -2066,13 +2063,12 @@ background-color: transparent;
     left: 30px;
     top: 16px;
     border-radius: 100%;
-    transition: all .3s ease-in;
   }
   .module-process .process-container .texts-container .text-container .title {
     margin-bottom: 0;
     margin-left: 90px;
-    transition: all .3s ease-in;
     font-size: 30px;
+    transition: .3s;
   }
 }
 
@@ -2219,6 +2215,9 @@ background-color: transparent;
 .module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet {
   background: white;
   opacity: 1 !important;
+}
+.single-services .module-slider-scroll.background-black .steps-container .swiper-pagination-bullet {
+  width: 70px;
 }
 .module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
 .module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet,
