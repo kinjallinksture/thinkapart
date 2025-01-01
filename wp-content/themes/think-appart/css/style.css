@@ -1954,16 +1954,21 @@ body .background-black *::selection {
 .module-form .form-container.contact-form .input-container .wpcf7-validates-as-required.wpcf7-checkbox {
   position: inherit;
 }
-.module-form .form-container .input-container .select-estimate + .wpcf7-form-control-wrap .wpcf7-validates-as-required,
-.module-form .form-container .input-container .select-budget + .wpcf7-form-control-wrap .wpcf7-validates-as-required  {
-  position: absolute !important;
-  top: -20px;
-  width: 330px !important;
-}
-.module-form .form-container .input-container .wpcf7-validates-as-required {
+.module-form .form-container.contact-form .input-container .wpcf7-validates-as-required {
   width: 100%;
   position: inherit;
 }
+.module-form .form-container .input-container p {
+  display: flex;
+  align-items: center;
+}
+.module-form .form-container .input-container .wpcf7-form-control-wrap {
+  flex-grow: 1; 
+}
+.module-form .form-container .input-container.message .wpcf7-form-control {
+  width: 100%;
+}
+
 .module-form.background-green .form-container .input-container .wpcf7-validates-as-required {
   position: inherit;
   width: 100%;

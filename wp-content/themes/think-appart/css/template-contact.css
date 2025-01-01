@@ -64,6 +64,16 @@
   padding: 20px 0;
   border-bottom: 1px solid #181818;
 }
+.module-form .form-container .input-container p {
+  display: flex;
+  align-items: center;
+}
+.module-form .form-container .input-container .wpcf7-form-control-wrap {
+  flex-grow: 1; 
+}
+.module-form .form-container .input-container.message .wpcf7-form-control {
+  width: 100%;
+}
 .module-form .form-container .input-container .input::-webkit-input-placeholder {
   color: inherit;
 }
