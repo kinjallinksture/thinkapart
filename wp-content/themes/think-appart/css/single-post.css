@@ -33,8 +33,11 @@
 }
 .module-form .form-container .input-container {
   position: relative;
-  width: 45%;
+  width: 49%;
   margin-bottom: 60px;
+}
+.module-form .form-container .input-container p span:last-child {
+  flex-grow: 1; 
 }
 .module-form .form-container .input-container.input-big {
   width: 100%;
