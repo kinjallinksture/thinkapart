@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
 }
-.module-form .form-container .input-container .wpcf7-form-control-wrap {
+.module-form .form-container .input-container p span:last-child {
   flex-grow: 1; 
 }
 .module-form .form-container .input-container.message .wpcf7-form-control {

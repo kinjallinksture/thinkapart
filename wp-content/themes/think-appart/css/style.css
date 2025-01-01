@@ -1950,6 +1950,11 @@ body .background-black *::selection {
   margin-left: 0;
   font-size: 19px;
 }
+.module-form .form-container .input-container {
+  position: relative;
+  width: 49%;
+  margin-bottom: 60px;
+}
 
 .module-form .form-container.contact-form .input-container .wpcf7-validates-as-required.wpcf7-checkbox {
   position: inherit;
@@ -1962,7 +1967,7 @@ body .background-black *::selection {
   display: flex;
   align-items: center;
 }
-.module-form .form-container .input-container .wpcf7-form-control-wrap {
+.module-form .form-container .input-container p span:last-child {
   flex-grow: 1; 
 }
 .module-form .form-container .input-container.message .wpcf7-form-control {
