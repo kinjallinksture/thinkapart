@@ -2186,10 +2186,17 @@ background-color: transparent;
   background: white;
   opacity: 1 !important;
 }
+.module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
+  background-color: #181818;
+  opacity: 1;
+}
 .module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
 .module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet,
 .module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
   width: 170px;
+}
+.module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
+  margin: 0 16px;
 }
 .module-slider-scroll .steps-container .swiper-pagination-bullet.active {
   height: 2px;
