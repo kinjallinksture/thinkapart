@@ -1954,6 +1954,10 @@ body .background-black *::selection {
   top: -20px;
   width: 330px;
 }
+.module-form.background-green .form-container .input-container .wpcf7-validates-as-required {
+  position: inherit;
+  width: 100%;
+}
 .module-form .form-container .input-container .input-button {
   padding: 18px 56px 22px 56px;
 }
