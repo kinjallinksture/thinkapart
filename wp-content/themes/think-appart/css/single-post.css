@@ -58,6 +58,7 @@
      -moz-appearance: none;
           appearance: none;
   border-radius: 0;
+  font-size: 19px;
   border: none;
   background: transparent;
   width: 100%;
@@ -304,7 +305,7 @@
     font-size: 50px;
     font-weight: 300;
     font-family: 'Graphik';
-    margin-bottom: 60px !important;
+    margin-bottom: 73px !important;
 }
 @media (max-width: 800px){
 	.module-share .module-title.font-h1 {
@@ -545,11 +546,16 @@
 }
 .module-content.text-full-list-width .text .indented-list {
   columns: 2;
-  column-gap: 20px;
+  column-gap: 30px;
+  padding-left: 30px;
+}
+.module-content .text .indented-list {
+  padding-left: 30px;
 }
 .module-content.text-full-list-width .inner-list {
   columns: 2;
-  column-gap: 20px;
+  column-gap: 30px;
+  padding-left: 30px;
 }
 .module-related-services {
   padding: 140px 170px 122px;
@@ -681,6 +687,7 @@
   width: 90%;
   margin-bottom: 0;
   text-align: left;
+  line-height: 63px;
 }
 .module-image.image-full-width .border-rounded {
   margin: 0 134px 76px;

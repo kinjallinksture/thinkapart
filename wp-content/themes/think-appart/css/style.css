@@ -1904,6 +1904,7 @@ body .background-black *::selection {
   border: 1px solid #000;
   padding: 14px 32px;
   border-radius: 28px;
+  font-size: 19px;
   cursor: pointer;
   transition: .3s;
 }
@@ -1922,6 +1923,7 @@ body .background-black *::selection {
 }
 .module-form .form-container .input-container .select-estimate {
   margin-right: 65px;
+  font-size: 19px;
 }
 .module-form .form-container .input-container .wpcf7-select {
   display: inline-block;
@@ -1941,6 +1943,7 @@ body .background-black *::selection {
 }
 .module-form .form-container .input-container .select-budget {
   margin-right: 35px;
+  font-size: 19px;
 }
 .module-form .form-container .input-container.message .wpcf7-form-control-wrap {
   margin-left: 0;
