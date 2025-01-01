@@ -647,11 +647,15 @@
 	function moduleSliderImages() {
 		
 			const slider = new Swiper(".module-slider-images .slider-container", {
-				speed: 1,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true, // Enables the fade transition effect between slides
+				},
+				speed: 1000,
 				watchSlidesProgress: true,
 				loop: true,
 				autoplay: {
-					delay: 15000,
+					delay: 6000,
 					disableOnInteraction: false
 				},
 				slidesPerView: 1,
