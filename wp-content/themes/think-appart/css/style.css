@@ -1983,6 +1983,8 @@ background-color: transparent;
     transition-delay: .3s;
     transition: all .3s ease-in;
     margin-top: 32px;
+  }
+  .module-process .process-container .texts-container .text-container p {
     font-size: 19px;
     letter-spacing: -0.9px;
   }
@@ -2181,14 +2183,14 @@ background-color: transparent;
 .module-slider-scroll .steps-container .swiper-pagination-bullet {
   background: #181818;
 }
+.module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
+  background-color: #181818;
+  opacity: 1;
+}
 .module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
 .module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet {
   background: white;
   opacity: 1 !important;
-}
-.module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
-  background-color: #181818;
-  opacity: 1;
 }
 .module-slider-scroll.background-black .steps-container .swiper-pagination-bullet,
 .module-slider-scroll.background-blue .steps-container .swiper-pagination-bullet,
