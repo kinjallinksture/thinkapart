@@ -67,8 +67,10 @@ while(have_rows('general')){
 				<h2 class="title font-h1 size-<?=$title_size?> <?=$title_width?>"><?=$title?></h2>
 				<?php
 			}
+			if( 'full-list-width' === $text_style_general ){
 			?>
-			<div class="short-text font-p"><?=get_sub_field('short_description')?></div>
+				<div class="short-text font-p"><?=get_sub_field('short_description')?></div>
+			<?php } ?>
 			<div class="text font-p"><?=get_sub_field('text')?></div>
 			<?php
 			if($image_style !== 'none'){
