@@ -2001,13 +2001,15 @@ background-color: transparent;
     visibility: hidden;
     opacity: 0;
     height: 0;
+    transition: 0.3s ease-in-out;
   }
   .module-process .process-container .texts-container .text-container.active p {
-    display: block;
     visibility: visible;
     opacity: 1;
     height: fit-content;
+    transition: .3s ease-in-out;
     margin-top: 32px;
+    height: auto;
   }
   .module-process .process-container .texts-container .text-container p {
     font-size: 19px;
@@ -2022,7 +2024,7 @@ background-color: transparent;
     position: relative;
     border-radius: 20px;
     margin-bottom: 48px;
-    transition: .3s;
+    transition: all .5s ease-in-out;
   }
   .module-process .process-container .texts-container .text-container::after {
     content: "";
@@ -2032,14 +2034,14 @@ background-color: transparent;
     top: 29px;
     width: 34px;
     height: 34px;
+    transition: all .5s ease-in;
   }
   .module-process .process-container .texts-container .text-container.active {
     background-color: white;
     color: #000;
     border-color: white;
-    transition: .3s;
+    transition: all .5s ease-in;
   }
-
   .module-process .process-container .texts-container .text-container.active::after {
     content: "";
     background-image: url('../assets/img/services-active.svg');
@@ -2063,12 +2065,13 @@ background-color: transparent;
     left: 30px;
     top: 16px;
     border-radius: 100%;
+    transition: all .5s ease-in;
   }
   .module-process .process-container .texts-container .text-container .title {
     margin-bottom: 0;
     margin-left: 90px;
+    transition: all .5s ease-in;
     font-size: 30px;
-    transition: .3s;
   }
 }
 
