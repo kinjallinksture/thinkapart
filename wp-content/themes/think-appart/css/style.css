@@ -1919,7 +1919,7 @@ body .background-black *::selection {
   display: none;
 }
 .module-form .form-container .input-container.input-big .wpcf7-list-item {
-  margin-left: 18px;
+  margin-left: 15px;
 }
 .module-form .form-container .input-container .select-estimate {
   margin-right: 41px;
@@ -1932,6 +1932,7 @@ body .background-black *::selection {
   border-radius: 28px;
   cursor: pointer;
   transition: .3s;
+  font-size: 19px;
   appearance: none;
   background-image: url('../assets/img/arrow-down.svg');
   background-position: right center;
