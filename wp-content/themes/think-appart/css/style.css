@@ -1896,7 +1896,7 @@ body .background-black *::selection {
   padding: 152px 140px 130px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap {
-  margin-left: 40px;
+  margin-left: 5px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label {
   position: relative;
@@ -1922,7 +1922,7 @@ body .background-black *::selection {
   margin-left: 18px;
 }
 .module-form .form-container .input-container .select-estimate {
-  margin-right: 65px;
+  margin-right: 41px;
   font-size: 19px;
 }
 .module-form .form-container .input-container .wpcf7-select {
