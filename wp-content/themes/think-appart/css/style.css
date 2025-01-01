@@ -1896,7 +1896,7 @@ body .background-black *::selection {
   padding: 152px 140px 130px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap {
-  margin-left: 60px;
+  margin-left: 40px;
 }
 .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label {
   position: relative;
