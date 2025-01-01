@@ -1948,6 +1948,7 @@ body .background-black *::selection {
 }
 .module-form .form-container .input-container.message .wpcf7-form-control-wrap {
   margin-left: 0;
+  font-size: 19px;
 }
 .module-form .form-container .input-container .wpcf7-validates-as-required  {
   position: absolute;
