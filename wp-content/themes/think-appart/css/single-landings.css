@@ -341,9 +341,6 @@
   -webkit-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
-.module-process .process-container .texts-container .text-container:last-child {
-  padding-bottom: 0;
-}
 .module-process .process-container .texts-container .text-container:last-child .line {
   display: none;
 }
@@ -738,6 +735,9 @@
 }
 .module-slider-scroll .steps-container .step {
   width: 70px;
+}
+.single-landings .module-slider-scroll .steps-container .step {
+  width: 70px !important;
 }
 .module-slider-images {
   padding: var(--lateral-space-extra-small);
