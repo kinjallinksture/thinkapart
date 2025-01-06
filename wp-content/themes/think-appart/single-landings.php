@@ -386,7 +386,13 @@ while (have_rows('content')) {
 						?>
 					</div>
 					<div class="image-container only-desktop">
-						<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+					<div class="shapes-container js-animate" data-animation-type="shapes">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-1-white.svg" alt="" class="shape shape-1">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-2-black.svg" alt="" class="shape shape-2">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-3-white.svg" alt="" class="shape shape-3">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-6-black.svg" alt="" class="shape shape-4">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-7-black.svg" alt="" class="shape shape-5">
+					</div>
 					</div>
 				</div>
 			</div>

@@ -525,7 +525,7 @@
 				}})
 			})
 
-			tween.fromTo($module.find('.image-container'), $textContainer.length, {rotate: 0},{rotate: 320, ease: Linear.easeNone}, '-='+$textContainer.length)
+			tween.fromTo($module.find('.image-container1'), $textContainer.length, {rotate: 0},{rotate: 320, ease: Linear.easeNone}, '-='+$textContainer.length)
 
 			var scene = new ScrollMagic.Scene({
 				triggerElement: module,

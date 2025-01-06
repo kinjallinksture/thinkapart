@@ -375,7 +375,66 @@
   width: 40%;
   position: sticky;
   top: 150px;
+  height: 100%;
+  margin: 110px;
 }
+.module-process .image-container {
+	max-width: 60%;
+	margin-bottom: 80px;
+  }
+  .module-process .image-container .image {
+	max-height: 400px;
+  }
+  .module-process .image-container {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+  }
+  .module-process .shapes-container {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 420px;
+	height: 740px;
+	overflow: hidden;
+	pointer-events: none;
+	margin-bottom: 50px;
+  }
+  .module-process .shapes-container .shape {
+	position: absolute;
+  }
+  .module-process .shapes-container .shape.shape-1 {
+    width: 125px;
+    height: 125px;
+    bottom: 615px;
+    left: 80px;
+  }
+  .module-process .shapes-container .shape.shape-2 {
+    width: 192px;
+    height: 185px;
+    left: 0;
+    bottom: 260px;
+  }
+  .module-process .shapes-container .shape.shape-3 {
+    width: 185px;
+    height: 210px;
+    right: 20px;
+    bottom: 200px;
+  }
+  .module-process .shapes-container .shape.shape-4 {
+    width: 293px;
+    height: 147px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  .module-process .shapes-container .shape.shape-5 {
+    width: 210px;
+    height: 210px;
+    right: 0px;
+    bottom: 430px;
+  }
 @media (max-width: 800px) {
   .module-process {
     padding: 50px var(--lateral-space-extra-small);
