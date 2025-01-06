@@ -551,7 +551,7 @@
 }
 .module-content.text-full-list-width .text .indented-list {
   columns: 2;
-  column-gap: 30px;
+  column-gap: 56px;
   padding-left: 29px;
 }
 .module-content .text .indented-list {
