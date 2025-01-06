@@ -801,9 +801,6 @@
   .module-form {
     padding: 100px 110px;
   }
-  .module-form .form-container .input-container .wpcf7-validates-as-required {
-    width: 130px;
-  }
   .module-related-posts {
     padding: 90px 80px;
   }
@@ -848,9 +845,6 @@
   }
   .module-related-posts {
     padding: 90px 80px;
-  }
-  .module-form .form-container .input-container .wpcf7-validates-as-required {
-    width: 100px;
   }
   .module-form .form-container .input-container .select-estimate {
     margin-right: 25px;

@@ -1882,7 +1882,7 @@ body .background-black *::selection {
   width: 200px;
   display: flex;
   align-self: center;
-  margin: 0 0 18px 0;
+  margin: 0 6px 18px 6px;
 }
 .header-container.sticky .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item img {
   margin-right: 8px;
@@ -1925,6 +1925,7 @@ body .background-black *::selection {
 .module-form .form-container .input-container .select-estimate {
   margin-right: 41px;
   font-size: 16px;
+  flex-shrink: 0;
 }
 .module-form .form-container .input-container .wpcf7-select {
   display: inline-block;
@@ -1946,6 +1947,7 @@ body .background-black *::selection {
 .module-form .form-container .input-container .select-budget {
   margin-right: 35px;
   font-size: 16px;
+  flex-shrink: 0;
 }
 .module-form .form-container .input-container.message .wpcf7-form-control-wrap {
   margin-left: 0;
@@ -2234,6 +2236,9 @@ background-color: transparent;
 .module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
   margin: 0 16px;
 }
+/* .page-template-template-services .module-slider-scroll.no-stuck .steps-container .swiper-pagination-bullet {
+  margin: 0 28px;
+} */
 .module-slider-scroll .steps-container .swiper-pagination-bullet.active {
   height: 2px;
 }
@@ -2278,9 +2283,6 @@ background-color: transparent;
   }
   .module-form {
     padding: 100px 110px;
-  }
-  .module-form .form-container .input-container .wpcf7-validates-as-required {
-    width: 130px;
   }
 }
 @media (max-width: 1024px)  {
@@ -2332,9 +2334,6 @@ background-color: transparent;
   .header-container.sticky .logo-container .logo {
     width: 143px;
   }
-  .module-form .form-container .input-container .wpcf7-validates-as-required {
-    width: 100px;
-  }
   .module-form .form-container .input-container .select-estimate {
     margin-right: 25px;
   }
@@ -2346,6 +2345,9 @@ background-color: transparent;
   }
   .module-form {
     padding: 80px 80px;
+  }
+  .module-form .form-container .input-container .select-budget {
+    margin-right: 15px;
   }
 
 }
@@ -2458,6 +2460,18 @@ background-color: transparent;
   .module-review .steps-container {
     margin-top: 30px;
   }
+}
+
+@media (max-width: 767px) {
+  .module-form .form-container .input-container p {
+    flex-wrap: wrap;
+  }
+  .module-form .form-container .input-container .select-budget {
+    margin-right: 0px;
+  }
+  .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap {
+    margin-left: 0px;
+  } 
 }
 
 
