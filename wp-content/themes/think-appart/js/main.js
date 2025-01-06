@@ -110,6 +110,7 @@
 	    $('.header-container .open-sub-menu').on('click', function(event) {
 	        $('.header-container .menu-mobile-button').addClass('dark');
 	        $('.sub_mega_menu_content').addClass('opened');
+			$('body').addClass('mobile-services');
 	    });
 	}
 
@@ -117,6 +118,7 @@
 	    $('.header-container .return-main-nav').on('click', function(event) {
 	        $('.header-container .menu-mobile-button').removeClass('dark');
 	        $('.sub_mega_menu_content').removeClass('opened');
+			$('body').removeClass('mobile-services');
 	    });
 	}
 
