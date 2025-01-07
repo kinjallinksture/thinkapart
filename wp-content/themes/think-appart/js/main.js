@@ -17,10 +17,12 @@
 				// On hover, set the height based on the content size
 				var contentHeight = $(this).find('.mega-menu-inner').outerHeight(true); 
 				$('.mega_menu_content').css('height', contentHeight);
+				$('body').addClass('show-mega-menu');
 			},
 			function() {
 				// On hover out, reset the height (if necessary)
 				$('.mega_menu_content').css('height', '0');
+				$('body').removeClass('show-mega-menu');
 			}
 		);
 		$('.mega_menu_content').css('height', '0');
