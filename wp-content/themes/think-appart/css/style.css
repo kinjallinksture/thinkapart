@@ -2274,6 +2274,9 @@ background-color: transparent;
 .mobile-services .header-container .logo-container .logo {
   opacity: 0;
 }
+.header-container .logo-container .logo {
+  opacity: 1;
+}
 
 .module-process .process-container .image-container {
   width: 40%;
