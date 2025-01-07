@@ -104,6 +104,7 @@
 	        if ($('.sub_mega_menu_content').hasClass('opened')) {
 		        $('.sub_mega_menu_content').removeClass('opened');
 				$('body').removeClass('show-menu mobile-services');
+				$(this).removeClass('dark');
 		    }
 	    });
 	}
