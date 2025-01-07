@@ -445,7 +445,6 @@
   }
   .module-process .module-title {
     text-align: center;
-    margin-bottom: 90px;
   }
   .module-process .process-container .texts-container {
     width: 100%;
@@ -963,4 +962,10 @@
 .recaptcha-holder {
   display: flex; 
   justify-content: center;
+}
+
+@media (max-width: 991px)  {
+  .module-process .process-container .texts-container {
+    padding-top: 40px;
+  }
 }
