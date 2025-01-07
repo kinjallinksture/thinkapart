@@ -2048,6 +2048,9 @@ background-color: transparent;
     margin-bottom: 48px;
     transition: all .5s ease-in-out;
   }
+  .module-process .process-container .texts-container .text-container:last-child {
+    margin-bottom: 0;
+  }
   .module-process .process-container .texts-container .text-container .title::after {
     content: "";
     background-image: url('../assets/img/services.svg');
@@ -2654,6 +2657,9 @@ background-color: transparent;
   .module-form .form-container .input-container .select-budget {
     margin-bottom: 6px;
     width: 100%;
+  }
+  .module-process .module-content {
+    padding: 70px 30px;
   }
   .module-form .form-container .input-container .select-estimate {
     width: 100%;
