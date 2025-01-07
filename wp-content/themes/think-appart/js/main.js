@@ -103,7 +103,7 @@
 	        $('html').toggleClass('overflow-hidden');
 	        if ($('.sub_mega_menu_content').hasClass('opened')) {
 		        $('.sub_mega_menu_content').removeClass('opened');
-				$('body').removeClass('show-menu');
+				$('body').removeClass('show-menu mobile-services');
 		    }
 	    });
 	}
