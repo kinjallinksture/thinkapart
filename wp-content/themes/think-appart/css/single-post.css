@@ -499,7 +499,7 @@
 }
 
 .text.font-p{
-	font-size: 20px;
+	font-size: 19px;
 }
 
 .module-author .author-container .author-summary .social-links-container {
@@ -552,7 +552,10 @@
 .module-content.text-full-list-width .text .indented-list {
   columns: 2;
   column-gap: 56px;
-  padding-left: 29px;
+  padding-left: 18px;
+}
+.module-content.text-full-list-width .text .indented-list li {
+  margin-bottom: 12px;
 }
 .module-content .text .indented-list {
   padding-left: 30px;
@@ -560,6 +563,9 @@
 .module-content.text-full-list-width .inner-list {
   columns: 2;
   column-gap: 30px;
+}
+.module-content.text-full-list-width p {
+  font-size: 19px;
 }
 .module-related-services {
   padding: 140px 170px 122px;
@@ -577,7 +583,7 @@
 
 }
 .module-content .text p {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 28px;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -874,7 +880,12 @@
     width: 100%;
     margin-bottom: 36px;
     text-align: left;
+    line-height: 42px;
   }
+  h2, .font-h1 {
+    line-height: 42px;
+  }
+  
   .module-cover-single-post.text-full-width, .module-content.text-full-width  {
     text-align: left;
     margin: 0;
@@ -932,4 +943,7 @@
   columns: 1;
   column-gap: 0;
 }
+.module-image.image-full-width .border-rounded {
+  margin: 0 0 30px 0;
+} 
 }
