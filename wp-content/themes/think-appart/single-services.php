@@ -223,36 +223,6 @@ while(have_rows('awards')){
 	</section>
 	<?php
 }
-
-while(have_rows('client_logos')){
-	the_row();
-	if(get_sub_field('use_general_logos')){
-		while(have_rows('general_client_logos','option')){
-			the_row();
-			$logos = get_sub_field('logos');
-		}
-	}else{
-		$logos = get_sub_field('logos');
-	}
-
-	?>
-	<section class="module module-logos background-black">
-		<div class="display-container">
-			<div class="display-text-container">
-				<div class="display-text-wrapper">
-					<?php
-					foreach ($logos as $logo) {
-						?>
-						<img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="display-image">
-						<?php
-					}
-					?>
-				</div>
-			</div>
-		</div>
-	</section>
-	<?php
-}
 while(have_rows('process')){
 	the_row();
 ?>
@@ -294,6 +264,35 @@ while(have_rows('process')){
 	</div>
 </section>
 <?php
+}
+while(have_rows('client_logos')){
+	the_row();
+	if(get_sub_field('use_general_logos')){
+		while(have_rows('general_client_logos','option')){
+			the_row();
+			$logos = get_sub_field('logos');
+		}
+	}else{
+		$logos = get_sub_field('logos');
+	}
+
+	?>
+	<section class="module module-logos background-black">
+		<div class="display-container">
+			<div class="display-text-container">
+				<div class="display-text-wrapper">
+					<?php
+					foreach ($logos as $logo) {
+						?>
+						<img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>" class="display-image">
+						<?php
+					}
+					?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php
 }
 if(have_rows('reviews')){
 	?>
