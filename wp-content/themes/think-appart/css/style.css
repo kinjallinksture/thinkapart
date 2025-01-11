@@ -2619,6 +2619,9 @@ background-color: transparent;
     overflow: hidden;
   }
   .header-container.sticky {
+    opacity: 0.86;
+  }
+  .show-menu .header-container.sticky {
     opacity: 1;
   }
   .header-container.sticky .nav-container .menu-container {
