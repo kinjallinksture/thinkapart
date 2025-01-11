@@ -125,19 +125,20 @@
 									<div class="return-main-nav">
 										<button aria-expanded="true"><i class="fa-solid fa-chevron-left sub-service-mobile"></i></button>
 									</div>
+									<div class="services-sub-menu">
 									<?php
 										while(have_rows('mega_menu_content', 'option')){
 											the_row();
 												$mega_menu_page_link = get_sub_field('menu_link'); 
 												$menu_image = get_sub_field('menu_image');
-									?>	
-									<div class="services-sub-menu">
+										?>	
 										<div class="sub_mega_menu_item"> 
 											<img src="<?php echo $menu_image; ?>"/>
 											<a href="<?php echo esc_url(get_permalink($mega_menu_page_link->ID)); ?>" class="text" rel="noopener noreferrer"><?php echo esc_html(get_the_title($mega_menu_page_link->ID)); ?></a>
 										</div>
-									</div>
+									
 									<?php } ?>
+									</div>
 								</nav>
 								<!-- END MEGA MENU -->
 								<?php endif; ?>
