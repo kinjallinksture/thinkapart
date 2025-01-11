@@ -2574,10 +2574,10 @@ background-color: transparent;
     transform: translate(110%);
   }
   .header-container.sticky .nav-container.opened {
-    transform: translate(8px) !important;
+    transform: translate(9px) !important;
     position: fixed;
     top: 13px;
-    left: 17px;
+    left: 15px;
     right: 33px;
     bottom: 12px;
     border-radius: 27px;
