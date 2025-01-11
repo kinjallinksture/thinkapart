@@ -1157,7 +1157,7 @@ body .background-black *::selection {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 60px;
   font-size: 20px;
   line-height: 22px;
 }
@@ -1376,6 +1376,7 @@ body .background-black *::selection {
             justify-content: space-between;
     background-color: #181818;
     padding: 90px var(--lateral-space);
+    padding-top: 100px;
     -webkit-transform: translate(110%);
             transform: translate(110%);
     -webkit-transition: -webkit-transform 0.4s;
@@ -1422,7 +1423,7 @@ body .background-black *::selection {
     top: 0;
     bottom: 0;
     left: 0;
-    height:  calc(100vh + 10%);
+    height: 100vh;
     right: 0;
     background-color: white;
     display: flex;
@@ -1430,8 +1431,8 @@ body .background-black *::selection {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    padding-left: 56px;
     row-gap: 44px;
-    padding: 90px var(--lateral-space);
     -webkit-transform: translate(100%);
             transform: translate(100%);
     -webkit-transition: -webkit-transform 0.4s;
@@ -1443,18 +1444,41 @@ body .background-black *::selection {
   }
   .header-container.sticky .sub_mega_menu_content  {
     height:  calc(100vh - 24px);
+    overflow: hidden;
   }
   .sub_mega_menu_content.opened {
     -webkit-transform: translate(0%);
             transform: translate(0%);
+  }
+  .mobile-services .sub_mega_menu_content.opened {
+    width: 100%;
+    left: 0;
+    padding: 0 0 0 56px;
+    background: #000;
+  }
+
+  .mobile-services .sub_mega_menu_content.opened .services-sub-menu {
+    row-gap: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px var(--lateral-space);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 0 0 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
   }
   .return-main-nav {
     display: flex;
     position: absolute;
     left: 0;
     width: 56px;
+    top: 0;
     background-color: #181818;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
   }
@@ -1468,6 +1492,7 @@ body .background-black *::selection {
       align-items: center;
       width: 184px;
       column-gap: 12px;
+      font-size: 14px;
   }
   .header-container .social-links-container {
       justify-content: center !important;
@@ -1720,14 +1745,18 @@ body .background-black *::selection {
   transform: translateY(0);
   width: 992px;
   margin: 0 auto;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-radius: 60px;
   top: 16px;
   z-index: 99;
   box-shadow: 0px 0 15px 0px rgba(0, 0, 0, 0.08);
   background-color: white;
   opacity: 0.86;
+}
+.header-container.sticky .social-links-container {
+  margin-top: 50px;
+
 }
 .show-mega-menu .header-container.sticky {
   box-shadow: none;
@@ -2546,9 +2575,9 @@ background-color: transparent;
   .header-container.sticky .nav-container.opened {
     transform: translate(3%) !important;
     position: fixed;
-    top: 12px;
-    left: 0px;
-    right: 36px;
+    top: 13px;
+    left: 17px;
+    right: 33px;
     bottom: 12px;
     border-radius: 27px;
     display: -webkit-box;
@@ -2570,7 +2599,6 @@ background-color: transparent;
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s;
     overflow: hidden;
-    overflow-y: auto;
   }
   .show-menu .header-container::before {
     content: "";
@@ -2582,6 +2610,9 @@ background-color: transparent;
     height: 100%;
     width: 100%;
     background-size: cover;
+  }
+  .header-container {
+    padding: 16px 25px;
   }
   .mobile-services .header-container.sticky .nav-container.opened {
     overflow: hidden;
@@ -2694,6 +2725,8 @@ background-color: transparent;
     margin-left: 10px;
     padding: 10px 44px 10px 24px;
     background-position-x: 68px;
+    background-color: transparent;
+    color: black;
 
   }
   .module-form .form-container .input-container.input-big .wpcf7-form-control-wrap .wpcf7-list-item label {
