@@ -131,10 +131,12 @@
 												$mega_menu_page_link = get_sub_field('menu_link'); 
 												$menu_image = get_sub_field('menu_image');
 									?>	
+									<div class="services-sub-menu">
 										<div class="sub_mega_menu_item"> 
 											<img src="<?php echo $menu_image; ?>"/>
 											<a href="<?php echo esc_url(get_permalink($mega_menu_page_link->ID)); ?>" class="text" rel="noopener noreferrer"><?php echo esc_html(get_the_title($mega_menu_page_link->ID)); ?></a>
 										</div>
+									</div>
 									<?php } ?>
 								</nav>
 								<!-- END MEGA MENU -->
