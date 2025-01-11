@@ -2574,7 +2574,7 @@ background-color: transparent;
     transform: translate(110%);
   }
   .header-container.sticky .nav-container.opened {
-    transform: translate(3%) !important;
+    transform: translate(8px) !important;
     position: fixed;
     top: 13px;
     left: 17px;
