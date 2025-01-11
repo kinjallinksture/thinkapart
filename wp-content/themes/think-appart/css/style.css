@@ -1994,6 +1994,7 @@ body .background-black *::selection {
   position: relative;
   right: 10px;
   background-position-x: 72px;
+  background-color: transparent;
 }
 .module-form .form-container .input-container .select-budget {
   margin-right: 35px;

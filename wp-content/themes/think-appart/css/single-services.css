@@ -272,6 +272,100 @@
   max-height: 130px;
   margin: 0 10px;
 }
+.module-process {
+  padding: 75px var(--lateral-space-extra-small);
+}
+.module-process .module-content {
+  padding: 180px 130px;
+  border-radius: 45px;
+}
+.module-process .module-title {
+  margin-bottom: 30px;
+}
+.module-process .process-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.module-process .process-container .texts-container {
+  position: relative;
+  width: 54%;
+  max-width: 490px;
+  padding-top: 110px;
+}
+.module-process .process-container .texts-container .text-container {
+  position: relative;
+  padding-left: 54px;
+  padding-bottom: 90px;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.module-process .process-container .texts-container .text-container:last-child .line {
+  display: none;
+}
+.module-process .process-container .texts-container .text-container.active {
+  opacity: 1;
+}
+.module-process .process-container .texts-container .text-container .dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.module-process .process-container .texts-container .text-container .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #FFFFFF;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.module-process .process-container .texts-container .text-container .title {
+  margin-bottom: 12px;
+}
+.module-process .process-container .image-container {
+  width: 40%;
+  position: sticky;
+  top: 150px;
+}
+@media (max-width: 800px) {
+  .module-process {
+    padding: 50px var(--lateral-space-extra-small);
+  }
+  .module-process .module-content {
+    padding: 50px 30px;
+    border-radius: 25px;
+  }
+  .module-process .module-title {
+    text-align: center;
+  }
+  .module-process .process-container .texts-container {
+    width: 100%;
+    padding-top: 0;
+  }
+  .module-process .process-container .texts-container .text-container {
+    padding-left: 32px;
+    padding-bottom: 60px;
+  }
+  .module-process .process-container .texts-container .text-container .dot {
+    width: 16px;
+    height: 16px;
+  }
+}
 @media (max-width: 800px) {
   .module-awards {
     padding: 90px var(--lateral-space);

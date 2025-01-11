@@ -54,7 +54,7 @@ while(have_rows('general')){
 		$text_style = get_sub_field('text_style');
 		$image_style = get_sub_field('image_style');
 		$title_width = '';
-		if( 'full-width' === $text_style_general ){
+		if( 'full-width' === $text_style ){
 			$title_width = 'title-full-width';
 		}
 		?>
@@ -67,8 +67,7 @@ while(have_rows('general')){
 				<h2 class="title font-h1 size-<?=$title_size?> <?=$title_width?>"><?=$title?></h2>
 				<?php
 			}
-			if( 'full-list-width' === $text_style_general ){
-			?>
+			if( 'full-list-width' === $text_style ){ ?>
 				<div class="short-text font-p"><?=get_sub_field('short_description')?></div>
 			<?php } ?>
 			<div class="text font-p"><?=get_sub_field('text')?></div>
