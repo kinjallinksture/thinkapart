@@ -362,7 +362,6 @@ while (have_rows('content')) {
 		</section>
 		<?php
 	}elseif($layout == 'process'){
-		$image = get_sub_field('image');
 		?>
 		<section class="module module-process">
 			<div class="module-content background-yellow">
@@ -378,7 +377,11 @@ while (have_rows('content')) {
 								<div class="dot"></div>
 								<div class="line"></div>
 								<h3 class="title font-h3"><?=get_sub_field('title')?></h3>
-								<p class="text font-p"><?=get_sub_field('text')?></p>
+								<?php 
+								$text = get_sub_field('text');
+								if ( ! empty( $text ) ) { ?>
+									<p class="text font-p"><?=get_sub_field('text')?></p>
+								<?php } ?>
 							</div>
 							<?php
 							$active = '';
