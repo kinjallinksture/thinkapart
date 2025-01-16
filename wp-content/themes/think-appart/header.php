@@ -175,9 +175,19 @@
 								<p class="text"><?=$email?></p>
 							</a>
 						</div>
+						<div class="social-links-container font-color-white only-mobile">
+						<?php
+							while(have_rows('social_networks', 'option')){
+								the_row();
+								?>
+								<a href="<?=get_sub_field('link')?>" class="social-link font-semibold" target="_blank" rel="noopener noreferrer"><?=get_sub_field('text')?></a>
+								<?php
+							}
+							?>
+						</div>
 					</div>
 					<?php
-				}
+				}	
 			}
 			?>
 			<div class="menu-mobile-button only-mobile">
