@@ -1752,7 +1752,7 @@ body .background-black *::selection {
   z-index: 99;
   box-shadow: 0px 0 15px 0px rgba(0, 0, 0, 0.08);
   background-color: white;
-  opacity: 0.86;
+  opacity: 0.95;
 }
 .header-container.sticky .social-links-container {
   margin-top: 50px;
@@ -2095,15 +2095,21 @@ background-color: transparent;
     width: 34px;
     height: 34px;
     transition: all .5s ease-in;
+    scale: 0.7;
   }
   .module-process .process-container .texts-container .text-container.active {
     background-color: white;
     color: #000;
     border-color: white;
-    transition: all .5s ease-in;
+    transition: all .3s ease-in;
   }
   .module-process .process-container .texts-container .text-container.active .title::after {
     background-image: url('../assets/img/services-active.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s ease-in;
+    scale: 1;
   }
   
   .module-process .process-container .texts-container .text-container.active .title::before {
@@ -2226,13 +2232,13 @@ background-color: transparent;
   border-radius: 30px;
   background-color: white;
 }
-.module-slider-images .story__prev, .story__next {
+.module-slider-images .story__prev, .module-slider-images .story__next {
   height: 100%;
   width: 50%;
   top: 0;
   margin-top: 0;
 }
-.module-slider-images .story__prev::after, .story__next::after {
+.module-slider-images .story__prev::after, .module-slider-images .story__next::after {
   content: none;
 }
 .module-slider-images .story__prev {
@@ -2250,9 +2256,24 @@ background-color: transparent;
   width: 70px !important;
   border-radius: 0;
 }
-.module-slider-images .slider-container .swiper-button-prev:after,
+.module-slider-images .slider-container .swiper-button-prev:after {
+  content: " ";
+  background-image: url('../assets/img/navigation-right.svg');
+  background-repeat: no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  background-position: center center;
+  transform: rotate(180deg);
+}
 .module-slider-images .slider-container .swiper-button-next:after {
-  display: none;
+  content: " ";
+  background-image: url('../assets/img/navigation-right.svg');
+  background-repeat: no-repeat;
+  background-size: 50px;
+  height: 50px;
+  width: 50px;
+  background-position: center center;
 }
 .module-slider-scroll .steps-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
   height: 2px;
@@ -2619,7 +2640,7 @@ background-color: transparent;
     overflow: hidden;
   }
   .header-container.sticky {
-    opacity: 0.86;
+    opacity: 0.95;
   }
   .show-menu .header-container.sticky {
     opacity: 1;
