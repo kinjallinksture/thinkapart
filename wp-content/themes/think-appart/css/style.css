@@ -2728,6 +2728,9 @@ background-color: transparent;
   h2, .font-h1 {
     line-height: 42px;
   }
+  .module-process .process-container .texts-container .text-container .title::after  {
+    scale: 0.8;
+  }
 }
 
 @media (max-width: 767px) {
