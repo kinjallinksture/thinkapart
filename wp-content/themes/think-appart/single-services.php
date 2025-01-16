@@ -32,7 +32,6 @@ while(have_rows('general')){
 			<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 		</div>
 		</div>
-		<!-- Tweaked by TBS - to add link to the AOI when link is filled in -->
 		<div class="areas-container font-p">
 			<p class="title font-bold"><?=get_sub_field('list_areas_title')?></p>
 			<?php
@@ -53,26 +52,6 @@ while(have_rows('general')){
 			}
 			?>
 		</div>
-		
-		<!-- Added by TBS - Dynamic but will only show the services AOI that exist so please make sure to add all AOI and use this -->
-		<!-- <div class="areas-container font-p">
-			<p class="title font-bold"><?=get_sub_field('list_areas_title')?> Dynamic</p>
-			<?php
-			// $list_areas_dynamic = get_sub_field('list_areas_dynamic');
-			// if ($list_areas_dynamic) {
-			// 	foreach ($list_areas_dynamic as $post) {
-			// 		setup_postdata($post);
-
-			// 		$area_link = get_field('area_link');
-			// 		$area_name = get_the_title(); 
-			?>
-					<p><a href="<?= $area_link ?>"><?php echo $area_name; ?></a></p>
-			<?php
-				// }
-				// wp_reset_postdata();
-			//}
-			?>
-		</div> -->
 	</section>
 	<section class="module module-slider-scroll with-top-image <?=$module_slider_class?> background-<?=$background['color']?> font-color-<?=$background['font_color']?>" //<?=$background['other_color']?>>
 		<div class="image-container image-mobile-view">
@@ -114,6 +93,7 @@ while(have_rows('general')){
 	<?php
 	while(have_rows('process')){
 		the_row();
+		if (have_rows('process_detail')) {
 	?>
 	<section class="module module-process">
 		<div class="module-content background-yellow">
@@ -153,6 +133,7 @@ while(have_rows('general')){
 		</div>
 	</section>
 	<?php
+		}
 	}
 	if (have_rows('read_more_text')): 
 		while (have_rows('read_more_text')): the_row(); 

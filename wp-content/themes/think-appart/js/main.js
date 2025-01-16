@@ -2,7 +2,7 @@
 	var scrollMagicController = null;
 	var lastScrollTop = 0;
 
-	$(document).ready(function(){
+	$(document).ready(function($){
 		fixVH();
 		function adjustMegaMenuHeight() {
 			$('.service-nav-item').each(function () {
@@ -42,6 +42,23 @@
 				label.removeClass('checked');
 			}
 		});
+
+		$('.budget-text, .budget').on('input', function () {
+			const budgetTextValue = parseFloat($('.budget-text').val());
+			const estimateValue = parseFloat($('.budget').val());
+			if (budgetTextValue === 0 || estimateValue === 0 && (!isNaN(budgetTextValue) || !isNaN(estimateValue)) ) {
+				$(this).next('.wpcf7-not-valid-tip').remove();
+				$(this).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
+			} else if (budgetTextValue < estimateValue) {
+				// If budget-text is less than budget-estimate, show error message
+				if ($(this).next('.wpcf7-not-valid-tip').length === 0) {
+					$(this).after('<span class="wpcf7-not-valid-tip">Value cannot be more than budget estimate.</span>');
+				}
+			} else {
+				$(this).next('.wpcf7-not-valid-tip').remove(); // Remove error if valid
+			}
+		});
+		
 	})
 
 	$(window).on('load', function(){
