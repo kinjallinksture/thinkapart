@@ -560,6 +560,9 @@
 .module-content .text .indented-list {
   padding-left: 30px;
 }
+.module-content .text .indented-list:last-child {
+  margin-bottom: 0;
+}
 .module-content.text-full-list-width .inner-list {
   columns: 2;
   column-gap: 30px;
@@ -868,6 +871,9 @@
 
 }
   @media (max-width: 800px) {
+    .module-content .image-container.border-rounded {
+      padding-top: 100px;
+    }
   .module-cover-single-post .title-container .breadcrumb-container {
     margin-bottom: 40px;
   }

@@ -2795,6 +2795,8 @@ background-color: transparent;
     margin-bottom: 30px;
   }
   .module-author .author-container .author-profile img {
-    max-width: 336px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }
