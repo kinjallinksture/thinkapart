@@ -111,10 +111,52 @@ while(have_rows('general')){
 			</div>
 		</div>
 	</section>
-
-	<?php if (have_rows('read_more_text')): ?>
-	<?php while (have_rows('read_more_text')): the_row(); ?>
-	<?php $title = get_sub_field('title'); ?>
+	<?php
+	while(have_rows('process')){
+		the_row();
+	?>
+	<section class="module module-process">
+		<div class="module-content background-yellow">
+			<h2 class="module-title font-h1"><?=get_sub_field('title')?></h2>
+			<div class="process-container">
+				<div class="texts-container">
+					<?php
+					$active = 'active';
+					while(have_rows('process_detail')){
+						the_row();
+						?>
+						<div class="text-container <?=$active?>">
+							<div class="dot"></div>
+							<div class="line"></div>
+							<h3 class="title font-h3"><?=get_sub_field('title')?></h3>
+							<?php 
+							$text = get_sub_field('text');
+							if ( ! empty( $text ) ) { ?>
+								<p class="text font-p"><?=get_sub_field('text')?></p>
+							<?php } ?>
+						</div>
+						<?php
+						$active = '';
+					}
+					?>
+				</div>
+				<div class="image-container only-desktop">
+					<div class="shapes-container js-animate" data-animation-type="shapes">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-1-white.svg" alt="" class="shape shape-1">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-2-black.svg" alt="" class="shape shape-2">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-3-white.svg" alt="" class="shape shape-3">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-6-black.svg" alt="" class="shape shape-4">
+						<img src="<?=get_template_directory_uri()?>/assets/svg/shape-7-black.svg" alt="" class="shape shape-5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php
+	}
+	if (have_rows('read_more_text')): 
+		while (have_rows('read_more_text')): the_row(); 
+		$title = get_sub_field('title'); ?>
 	<section class="module <?= ($title ? 'module-question' : 'module-question-hidden'); ?>">
 			<p class="module-title font-h1"><?= $title ?></p>
 		<div class="more-info-container">
@@ -204,7 +246,6 @@ while(have_rows('works')){
 		<?php
 	}
 }
-
 while(have_rows('awards')){
 	the_row();
 	?>
@@ -222,48 +263,6 @@ while(have_rows('awards')){
 		</div>
 	</section>
 	<?php
-}
-while(have_rows('process')){
-	the_row();
-?>
-<section class="module module-process">
-	<div class="module-content background-yellow">
-		<h2 class="module-title font-h1"><?=get_sub_field('title')?></h2>
-		<div class="process-container">
-			<div class="texts-container">
-				<?php
-				$active = 'active';
-				while(have_rows('process_detail')){
-					the_row();
-					?>
-					<div class="text-container <?=$active?>">
-						<div class="dot"></div>
-						<div class="line"></div>
-						<h3 class="title font-h3"><?=get_sub_field('title')?></h3>
-						<?php 
-						$text = get_sub_field('text');
-						if ( ! empty( $text ) ) { ?>
-							<p class="text font-p"><?=get_sub_field('text')?></p>
-						<?php } ?>
-					</div>
-					<?php
-					$active = '';
-				}
-				?>
-			</div>
-			<div class="image-container only-desktop">
-				<div class="shapes-container js-animate" data-animation-type="shapes">
-					<img src="<?=get_template_directory_uri()?>/assets/svg/shape-1-white.svg" alt="" class="shape shape-1">
-					<img src="<?=get_template_directory_uri()?>/assets/svg/shape-2-black.svg" alt="" class="shape shape-2">
-					<img src="<?=get_template_directory_uri()?>/assets/svg/shape-3-white.svg" alt="" class="shape shape-3">
-					<img src="<?=get_template_directory_uri()?>/assets/svg/shape-6-black.svg" alt="" class="shape shape-4">
-					<img src="<?=get_template_directory_uri()?>/assets/svg/shape-7-black.svg" alt="" class="shape shape-5">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<?php
 }
 while(have_rows('client_logos')){
 	the_row();
