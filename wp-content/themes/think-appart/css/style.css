@@ -1137,9 +1137,10 @@ body .background-black *::selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
 .header-container .phone-number:hover .phone {
-  fill: #FFFFFF;
+  fill: #00D3A8;
 }
 .header-container .phone-number .phone {
   -ms-flex-negative: 0;
@@ -1529,7 +1530,7 @@ body .background-black *::selection {
   }
   .header-container .short-menu-container .phone-number {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
   .footer-container {
     padding: 55px var(--lateral-space) var(--lateral-space);
@@ -1752,7 +1753,7 @@ body .background-black *::selection {
   z-index: 99;
   box-shadow: 0px 0 15px 0px rgba(0, 0, 0, 0.08);
   background-color: white;
-  opacity: 0.95;
+  opacity: 0.98;
 }
 .header-container.sticky .social-links-container {
   margin-top: 50px;
@@ -1765,12 +1766,26 @@ body .background-black *::selection {
   padding: 15px 0;
   border: 0;
 }
-.header-container.sticky .button.button-black {
+.header-container.sticky .button.button-black,
+.header-container.sticky .button.button-black-white  {
   border: 1px solid; 
 }
 .header-container.sticky .only-desktop a {
-  padding: 12px 10px !important;
+  padding: 12px 30px !important;
   border: 1px solid !important;
+}
+.header-container .short-menu-container .button.button-black-white  {
+  padding: 12px 30px !important;
+  border: 1px solid;
+}
+
+.header-container .short-menu-container .phone-number {
+  border: 1px solid !important;
+  padding: 12px 30px !important;
+}
+
+.header-container .short-menu-container .phone-number .phone  {
+  margin-right: 8px;
 }
 .header-container.sticky .menu-container .menu-item {
   margin-left: 15px;
@@ -1796,11 +1811,13 @@ body .background-black *::selection {
   color: #000;
   
 } 
-.header-container .button.button-black  {
+.header-container .button.button-black,
+.header-container .button.button-black-white  {
   color: white;
   line-height: normal;
 }
-.header-container .button.button-black:hover  {
+.header-container .button.button-black:hover,
+.header-container .button.button-black-white:hover  {
   color: black;
   border-color: black;
   background-color: transparent;
@@ -1819,7 +1836,8 @@ body .background-black *::selection {
   border-color: #00D3A8;
   background-color: transparent;
 }
-.header-container.sticky .menu-container .menu-item .button-black {
+.header-container.sticky .menu-container .menu-item .button-black,
+.header-container.sticky .menu-container .menu-item .button-black-white {
   padding: 12px 30px !important;
 }
 .header-container .menu-container .menu-item .phone-number:hover svg {
@@ -2594,6 +2612,9 @@ background-color: transparent;
   .header-container.sticky .nav-container {
     transform: translate(110%);
   }
+  .header-container .short-menu-container .button {
+    font-size: 18px;
+  }
   .header-container.sticky .nav-container.opened {
     transform: translate(9px) !important;
     position: fixed;
@@ -2640,10 +2661,16 @@ background-color: transparent;
     overflow: hidden;
   }
   .header-container.sticky {
-    opacity: 0.95;
+    opacity: 0.98;
   }
   .show-menu .header-container.sticky {
     opacity: 1;
+  }
+  .header-container .short-menu-container .phone-number {
+    padding: 14px 35px !important;
+  }
+  .header-container .short-menu-container .button.button-black-white {
+    padding: 10px 30px !important;
   }
   .header-container.sticky .nav-container .menu-container {
     height: 100%;
@@ -2652,6 +2679,10 @@ background-color: transparent;
     -ms-flex-direction: column;
     flex-direction: column;
     row-gap: 21px;
+  }
+  .landings-template-default .header-container .nav-container,
+  .landings-template-default .header-container.sticky .nav-container.opened {
+    padding-top: 130px;
   }
   .header-container.sticky {
   transform: inherit;
