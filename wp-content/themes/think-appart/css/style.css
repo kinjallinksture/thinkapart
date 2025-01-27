@@ -2061,6 +2061,7 @@ background-color: transparent;
 }
 
 
+
   .module-process .process-container .texts-container .text-container .dot,
   .module-process .process-container .texts-container .text-container .line {
     display: none;
@@ -2493,6 +2494,10 @@ background-color: transparent;
     width: 189px;
     height: 190px;
   }
+  .module-form .title-container {
+    min-height: 146px;
+    margin-bottom: 90px;
+  }
  
 }
 @media (max-width: 1024px)  {
@@ -2588,6 +2593,10 @@ background-color: transparent;
   }
   .header-container.sticky .nav-container .menu-container .menu-item.service-nav-item .only-desktop .mega_menu_item {
     margin: 0 6px 8px 6px;
+  }
+  .module-form .title-container {
+    min-height: 146px;
+    margin-bottom: 70px;
   }
 
 }
@@ -2735,6 +2744,10 @@ background-color: transparent;
   .module-process .process-container .texts-container .text-container .title::after  {
     scale: 0.8;
   }
+  .module-form .title-container {
+    min-height: 126px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2857,5 +2870,15 @@ background-color: transparent;
     max-width: 100%;
     width: 100%;
     height: auto;
+  }
+  .module-form .title-container {
+    min-height: 85px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 420px)  {
+  .module-form .title-container {
+    min-height: 125px;
+    margin-bottom: 30px;
   }
 }

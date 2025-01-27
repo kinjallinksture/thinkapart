@@ -635,7 +635,7 @@
   margin-bottom: 0;
 }
 .module-content .image-container.border-rounded {
-  padding-top: 80px;
+  margin-top: 80px;
 }
 .module-author {
   padding: 145px 170px 130px;
@@ -956,7 +956,7 @@
 }
   @media (max-width: 800px) {
     .module-content .image-container.border-rounded {
-      padding-top: 100px;
+      margin-top: 100px;
     }
   .module-cover-single-post .title-container .breadcrumb-container {
     margin-bottom: 40px;
