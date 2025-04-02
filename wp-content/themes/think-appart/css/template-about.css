@@ -354,7 +354,8 @@
 }
 
 /* Achievements */
-.modules-about .module-our-achievements-box  {
+.modules-about .module-our-achievements-box,
+.modules-about .module-our-work-industries  {
   padding: 0 var(--lateral-space);
 }
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper {
@@ -389,6 +390,66 @@
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box p {
   font-size: 19px;
   line-height: 26px;
+}
+
+/* module our work industries */
+.modules-about .module-our-work-industries .our-work-industries-wrapper {
+  padding: 90px;
+  border-radius: 45px;
+  background-color: black;
+}
+.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
+  margin-bottom: 60px;
+}
+.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after {
+  content: "";
+  background-image: url('../assets/img/services-active.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all .3s ease-in;
+  scale: 1;
+}
+
+.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::before {
+  content: "";
+  background-color: #F6F459;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  border-radius: 100%;
+  transition: all .5s ease-in;
+}
+.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after {
+  content: "";
+  /* background-image: url('../assets/img/services.svg'); */
+  position: absolute;
+  left: 14px;
+  top: 13px;
+  transform: translateY(0%);
+  width: 34px;
+  height: 34px;
+  background-size: 34px;
+  transition: all .5s ease-in;
+  scale: 0.7;
+}
+.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2 {
+  margin-bottom: 0;
+  padding-left: 70px;
+  transition: all .5s ease-in;
+  font-size: 45px;
+  position: relative;
+  min-height: 60px;
+  vertical-align: middle;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  word-break: break-word;
 }
 
 @media (max-width: 1199px) {
@@ -440,4 +501,4 @@
     margin-bottom: 10px;
   }
 }
-/* Achievements */
+

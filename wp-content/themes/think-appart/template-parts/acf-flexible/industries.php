@@ -8,7 +8,7 @@ if ( have_rows( 'our_work_industries' ) ) {
 	?>
 	<section class="module module-our-work-industries">
 		<div class="our-work-industries-wrapper">
-			<div class="">
+			<div class="title-with-icon">
 				<?php
 				if ( ! empty( $our_work_industries_title ) ) {
 					?>
