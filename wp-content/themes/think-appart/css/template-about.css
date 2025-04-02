@@ -352,3 +352,92 @@
     width: 100%;
   }
 }
+
+/* Achievements */
+.modules-about .module-our-achievements-box  {
+  padding: 0 var(--lateral-space);
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
+  padding: 0 48px;
+  border-right: 1px solid rgb(0, 0, 0, 0.5);
+  width: 33.33%;
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:first-child {
+  padding-left: 0;
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
+  font-size: 55px;
+  line-height: 61px;
+  margin-bottom: 24px;
+  display: block;
+} 
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box .title {
+  font-size: 30px;
+  line-height: 33px;
+  margin-bottom: 16px;
+}
+.modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box p {
+  font-size: 19px;
+  line-height: 26px;
+}
+
+@media (max-width: 1199px) {
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
+    padding: 0 35px;
+    width: 50%;
+    margin-bottom: 35px;
+  }
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:last-child {
+    margin-bottom: 0;
+  }
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:nth-of-type(2) {
+    border-right: 0;
+  }
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  } 
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box .title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
+    padding: 0 25px 0 0;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-right: none;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    padding-right: 0;
+  }
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 800px) {
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  } 
+  .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box .title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}
+/* Achievements */

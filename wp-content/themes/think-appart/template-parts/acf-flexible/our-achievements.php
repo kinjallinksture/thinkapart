@@ -24,7 +24,7 @@ if ( have_rows( 'our_achievements_box' ) ) {
 					}
 					if ( ! empty( $achievements_title ) ) {
 						?>
-						<h2><?php echo esc_html( $achievements_title ); ?></h2>
+						<h2 class="title"><?php echo esc_html( $achievements_title ); ?></h2>
 						<?php
 					}
 					if ( ! empty( $achievements_description ) ) {
