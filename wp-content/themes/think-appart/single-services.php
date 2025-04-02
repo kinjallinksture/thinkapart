@@ -306,6 +306,22 @@ while(have_rows('form')){
 	jg_print_contact_form();
 }
 
+if ( have_rows( 'content' ) ) {
+	while ( have_rows( 'content' ) ) :
+		the_row();
+		$layout_section = get_row_layout();
+
+		switch ( $layout_section ) {
+			case 'blog_carousel':
+				$template_name = str_replace( '_', '-', $layout_section );
+				get_template_part( 'template-parts/acf-flexible/' . $template_name );
+				break;
+			default:
+				break;
+		}
+	endwhile;
+}
+
 while(have_rows('sylo_structure')){
 	the_row();
 	if(get_sub_field('include')){

@@ -4,9 +4,15 @@
 				<?php
 					while(have_rows('footer', 'option')){
 						the_row();
+						$footer_short_description = get_sub_field( 'footer_short_description' );
 						?>
 							<h2 class="module-title font-h2"><?=get_sub_field('under_logo_text')?></h2>
 						<?php
+						if ( ! empty( $footer_short_description ) ) {
+							?>
+							<p><?php echo esc_html( $footer_short_description ); ?></p>
+							<?php
+						}
 					}
 				?>
 			</div>

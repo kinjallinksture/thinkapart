@@ -2,15 +2,15 @@
 /**
  * Template name: Home
  */
-wp_enqueue_style('think-appart-home-style', get_template_directory_uri().'/css/template-home.css', array(), THINK_APPART_THEME_VERSION);
+wp_enqueue_style( 'think-appart-home-style', get_template_directory_uri().'/css/template-home.css', array(), THINK_APPART_THEME_VERSION );
 
-// Header
+// Header.
 get_header();
 
-while(have_rows('cover')){
+while ( have_rows( 'cover' ) ) {
 	the_row();
-	$video = get_sub_field('video');
-	$image = get_sub_field('image');
+	$video = get_sub_field( 'video' );
+	$image = get_sub_field( 'image' );
 	?>
 	<section class="module module-cover-home">
 		<div class="video-container full-screen-video">
@@ -28,11 +28,11 @@ while(have_rows('cover')){
 	<?php
 }
 
-while(have_rows('content')){
+while ( have_rows( 'content' ) ) {
 	the_row();
 	$layout = get_row_layout();
 
-	if($layout == 'aproach'){
+	if ( $layout == 'aproach' ) {
 		?>
 		<section class="module module-approach background-green">
 			<p class="module-title font-p font-bold"><?=get_sub_field('title')?></p>
@@ -44,32 +44,36 @@ while(have_rows('content')){
 			</div>
 		</section>
 		<?php
-	}elseif($layout == 'services'){
+	} elseif ( $layout == 'services' ) {
 		?>
 		<section class="module module-services">
 			<h2 class="module-title font-p font-bold"><?=get_sub_field('title')?></h2>
 			<div class="services-container">
 				<?php
 				$services = get_posts([
-					'numberposts' => -1,
-					'post_type' => 'services',
-					'fields' => 'ids',
-					'orderby' => 'menu_order',
-					'order' => 'ASC',
-					'post_parent' => 0, // exclude child posts
+					'numberposts'      => -1,
+					'post_type'        => 'services',
+					'fields'           => 'ids',
+					'orderby'          => 'menu_order',
+					'order'            => 'ASC',
+					'post_parent'      => 0, // exclude child posts.
 					'suppress_filters' => false,
 				]);
-				foreach ($services as $service) {
-					while(have_rows('general', $service)){
+
+				foreach ( $services as $service ) {
+					while( have_rows( 'general', $service ) ) {
 						the_row();
-						$image = get_sub_field('image');
-						$background = jg_get_info_background_color('main');
-						$text_hover = change_color_to_hex('green');
-						if($background['color'] == 'green' || $background['color'] == 'blue'){
-							$text_hover = change_color_to_hex('black');
-						}elseif($background['color'] == 'yellow'){
-							$text_hover = change_color_to_hex('blue');
+
+						$image      = get_sub_field( 'image' );
+						$background = jg_get_info_background_color( 'main' );
+						$text_hover = change_color_to_hex( 'green' );
+
+						if ( $background['color'] == 'green' || $background['color'] == 'blue' ) {
+							$text_hover = change_color_to_hex( 'black' );
+						} elseif ( $background['color'] == 'yellow' ) {
+							$text_hover = change_color_to_hex( 'blue' );
 						}
+
 						$background = jg_change_background_color_to_hex($background);
 						?>
 						<a href="<?=get_permalink($service)?>" class="service-container" data-color-bg="<?=$background['color']?>" data-color-font="<?=$background['font_color']?>" data-color-hover="<?=$text_hover?>">
@@ -245,7 +249,10 @@ while(have_rows('content')){
 			</div>
 		</section>
 		<?php
-	}elseif($layout == 'about_us'){
+	} elseif($layout == 'blog_carousel'){
+		$template_name = 'blog-carousel';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif($layout == 'about_us'){
 		$images = get_sub_field('images');
 		?>
 		<section class="module module-about-home background-yellow">
@@ -267,7 +274,7 @@ while(have_rows('content')){
 				?>
 			</div>
 			<?php
-			while(have_rows('more_info')){
+			while ( have_rows( 'more_info' ) ) {
 				the_row();
 				?>
 				<div class="more-info-container">
@@ -280,14 +287,14 @@ while(have_rows('content')){
 					<div class="more-info-content">
 						<div class="more-info-content-wrapper">
 							<div class="column">
-								<h2 class="title font-h3 font-medium"><?=get_sub_field('title_1')?></h2>
-								<p class="text font-p2"><?=get_sub_field('text_1')?></p>
+								<h2 class="title font-h3 font-medium"><?=get_sub_field( 'title_1' )?></h2>
+								<p class="text font-p2"><?=get_sub_field( 'text_1' )?></p>
 							</div>
 							<div class="column">
-								<h2 class="title font-h3 font-medium"><?=get_sub_field('title_2')?></h2>
-								<p class="text font-p2"><?=get_sub_field('text_2')?></p>
+								<h2 class="title font-h3 font-medium"><?=get_sub_field( 'title_2' )?></h2>
+								<p class="text font-p2"><?=get_sub_field( 'text_2' )?></p>
 								<div class="button-container">
-									<a href="<?=get_permalink(get_sub_field('button_page'))?>" class="button button-hover-white"><?=get_sub_field('button_text')?></a>
+									<a href="<?=get_permalink( get_sub_field( 'button_page' ) )?>" class="button button-hover-white"><?=get_sub_field( 'button_text' )?></a>
 								</div>
 							</div>
 						</div>
@@ -302,34 +309,34 @@ while(have_rows('content')){
 }
 
 
-// Footer
+// Footer.
 get_footer();
 
 
-function jg_print_project_home($project, $parallax_factor = 0){
-	while(have_rows('general', $project)){
+function jg_print_project_home( $project, $parallax_factor = 0 ) {
+	while ( have_rows( 'general', $project ) ) {
 		the_row();
-		$project_bg = jg_get_info_background_color('hover');
+		$project_bg = jg_get_info_background_color( 'hover' );
 		?>
 		<a href="<?=get_permalink($project)?>" class="work-container js-parallax" data-parallax-factor="<?=$parallax_factor?>">
 			<div class="background-image">
 				<?php
-				$type = get_sub_field('home_media_type');
-				if(empty($type)){
-					$type = get_sub_field('thumbnail_media_type');
+				$type = get_sub_field( 'home_media_type' );
+				if ( empty( $type ) ) {
+					$type = get_sub_field( 'thumbnail_media_type' );
 				}
-				if($type == 'image'){
-					$image = get_sub_field('home_image');
-					if(empty($image)){
-						$image = get_sub_field('thumbnail_image');
+				if ( $type == 'image' ) {
+					$image = get_sub_field( 'home_image' );
+					if ( empty( $image ) ) {
+						$image = get_sub_field( 'thumbnail_image' );
 					}
 					?>
 						<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
 					<?php
-				}elseif($type == 'video'){
-					$video = get_sub_field('home_video');
-					if(empty($video)){
-						$video = get_sub_field('thumbnail_video');
+				} elseif ( $type == 'video' ){
+					$video = get_sub_field( 'home_video' );
+					if ( empty( $video ) ) {
+						$video = get_sub_field( 'thumbnail_video' );
 					}
 					?>
 						<video src="<?=$video['url']?>" class="image" autoplay muted loop playsinline></video>

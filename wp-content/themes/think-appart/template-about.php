@@ -32,7 +32,13 @@ while (have_rows('content')) {
 			<p class="text font-p2 <?=$text_class?>"><?=get_sub_field('text')?></p>
 		</section>
 		<?php
-	}elseif($layout == 'image'){
+	} elseif ( $layout == 'our_achievements' ) {
+		$template_name = 'our-achievements';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif ( $layout == 'industries' ) {
+		$template_name = 'industries';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif($layout == 'image'){
 		$image = get_sub_field('image');
 		$image_position = get_sub_field('image_position');
 		?>
@@ -48,7 +54,9 @@ while (have_rows('content')) {
 			<?php
 			while(have_rows('team')){
 				the_row();
-				$image = get_sub_field('image');
+				$image            = get_sub_field('image');
+				$team_details     = get_sub_field('team_details');
+				$linkedin_profile = get_sub_field('linkedin_profile');
 				?>
 				<div class="item">
 					<div class="image-container">
@@ -56,6 +64,20 @@ while (have_rows('content')) {
 					</div>
 					<p class="name font-p"><strong><?=get_sub_field('name')?></strong></p>
 					<p class="font-p2 font-regular"><?=get_sub_field('role')?></p>
+					<?php
+					if ( ! empty( $linkedin_profile ) ) {
+						?>
+						<a href="<?php echo esc_url( $linkedin_profile ); ?>">LINKDIN ICON</a>
+						<?php
+					}
+					if ( ! empty( $team_details ) ) {
+						?>
+						<div class="team-details">
+							<?php echo $team_details; //phpcs:ignore ?>
+						</div>
+						<?php
+					}
+					?>
 				</div>
 				<?php
 			}

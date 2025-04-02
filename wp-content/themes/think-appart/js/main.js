@@ -105,7 +105,25 @@
 		moduleOfficesJobs();
 
 		moduleSylo();
+
+		moduleSwiperinit();
 	})
+
+	function moduleSwiperinit() {
+		/****** Swiper slider using params ******/
+		let swiperObjs = [];
+		$('[data-slider-options]').each(function () {
+			var _this = $(this),
+				sliderOptions = _this.attr('data-slider-options');
+
+			if (typeof (sliderOptions) !== 'undefined' && sliderOptions !== null) {
+				sliderOptions = $.parseJSON(sliderOptions);
+
+				var swiperObj = new Swiper(_this[0], sliderOptions);
+				swiperObjs.push(swiperObj);
+			}
+		});
+	}
 
 	function initVariables(){
 		scrollMagicController = new ScrollMagic.Controller();
