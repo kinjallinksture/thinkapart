@@ -38,6 +38,9 @@ while (have_rows('content')) {
 	} elseif ( $layout == 'industries' ) {
 		$template_name = 'industries';
 		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif ( $layout == 'mission' ) {
+		$template_name = 'mission';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
 	} elseif($layout == 'image'){
 		$image = get_sub_field('image');
 		$image_position = get_sub_field('image_position');
@@ -62,22 +65,26 @@ while (have_rows('content')) {
 					<div class="image-container">
 						<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 					</div>
-					<p class="name font-p"><strong><?=get_sub_field('name')?></strong></p>
-					<p class="font-p2 font-regular"><?=get_sub_field('role')?></p>
-					<?php
-					if ( ! empty( $linkedin_profile ) ) {
-						?>
-						<a href="<?php echo esc_url( $linkedin_profile ); ?>">LINKDIN ICON</a>
+					<div class="team-details-wrapper">
+						<p class="name font-p"><strong><?=get_sub_field('name')?></strong></p>
+						<p class="font-p2 font-regular"><?=get_sub_field('role')?></p>
 						<?php
-					}
-					if ( ! empty( $team_details ) ) {
+						if ( ! empty( $linkedin_profile ) ) {
+							?>
+							<a class="linkdin-icon" href="<?php echo esc_url( $linkedin_profile ); ?>">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/linkdin.svg" alt="<?php echo _x( 'LinkdIn', 'think-appart' ); ?>">
+							</a>
+							<?php
+						}
+						if ( ! empty( $team_details ) ) {
+							?>
+							<div class="team-details">
+								<?php echo $team_details; //phpcs:ignore ?>
+							</div>
+							<?php
+						}
 						?>
-						<div class="team-details">
-							<?php echo $team_details; //phpcs:ignore ?>
-						</div>
-						<?php
-					}
-					?>
+					</div>
 				</div>
 				<?php
 			}
