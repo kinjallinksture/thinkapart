@@ -10,7 +10,7 @@ $about_mission_text  = get_sub_field( 'about_mission_description' );
 if ( ! empty( $about_mission_title ) || ! empty( $about_mission_sub ) || ! empty( $about_mission_text ) ) {
 	?>
 	<section class="module module-process">
-		<div class="module-content background-yellow">
+		<div class="module-content">
 			<div class="process-container-misson">
 				<div class="texts-container">
 					<div class="text-container">
