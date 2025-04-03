@@ -1755,6 +1755,9 @@ body .background-black *::selection {
   background-color: white;
   opacity: 0.98;
 }
+html[lang="th"] .header-container.sticky {
+  width: 1199px;
+}
 .header-container.sticky .social-links-container {
   margin-top: 50px;
 
@@ -1774,9 +1777,6 @@ body .background-black *::selection {
   padding: 12px 30px !important;
   border: 1px solid !important;
 }
-html[lang="th"] .header-container.sticky .only-desktop a {
-  padding: 10px 20px !important;
-}
 .header-container .short-menu-container .button.button-black-white  {
   padding: 12px 30px !important;
   border: 1px solid;
@@ -1794,18 +1794,8 @@ html[lang="th"] .header-container.sticky .only-desktop a {
   margin-left: 12px;
   margin-right: 10px;
 }
-html[lang="th"] .header-container.sticky .menu-container .menu-item {
-  margin-left: 9px;
-  margin-right: 7px;
-}
-html[lang="th"] .header-container.sticky .menu-container .menu-item  a.button {
-  font-size: 13px;
-}
 .header-container.sticky .logo-container .logo {
   width: 183px;
-}
-html[lang="th"] .header-container.sticky .logo-container .logo {
-  width: 150px;
 }
 .header-container.sticky .logo-container {
   transition-duration: .65s;
@@ -2480,6 +2470,24 @@ background-color: transparent;
     margin-bottom: 10px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  html[lang="th"] .header-container.sticky .only-desktop a {
+    padding: 10px 20px !important;
+  }
+  html[lang="th"] .header-container.sticky .menu-container .menu-item {
+    margin-left: 9px;
+    margin-right: 7px;
+  }
+  html[lang="th"] .header-container.sticky .menu-container .menu-item  a.button {
+    font-size: 13px;
+  }
+  html[lang="th"] .header-container.sticky .logo-container .logo {
+    width: 150px;
+  }
+  html[lang="th"] .header-container.sticky {
+    width: auto;
+}
+}
 @media (max-width: 1199px) {
   .title-image-main {
     padding: 120px 60px 20px;
@@ -2569,6 +2577,9 @@ background-color: transparent;
     padding-right: 15px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+  html[lang="th"] .header-container.sticky {
+    width: auto;
   }
   .header-container .logo-container .logo {
     width: 130px;
