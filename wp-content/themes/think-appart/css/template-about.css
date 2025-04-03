@@ -464,6 +464,11 @@
   margin-right: 11px;
   margin-bottom: 18px;
 }
+.modules-about .module-our-work-industries .our-work-industries-wrapper .our-industries-box .button-white-green:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
 
 @media (max-width: 1199px) {
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
@@ -514,6 +519,13 @@
   .modules-about .module-our-work-industries .our-work-industries-wrapper {
     padding: 50px;
   }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2 {
+    font-size: 30px;
+    width: 90%;
+  }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
+    margin-bottom: 35px;
+  }
 }
 @media (max-width: 800px) {
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
@@ -526,5 +538,19 @@
     line-height: 24px;
     margin-bottom: 10px;
   }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper {
+    padding: 40px;
+  }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2 {
+    font-size: 24px;
+    width: 100%;
+  }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
+    margin-bottom: 25px;
+  }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .our-industries-box .button-white-green {
+    padding: 16px 25px;
+    margin-bottom: 15px;
+}
 }
 
