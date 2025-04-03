@@ -602,7 +602,7 @@
 
 			var scene = new ScrollMagic.Scene({
 				triggerElement: module,
-				triggerHook: .7,
+				triggerHook: .9,
 				duration: $module.innerHeight()
 			})
 			.setTween(tween)

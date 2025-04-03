@@ -358,6 +358,12 @@
 .modules-about .module-our-work-industries  {
   padding: 0 var(--lateral-space);
 }
+.modules-about .module-our-work-industries  {
+  margin-bottom: 0;
+}
+.modules-about .module-our-work-industries + .module-team {
+  margin-top: 0;
+}
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper {
   display: flex;
   justify-content: center;
@@ -535,7 +541,7 @@
   background-position: center;
   background-size: cover;
   background-size: 34px;
-  transition: 4s;
+  transition: 2s;
 }
 .module-process .process-container-misson .text-container.active .title::after {
   transform: rotate(360deg);
