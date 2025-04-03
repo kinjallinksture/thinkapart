@@ -72,7 +72,7 @@ while (have_rows('content')) {
 						if ( ! empty( $linkedin_profile ) ) {
 							?>
 							<a class="linkdin-icon" href="<?php echo esc_url( $linkedin_profile ); ?>">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/linkdin.svg" alt="<?php echo _x( 'LinkdIn', 'think-appart' ); ?>">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/LinkedIn.svg" alt="<?php echo _x( 'LinkdIn', 'think-appart' ); ?>">
 							</a>
 							<?php
 						}
