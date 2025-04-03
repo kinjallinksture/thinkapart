@@ -256,7 +256,7 @@
   grid-template-columns: repeat(3, 1fr);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 211, 168, 0)), to(#00D3A8));
   background: linear-gradient(180deg, rgba(0, 211, 168, 0) 0%, #00D3A8 100%);
-  grid-gap: 130px 85px;
+  grid-gap: 130px 90px;
 }
 .module-team .item .image-container {
   border-radius: 20px;
@@ -470,6 +470,32 @@
   border-color: white;
 }
 
+
+/* module-team */
+.module-team .item .team-details-wrapper {
+  position: relative;
+}
+.module-team .item .team-details-wrapper .name {
+   margin: 0;
+}
+.module-team .item .team-details-wrapper .linkedin-icon img {
+   position: absolute;
+   top: 9px;
+   right: 0;
+}
+.module-team .item .team-details-wrapper .team-details {
+  padding-left: 16px;
+  border-left: 1px solid rgb(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+.module-team .item .team-details-wrapper .team-details p {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+.module-team .item .team-details-wrapper .team-details p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1199px) {
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
     padding: 0 35px;
@@ -502,6 +528,9 @@
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
     margin-bottom: 45px;
   }
+  .module-team {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 991px) {
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
@@ -525,6 +554,10 @@
   }
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
     margin-bottom: 35px;
+  }
+  .module-team {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 90px 50px;
   }
 }
 @media (max-width: 800px) {
@@ -551,6 +584,10 @@
   .modules-about .module-our-work-industries .our-work-industries-wrapper .our-industries-box .button-white-green {
     padding: 16px 25px;
     margin-bottom: 15px;
-}
+  }
+  .module-team {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 70px 50px;
+  }
 }
 
