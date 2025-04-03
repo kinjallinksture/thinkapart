@@ -17,24 +17,20 @@ if ( have_rows( 'our_work_industries' ) ) {
 				}
 				?>
 			</div>
-			<?php
-			while ( have_rows( 'our_work_industries' ) ) {
-				the_row();
+			<div class="our-industries-box buttons-container">
+				<?php
+				while ( have_rows( 'our_work_industries' ) ) {
+					the_row();
 
-				$industries_name = get_sub_field( 'industries_name' );
-				?>
-				<div class="our-industries-box buttons-container">
-					<?php
+					$industries_name = get_sub_field( 'industries_name' );
 					if ( ! empty( $industries_name ) ) {
 						?>
 						<a href="#" class="button button-white-green"><?php echo $industries_name; //phpcs:ignore ?></a>
 						<?php
 					}
-					?>
-				</div>
-				<?php
-			}
-			?>
+				}
+				?>
+			</div>
 		</div>
 	</section>
 	<?php
