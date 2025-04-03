@@ -25,7 +25,7 @@ if ( ! empty( $carousel_blogs ) ) {
 			$index_number = wp_rand( 10, 200 );
 
 			$json_array = array(
-				'slidesPerView'  => 2,
+				'slidesPerView'  => 1,
 				'spaceBetween'   => 24,
 				'direction'      => 'horizontal',
 				'navigation'     => array(
@@ -33,9 +33,21 @@ if ( ! empty( $carousel_blogs ) ) {
 					'prevEl' => '.swiper-button-previous-blog-' . $index_number,
 				),
 				'breakpoints'    => array(
-					'768' => array(
+					'1199' => array(
 						'slidesPerView' => 3,
-						'spaceBetween'  => 0,
+						'spaceBetween'  => 29,
+					),
+					'991' => array(
+						'slidesPerView' => 2,
+						'spaceBetween'  => 29,
+					),
+					'768' => array(
+						'slidesPerView' => 1,
+						'spaceBetween'  => 29,
+					),
+					'575' => array(
+						'slidesPerView' => 2,
+						'spaceBetween'  => 20,
 					),
 				),
 				'allowTouchMove' => true,

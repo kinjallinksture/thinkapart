@@ -463,6 +463,7 @@
   color: white;
   margin-right: 11px;
   margin-bottom: 18px;
+  cursor: default;
 }
 .modules-about .module-our-work-industries .our-work-industries-wrapper .our-industries-box .button-white-green:hover {
   background-color: white;
