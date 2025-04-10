@@ -14,8 +14,6 @@ if ( ! empty( $about_mission_title ) || ! empty( $about_mission_sub ) || ! empty
 			<div class="process-container-misson">
 				<div class="texts-container">
 					<div class="text-container">
-						<div class="dot"></div>
-						<div class="line"></div>
 						<?php
 						if ( ! empty( $about_mission_title ) ) {
 							?>

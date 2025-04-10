@@ -94,6 +94,8 @@
 
 		moduleProcessMisson();
 
+		moduleIndustries();
+
 		moduleReview();
 
 		projectSinglePage();
@@ -588,6 +590,37 @@
 		$('.module-process .process-container-misson').each(function(i, module){
 			var $module = $(module);
 			var $textContainer = $module.find('.text-container');
+			var changeActive = false;
+
+			var tween = new TimelineMax();
+
+			$textContainer.each(function(i, item){
+				tween.fromTo($(item).find('.line'), 1, {height: '0px'}, {height: '0px', ease: Linear.easeNone, onComplete: function(){
+						changeIndex($textContainer, Math.min(i+1, $textContainer.length-1));
+				}, onReverseComplete: function(){
+						changeIndex($textContainer, Math.max(i-1, 0));
+				}})
+			})
+
+			var scene = new ScrollMagic.Scene({
+				triggerElement: module,
+				triggerHook: .9,
+				duration: $module.innerHeight()
+			})
+			.setTween(tween)
+			.addTo(scrollMagicController)
+		})
+
+		function changeIndex($textContainer, index){
+			$textContainer.removeClass('active');
+			$textContainer[index].classList.add('active');
+		}
+	}
+
+	function moduleIndustries(){
+		$('.module-our-work-industries .our-work-industries-wrapper').each(function(i, module){
+			var $module = $(module);
+			var $textContainer = $module.find('.title-with-icon');
 			var changeActive = false;
 
 			var tween = new TimelineMax();

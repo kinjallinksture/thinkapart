@@ -428,16 +428,17 @@
 }
 .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after {
   content: "";
-  /* background-image: url('../assets/img/services.svg'); */
   position: absolute;
-  left: 8px;
-  top: 12px;
-  transform: translateY(0%);
-  width: 46px;
-  height: 46px;
-  background-size: 46px;
-  transition: all .5s ease-in;
-  scale: 0.7;
+  left: 14px;
+  top: 17px;
+  transform: rotate(0deg);
+  width: 34px;
+  height:  34px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 34px;
+  transition: 2s;
 }
 .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2 {
   margin-bottom: 0;
@@ -514,7 +515,8 @@
   background-size: 34px;
   transition: 2s;
 }
-.module-process .process-container-misson .text-container.active .title::after {
+.module-process .process-container-misson .text-container.active .title::after,
+.module-our-work-industries .our-work-industries-wrapper .title-with-icon.active h2::after {
   transform: rotate(360deg);
 }
 .module-process .process-container-misson .title {
