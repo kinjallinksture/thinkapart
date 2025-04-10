@@ -57,34 +57,14 @@ while (have_rows('content')) {
 			<?php
 			while(have_rows('team')){
 				the_row();
-				$image            = get_sub_field('image');
-				$team_details     = get_sub_field('team_details');
-				$linkedin_profile = get_sub_field('linkedin_profile');
+				$image = get_sub_field('image');
 				?>
 				<div class="item">
 					<div class="image-container">
 						<div class="background-image"><img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image"></div>
 					</div>
-					<div class="team-details-wrapper">
-						<p class="name font-p"><strong><?=get_sub_field('name')?></strong></p>
-						<p class="font-p2 font-regular"><?=get_sub_field('role')?></p>
-						<?php
-						if ( ! empty( $linkedin_profile ) ) {
-							?>
-							<a class="linkedin-icon" href="<?php echo esc_url( $linkedin_profile ); ?>" target="_blank">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/LinkedIn.svg" alt="<?php echo _x( 'LinkedIn', 'think-appart' ); ?>">
-							</a>
-							<?php
-						}
-						if ( ! empty( $team_details ) ) {
-							?>
-							<div class="team-details">
-								<?php echo $team_details; //phpcs:ignore ?>
-							</div>
-							<?php
-						}
-						?>
-					</div>
+					<p class="name font-p"><strong><?=get_sub_field('name')?></strong></p>
+					<p class="font-p2 font-regular"><?=get_sub_field('role')?></p>
 				</div>
 				<?php
 			}

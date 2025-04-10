@@ -306,8 +306,8 @@ while(have_rows('form')){
 	jg_print_contact_form();
 }
 
-if ( have_rows( 'content' ) ) {
-	while ( have_rows( 'content' ) ) :
+if ( have_rows( 'services_content_flexible' ) ) {
+	while ( have_rows( 'services_content_flexible' ) ) :
 		the_row();
 		$layout_section = get_row_layout();
 

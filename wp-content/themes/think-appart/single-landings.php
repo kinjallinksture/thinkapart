@@ -434,7 +434,10 @@ while (have_rows('content')) {
 			<a href="<?=get_permalink($id_projects_main_page)?>" class="button button-<?=$button_color?>"><?=__('View all projects', 'think-appart')?></a>
 		</section>
 		<?php
-	}elseif($layout == 'form'){
+	} elseif($layout == 'blog_carousel'){
+		$template_name = 'blog-carousel';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif($layout == 'form'){
 		jg_print_contact_form('background-yellow');
 	}
 
