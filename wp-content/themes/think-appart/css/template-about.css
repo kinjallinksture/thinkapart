@@ -625,11 +625,14 @@
   }
 }
 @media (max-width: 800px) {
-  .module-process .process-container-misson {
-    padding: 35px;
+  .module-process .process-container-misson,
+  .modules-about .module-our-work-industries .our-work-industries-wrapper {
+    padding: 30px;
+    border-radius: 25px;
   }
   .module-process .process-container-misson .title {
     font-size: 35px;
+    width: 100%;
   }
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
     font-size: 32px;
@@ -641,12 +644,10 @@
     line-height: 24px;
     margin-bottom: 10px;
   }
-  .modules-about .module-our-work-industries .our-work-industries-wrapper {
-    padding: 40px;
-  }
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2 {
     font-size: 24px;
     width: 100%;
+    line-height: 36px;
   }
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
     margin-bottom: 25px;
@@ -655,17 +656,12 @@
     padding: 16px 25px;
     margin-bottom: 15px;
   }
-}
-@media (max-width: 767px) {
-  .module-process .process-container-misson {
-    padding: 30px;
-  }
-  .module-process .process-container-misson .title {
-    padding-left: 75px;
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  .module-process .process-container-misson p {
-    padding-left: 75px;
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after,
+  .module-process .process-container-misson .title::after {
+    left: 15px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    background-size: 32px;
   }
 }

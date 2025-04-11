@@ -1754,16 +1754,18 @@ body .background-black *::selection {
     font-size: 20px;
   }
   .module-blog-carousel-block .blog-carousel-wrapper .swiper-button-wrap .swiper-button-prev {
-    left: 0px;
+    left: 5px;
   }
   .module-blog-carousel-block .blog-carousel-wrapper .swiper-button-wrap .swiper-button-next {
-    right: 0px;
+    right: 5px;
   }
   .module-blog-carousel-block .blog-carousel-button .button-small {
     padding: 16px 34px;
   }
   .module-blog-carousel-block  {
     padding: 90px var(--lateral-space);
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
