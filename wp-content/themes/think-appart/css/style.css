@@ -2574,7 +2574,11 @@ background-color: transparent;
     font-weight: 300;
     line-height: 25px;
   }
-
+@media (min-width: 801px) and (max-width: 1599px) {
+	.footer-container .columns-container {
+  	  padding-right: 90px;
+   }
+}
 @media (max-width: 1599px) {
   .title-image-main {
     padding: 120px 129px 20px;

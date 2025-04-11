@@ -413,7 +413,6 @@
   transition: all .3s ease-in;
   scale: 1;
 }
-
 .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::before {
   content: "";
   background-color: #F6F459;

@@ -25,7 +25,7 @@ if ( have_rows( 'our_work_industries' ) ) {
 					$industries_name = get_sub_field( 'industries_name' );
 					if ( ! empty( $industries_name ) ) {
 						?>
-						<a href="#" class="button button-white-green"><?php echo $industries_name; //phpcs:ignore ?></a>
+						<span class="button button-white-green"><?php echo $industries_name; //phpcs:ignore ?></span>
 						<?php
 					}
 				}

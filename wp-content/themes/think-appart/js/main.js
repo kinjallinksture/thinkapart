@@ -93,7 +93,7 @@
 		moduleProcess();
 
 		moduleProcessMisson();
-
+		
 		moduleIndustries();
 
 		moduleReview();
@@ -612,11 +612,12 @@
 		})
 
 		function changeIndex($textContainer, index){
+			console.log( index );
 			$textContainer.removeClass('active');
 			$textContainer[index].classList.add('active');
 		}
 	}
-
+	
 	function moduleIndustries(){
 		$('.module-our-work-industries .our-work-industries-wrapper').each(function(i, module){
 			var $module = $(module);
