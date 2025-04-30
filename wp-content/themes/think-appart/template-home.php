@@ -98,28 +98,49 @@ while ( have_rows( 'content' ) ) {
 	}elseif($layout == 'latest_works'){
 		$projects = get_sub_field('projects');
 		$n_projects = count($projects);
+		$col4_count = 0;
+		$row_open = false;
 		?>
 		<section class="module module-latest-works">
-			<div class="columns-container">
-				<div class="column">
-					<h2 class="module-title font-h2 font-regular"><?=get_sub_field('title')?></h2>
-					<?php
-					$parallax_factor = -.5;
-					for ($i=1; $i < $n_projects; $i+=2) {
-						jg_print_project_home($projects[$i], $parallax_factor);
-						// $parallax_factor+=.5;
-					}
-					?>
-				</div>
-				<div class="column">
-					<?php
-					$parallax_factor = 1;
-					for ($i=0; $i < $n_projects; $i+=2) {
-						jg_print_project_home($projects[$i], $parallax_factor);
-					}
-					?>
-				</div>
+			
+			<div class="row">
+				<h2 class="module-title font-h2 font-regular"><?=get_sub_field('title')?></h2>
 			</div>
+			<?php
+			foreach ($projects as $index => $project) {
+				// Open first row
+				if ($index === 0) {
+					echo '<div class="row">';
+					echo '<div class="col-8">';
+					jg_print_project_home($project);
+					echo '</div>';
+				} elseif ($index === 1) {
+					echo '<div class="col-4">';
+					jg_print_project_home($project);
+					echo '</div>';
+					echo '</div>'; // close first row
+				} else {
+					// All other items in rows of 3 col-4
+					if ($col4_count % 3 === 0) {
+						if ($row_open) {
+							echo '</div>'; // Close previous row
+						}
+						echo '<div class="row">';
+						$row_open = true;
+					}
+
+					echo '<div class="col-4">';
+					jg_print_project_home($project);
+					echo '</div>';
+
+					$col4_count++;
+				}
+			}
+
+			if ($row_open) {
+				echo '</div>'; // Close last open row
+			}
+			?>
 			<div class="buttons-container">
 				<a href="<?=get_permalink(get_sub_field('button_page'))?>" class="button button-black"><?=get_sub_field('button_text')?></a>
 			</div>
@@ -318,7 +339,7 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 		the_row();
 		$project_bg = jg_get_info_background_color( 'hover' );
 		?>
-		<a href="<?=get_permalink($project)?>" class="work-container js-parallax" data-parallax-factor="<?=$parallax_factor?>">
+		<a href="<?=get_permalink($project)?>" class="">
 			<div class="background-image">
 				<?php
 				$type = get_sub_field( 'home_media_type' );
@@ -345,8 +366,20 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 				?>
 			</div>
 			<div class="text-container background-<?=$project_bg['color']?> font-color-<?=$project_bg['font_color']?>" <?=$project_bg['other_color_style']?>>
-				<p class="font-p"><?=get_sub_field('title')?></p>
+				
 			</div>
+			<p class="font-p"><?=get_sub_field('title')?></p>
+			<ul>
+			<?php
+				$services = get_sub_field('services');
+				foreach ($services as $service) {
+					$service_lang = apply_filters( 'wpml_object_id', $service, 'services', true );
+					?>
+					<li><?=get_the_title($service_lang)?></li>
+					<?php
+				}
+			?>
+			</ul>
 		</a>
 		<?php
 	}

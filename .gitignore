@@ -25,3 +25,5 @@ node_modules/
 # root files
 wp-config.php
 .htaccess
+wp-admin/*
+wp-includes/*
