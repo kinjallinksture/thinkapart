@@ -164,6 +164,7 @@ while (have_rows('content')) {
 	}elseif($layout == 'team'){
 		?>
 		<section class="module module-team-table">
+			<div class="team-table-container">
 			<?php
 			while(have_rows('team')){
 				the_row();
@@ -176,13 +177,14 @@ while (have_rows('content')) {
 				<?php
 			}
 			?>
+			</div>
 		</section>
 		<?php
 	}elseif($layout == 'section_link'){
 		$image_1 = get_sub_field('image_1');
 		$image_2 = get_sub_field('image_2');
 		?>
-		<section class="module module-link-section">
+		<section class="module module-link-section background-yellow">
 			<div class="text-container">
 				<p class="tagline font-p"><strong><?=get_sub_field('tagline')?></strong></p>
 				<p class="title font-h2"><?=get_sub_field('title')?></p>
