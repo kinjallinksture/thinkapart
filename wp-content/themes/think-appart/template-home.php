@@ -101,39 +101,38 @@ while ( have_rows( 'content' ) ) {
 		$col4_count = 0;
 		$row_open = false;
 		?>
-		<section class="module module-latest-works">
-			
-			<div class="row">
+		<section class="module module-grid-latest-works">
+			<div class="title">
 				<h2 class="module-title font-h2 font-regular"><?=get_sub_field('title')?></h2>
 			</div>
 			<?php
-			foreach ($projects as $index => $project) {
-				// Open first row
-				if ($index === 0) {
-					echo '<div class="row">';
-					echo '<div class="col-8">';
-					jg_print_project_home($project);
-					echo '</div>';
-				} elseif ($index === 1) {
-					echo '<div class="col-4">';
-					jg_print_project_home($project);
-					echo '</div>';
-					echo '</div>'; // close first row
-				} else {
-					// All other items in rows of 3 col-4
-					if ($col4_count % 3 === 0) {
-						if ($row_open) {
-							echo '</div>'; // Close previous row
+			if ( ! empty( $projects ) ) {
+				foreach ( $projects as $index => $project ) {
+					// Open first row
+					if ( $index === 0 ) {
+						echo '<div class="first-row">';
+						echo '<div class="project-item-one project-home-grid">';
+							jg_print_project_home( $project );
+						echo '</div>';
+					} elseif ($index === 1) {
+						echo '<div class="project-item-two project-home-grid">';
+							jg_print_project_home($project);
+						echo '</div>';
+						echo '</div>'; // close first row
+					} else {
+						// All other items in rows of 3 col-4
+						if ( $col4_count % 3 === 0 ) {
+							if ($row_open) {
+								echo '</div>'; // Close previous row
+							}
+							echo '<div class="second-row">';
+							$row_open = true;
 						}
-						echo '<div class="row">';
-						$row_open = true;
+						echo '<div class="second-row-items project-home-grid">';
+							jg_print_project_home($project);
+						echo '</div>';
+						$col4_count++;
 					}
-
-					echo '<div class="col-4">';
-					jg_print_project_home($project);
-					echo '</div>';
-
-					$col4_count++;
 				}
 			}
 
@@ -339,8 +338,8 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 		the_row();
 		$project_bg = jg_get_info_background_color( 'hover' );
 		?>
-		<a href="<?=get_permalink($project)?>" class="">
-			<div class="background-image">
+		<a href="<?=get_permalink($project)?>" class="home-project-grid-wrap">
+			<div class="background-image-wrap">
 				<?php
 				$type = get_sub_field( 'home_media_type' );
 				if ( empty( $type ) ) {
