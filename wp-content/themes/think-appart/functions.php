@@ -66,6 +66,7 @@ function registrar_jscss(){
 	wp_enqueue_script('scrollmagic-gsap', get_template_directory_uri().'/js/lib/animation.gsap.js', array(), THINK_APPART_THEME_VERSION);
 	wp_enqueue_script('swiper', get_template_directory_uri().'/js/lib/swiper-bundle.min.js', array(), THINK_APPART_THEME_VERSION);
 	wp_enqueue_script('typed', get_template_directory_uri().'/js/lib/typed.js', array(), THINK_APPART_THEME_VERSION);
+	wp_enqueue_script('scrolltrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array(), THINK_APPART_THEME_VERSION);
 	wp_enqueue_script('think-appart-scrollanimation-js', get_template_directory_uri().'/js/scrollAnimation.js', array(), THINK_APPART_THEME_VERSION);
 	wp_enqueue_script('think-appart-main-js', get_template_directory_uri().'/js/main.js', array(), THINK_APPART_THEME_VERSION);
 }

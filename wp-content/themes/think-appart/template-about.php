@@ -154,7 +154,7 @@ while (have_rows('content')) {
 		<section class="module module-bg-image-scale">
 			<div class="scale-animation">
 				<div class="sticky-div">
-					<div class="scale-image-wrapper">
+					<div class="scale__image-wrapper">
 						<img src="<?php echo $image;?>" class="scale-image">
 					</div>
 				</div>

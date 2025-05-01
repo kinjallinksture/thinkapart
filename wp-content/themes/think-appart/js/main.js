@@ -111,6 +111,8 @@
 		moduleSylo();
 
 		moduleSwiperinit();
+
+		scaleAnimation();
 	})
 
 	function moduleSwiperinit() {
@@ -254,6 +256,40 @@
 			var x = event.clientX - bounding.x;
 			var y = event.clientY - bounding.y;
 			gsap.to($currentIconPause, .2, {top: y + 'px', left: x + 'px', ease: Power0.easeNone})
+		}
+	}
+
+	function scaleAnimation() {
+		var animation_legth = $( '.scale-animation' ).length;
+		if ( animation_legth > 0 ) {
+			$(".scale-animation").each(function (index) {
+				let triggerElement = $(this);
+				let targetElement = $(".scale__image-wrapper");
+			
+				let tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: triggerElement,
+					start: "top top",
+					end: "bottom bottom",
+					scrub: 1
+				}
+				});
+				tl.fromTo(
+				targetElement,
+				{
+					width: "35em",
+					height: "35em",
+					borderRadius: "4rem",
+					duration: 1
+				},
+				{
+					width: "100vw",
+					height: "100vh",
+					borderRadius: "0rem",
+					duration: 1
+				}
+				);
+			});
 		}
 	}
 
