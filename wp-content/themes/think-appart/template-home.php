@@ -364,9 +364,6 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 				}
 				?>
 			</div>
-			<div class="text-container background-<?=$project_bg['color']?> font-color-<?=$project_bg['font_color']?>" <?=$project_bg['other_color_style']?>>
-				
-			</div>
 			<p class="font-p"><?=get_sub_field('title')?></p>
 			<?php
 				$services = get_sub_field( 'services' );
