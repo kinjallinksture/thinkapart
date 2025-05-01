@@ -97,9 +97,6 @@ while ( have_rows( 'content' ) ) {
 		<?php
 	}elseif($layout == 'latest_works'){
 		$projects = get_sub_field('projects');
-		$n_projects = count($projects);
-		$col4_count = 0;
-		$row_open = false;
 		?>
 		<section class="module module-grid-latest-works">
 			<div class="title">
@@ -107,37 +104,19 @@ while ( have_rows( 'content' ) ) {
 			</div>
 			<?php
 			if ( ! empty( $projects ) ) {
-				foreach ( $projects as $index => $project ) {
-					// Open first row
-					if ( $index === 0 ) {
-						echo '<div class="first-row">';
-						echo '<div class="project-item-one project-home-grid">';
-							jg_print_project_home( $project );
-						echo '</div>';
-					} elseif ($index === 1) {
-						echo '<div class="project-item-two project-home-grid">';
-							jg_print_project_home($project);
-						echo '</div>';
-						echo '</div>'; // close first row
-					} else {
-						// All other items in rows of 3 col-4
-						if ( $col4_count % 3 === 0 ) {
-							if ($row_open) {
-								echo '</div>'; // Close previous row
-							}
-							echo '<div class="second-row">';
-							$row_open = true;
-						}
-						echo '<div class="second-row-items project-home-grid">';
-							jg_print_project_home($project);
-						echo '</div>';
-						$col4_count++;
+				?>
+				<div class="first-row">
+					<?php
+					foreach ( $projects as $index => $project ) {
+						?>
+						<div class="project-home-grid">
+							<?php jg_print_project_home( $project ); ?>
+						</div>
+						<?php
 					}
-				}
-			}
-
-			if ($row_open) {
-				echo '</div>'; // Close last open row
+					?>
+				</div>
+				<?php
 			}
 			?>
 			<div class="buttons-container">
@@ -363,6 +342,9 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 					<?php
 				}
 				?>
+			</div>
+			<div class="text-container background-<?=$project_bg['color']?> font-color-<?=$project_bg['font_color']?>" <?=$project_bg['other_color_style']?>>
+				
 			</div>
 			<p class="font-p"><?=get_sub_field('title')?></p>
 			<?php
