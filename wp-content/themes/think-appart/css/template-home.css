@@ -663,6 +663,9 @@
 .module-grid-latest-works .project-home-grid:first-child {
   width: 66%;
 }
+.module-grid-latest-works .project-home-grid .home-project-grid-wrap:hover {
+  color: black;
+}
 .module-grid-latest-works .home-project-grid-wrap .image {
   width: 100%;
   height: 600px;
@@ -762,7 +765,7 @@
 
 @media (max-width: 767px) {
   .module-grid-latest-works .title .module-title {
-    width: 90%;
+    width: 100%;
   }
   .module-grid-latest-works {
     padding: 80px 28px;

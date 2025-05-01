@@ -100,7 +100,7 @@ while ( have_rows( 'content' ) ) {
 		?>
 		<section class="module module-grid-latest-works">
 			<div class="title">
-				<h2 class="module-title font-h1 font-regular"><?=get_sub_field('title')?></h2>
+				<h2 class="module-title font-h1"><?=get_sub_field('title')?></h2>
 			</div>
 			<?php
 			if ( ! empty( $projects ) ) {

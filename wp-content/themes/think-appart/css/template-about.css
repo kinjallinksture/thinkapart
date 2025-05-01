@@ -205,9 +205,7 @@
     margin-bottom: 0;
   }
 }
-.modules-about .module {
-  margin: 150px 0;
-}
+
 .modules-about .module-awards {
   padding: 0 var(--lateral-space);
 }
@@ -277,7 +275,7 @@
   max-width: none;
 }
 .module-link-section {
-  padding: 0 var(--lateral-space);
+  padding: 150px var(--lateral-space);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,8 +303,8 @@
   margin-top: 32px;
 }
 @media (max-width: 800px) {
-  .modules-about .module {
-    margin: 70px 0;
+  .module-link-section {
+    padding: 70px var(--lateral-space);
   }
   .module-title-text {
     -webkit-box-orient: vertical;
