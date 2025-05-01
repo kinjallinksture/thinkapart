@@ -103,7 +103,7 @@ while ( have_rows( 'content' ) ) {
 		?>
 		<section class="module module-grid-latest-works">
 			<div class="title">
-				<h2 class="module-title font-h2 font-regular"><?=get_sub_field('title')?></h2>
+				<h2 class="module-title font-h1 font-regular"><?=get_sub_field('title')?></h2>
 			</div>
 			<?php
 			if ( ! empty( $projects ) ) {
@@ -368,17 +368,23 @@ function jg_print_project_home( $project, $parallax_factor = 0 ) {
 				
 			</div>
 			<p class="font-p"><?=get_sub_field('title')?></p>
-			<ul>
 			<?php
-				$services = get_sub_field('services');
-				foreach ($services as $service) {
-					$service_lang = apply_filters( 'wpml_object_id', $service, 'services', true );
+				$services = get_sub_field( 'services' );
+				if ( ! empty( $services ) ) {
+					$cat_array = array();
+					foreach ( $services as $service ) {
+						$cat_id = apply_filters( 'wpml_object_id', $service, 'services', true );
+						$cat_array[] = get_the_title( $cat_id );
+					}
+				}
+				if ( ! empty( $cat_array ) ) {
 					?>
-					<li><?=get_the_title($service_lang)?></li>
+					<div class="project-grid-category-list">
+						<?php echo implode( ' | ', $cat_array ); //phpcs:ignore ?>
+					</div>
 					<?php
 				}
 			?>
-			</ul>
 		</a>
 		<?php
 	}

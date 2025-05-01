@@ -163,7 +163,7 @@ while (have_rows('content')) {
 		<?php
 	}elseif($layout == 'team'){
 		?>
-		<section class="module module-team">
+		<section class="module module-team-table">
 			<?php
 			while(have_rows('team')){
 				the_row();
