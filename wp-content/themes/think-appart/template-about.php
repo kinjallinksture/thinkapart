@@ -64,7 +64,7 @@ while (have_rows('content')) {
 					<?php
 					if ( 'self-hosted' === $video_type && ( ! empty( $video_mp4 ) || ! empty( $video_ogg ) || ! empty( $video_webm ) ) ) {
 					?>
-						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" controls muted >
+						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted >
 							<?php
 							if ( ! empty( $video_mp4 ) ) {
 								?>
@@ -99,7 +99,7 @@ while (have_rows('content')) {
 					<?php
 					if ( 'self-hosted' === $video_type && ( ! empty( $video_mp4 ) || ! empty( $video_ogg ) || ! empty( $video_webm ) ) ) {
 					?>
-						<video width="320" height="240" loop="loop" autoplay="autoplay" controls muted >
+						<video width="320" height="240" loop="loop" autoplay="autoplay" muted >
 							<?php
 							if ( ! empty( $video_mp4 ) ) {
 								?>

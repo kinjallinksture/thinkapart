@@ -277,8 +277,8 @@
 				tl.fromTo(
 				targetElement,
 				{
-					width: "35em",
-					height: "35em",
+					width: "545px",
+					height: "343px",
 					borderRadius: "4rem",
 					duration: 1
 				},
