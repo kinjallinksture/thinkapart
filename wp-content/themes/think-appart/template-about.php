@@ -86,19 +86,17 @@ while (have_rows('content')) {
 					<?php
 					} else {
 						if ( ! empty( $external_video_url ) ) {
-
 							?>
 							<div class="video-wrapper">
 								<?php echo $external_video_url; ?>
 							</div>
-							
 							<?php
 						}
 					}
 					?>
 				</div>
 				<div class="mobile-video w-embed">
-				<?php
+					<?php
 					if ( 'self-hosted' === $video_type && ( ! empty( $video_mp4 ) || ! empty( $video_ogg ) || ! empty( $video_webm ) ) ) {
 					?>
 						<video width="320" height="240" loop="loop" autoplay="autoplay" controls muted >
@@ -127,7 +125,6 @@ while (have_rows('content')) {
 							<div class="video-wrapper">
 								<?php echo $external_video_url; ?>
 							</div>
-							
 							<?php
 						}
 					}
