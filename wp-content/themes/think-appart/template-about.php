@@ -158,7 +158,7 @@ while (have_rows('content')) {
 		?>
 		<section class="module module-bg-image-scale">
 			<div class="row gif-title-container">
-				<p class="module-title font-h1"><?php echo $gif_title; ?></p>
+				<p class="module-title font-h2"><?php echo $gif_title; ?></p>
 			</div>
 			<div class="scale-animation">
 				<div class="sticky-div">

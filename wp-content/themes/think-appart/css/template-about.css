@@ -206,6 +206,10 @@
   }
 }
 
+.modules-about .module.module-bg-image-scale {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .modules-about .module-awards {
   padding: 0 var(--lateral-space);
 }
@@ -283,6 +287,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.module.module-link-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 .module-link-section .text-container {
   width: 45%;
 }
@@ -302,6 +310,8 @@
 .module-link-section .images-container .image-container + .image-container {
   margin-top: 32px;
 }
+
+
 @media (max-width: 800px) {
   .module-link-section {
     padding: 70px var(--lateral-space);
@@ -542,6 +552,9 @@
    color: white;
    font-size: 19px;
 }
+.modules-about .module {
+  margin: 150px 0;
+}
 
 @media (max-width: 1199px) {
   .module-process .process-container-misson {
@@ -662,19 +675,27 @@
     height: 32px;
     background-size: 32px;
   }
+  .modules-about .module {
+    margin: 70px 0;
+  }
 }
 
 /* Image scale */
 .module-bg-image-scale {
-  padding-top: 10rem;
   width: 100%;
    height: auto;
+}
+.module-bg-image-scale .gif-title-container {
+  position: absolute;
+  top: 16vh;
+  left: 114px;
+  z-index: 1;
 }
 .module-bg-image-scale .scale-animation {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 100vh;
+    height: 300vh;
     display: flex;
     position: static;
 }
@@ -719,7 +740,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto !important;
   width: 790px;
   padding: 80px 0 160px 0;
  
@@ -740,15 +761,22 @@
 } 
 
 /*  module-video */
-.module-video {
-  padding: 160px 0;
-}
 .module-video .desktop-video video {
   width: 100%;
   max-height: 100%;
   object-fit: cover;
   min-height: 530px;
   height: 100%;
+}
+.module-video .mobile-video video {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 165px;
+  height: 100%;
+}
+.module-video .mobile-video {
+  display: none;
 }
 
 @media (max-width: 1199px)  {
@@ -761,8 +789,11 @@
     padding: 80px 19px 80px 19px;
     width: auto; 
   }
-  .module-video {
-    padding: 70px 0;
+  .module-video .mobile-video {
+    display: block;
+  }
+  .module-video .desktop-video {
+    display: none;
   }
 }
 @media (max-width: 575px) {
