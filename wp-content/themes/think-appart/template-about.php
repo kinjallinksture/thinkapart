@@ -194,7 +194,7 @@ while (have_rows('content')) {
 		?>
 		<section class="module module-link-section background-yellow">
 			<div class="text-container">
-				<p class="tagline font-p"><strong><?=get_sub_field('tagline')?></strong></p>
+				<p class="tagline font-p"><strong class="font-bold"><?=get_sub_field('tagline')?></strong></p>
 				<p class="title font-h2"><?=get_sub_field('title')?></p>
 				<?php
 				while(have_rows('button')){
