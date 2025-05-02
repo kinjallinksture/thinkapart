@@ -687,7 +687,7 @@
 }
 .module-bg-image-scale .gif-title-container {
   position: absolute;
-  top: 16vh;
+  top: 7vh;
   left: 114px;
   z-index: 1;
 }
@@ -713,9 +713,9 @@
     border-radius: 4rem;
     justify-content: center;
     align-items: center;
-    width: 34em;
+    width: 35em;
     min-width: auto;
-    height: 22em;
+    height: 35em;
     min-height: auto;
     display: flex;
     position: relative;
@@ -782,6 +782,9 @@
 @media (max-width: 1199px)  {
   .module-team-table {
     padding: 80px 19px 140px 19px; 
+  }
+  .module-bg-image-scale .gif-title-container {
+    top: 0vh;
   }
 }
 @media (max-width: 800px) {
