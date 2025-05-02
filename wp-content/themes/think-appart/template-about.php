@@ -51,92 +51,36 @@ while (have_rows('content')) {
 			</div>
 		</section>
 		<?php
-	} elseif($layout == 'video'){
-			$video_type         = get_sub_field( 'video_type' );
-			$image              = get_sub_field( 'poster_image' );
-			$video_mp4          = get_sub_field( 'video_mp4' );
-			$video_ogg          = get_sub_field( 'video_ogg' );
-			$video_webm         = get_sub_field( 'video_webm' );
-			$external_video_url = get_sub_field( 'embeded_url' );
-			$mobile_video_mp4   = get_sub_field( 'mobile_video_mp4' );
-			$mobile_video_ogg   = get_sub_field( 'mobile_video_ogg' );
-			$mobile_video_webm  = get_sub_field( 'mobile_video_webm' );
-			$mobile_embeded_url = get_sub_field( 'mobile_embeded_url' );
+	}elseif($layout == 'video'){
+			$image            = get_sub_field( 'poster_image' );
+			$video_mp4        = get_sub_field( 'video_mp4' );
+			$mobile_video_mp4 = get_sub_field( 'mobile_video_mp4' );
 			?>
 			<section class="module module-video">
-				<div class="desktop-video w-embed">
-					<?php
-					if ( 'self-hosted' === $video_type && ( ! empty( $video_mp4 ) || ! empty( $video_ogg ) || ! empty( $video_webm ) ) ) {
-					?>
+				<?php
+				if ( ! empty( $video_mp4 ) ) {
+				?>
+					<div class="desktop-video w-embed">
 						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted >
-							<?php
-							if ( ! empty( $video_mp4 ) ) {
-								?>
-								<source src="<?php echo $video_mp4; // phpcs:ignore ?>" type="video/mp4">
-								<?php
-							}
-							if ( ! empty( $video_ogg ) ) {
-								?>
-								<source src="<?php echo $video_ogg; // phpcs:ignore ?>" type="video/ogg">
-								<?php
-							}
-							if ( ! empty( $video_webm ) ) {
-								?>
-								<source src="<?php echo $video_webm; // phpcs:ignore ?>" type="video/webm">
-								<?php
-							}
-							?>
+							<source src="<?php echo $video_mp4; // phpcs:ignore ?>" type="video/mp4">
 						</video>
-					<?php
-					} else {
-						if ( ! empty( $external_video_url ) ) {
-							?>
-							<div class="video-wrapper">
-								<?php echo $external_video_url; ?>
-							</div>
-							<?php
-						}
-					}
-					?>
-				</div>
-				<div class="mobile-video w-embed">
-					<?php
-					if ( 'self-hosted' === $video_type && ( ! empty( $mobile_video_mp4 ) || ! empty( $mobile_video_ogg ) || ! empty( $mobile_video_webm ) ) ) {
-					?>
-						<video width="320" height="240" loop="loop" autoplay="autoplay" muted >
-							<?php
-							if ( ! empty( $mobile_video_mp4 ) ) {
-								?>
-								<source src="<?php echo $mobile_video_mp4; // phpcs:ignore ?>" type="video/mp4">
-								<?php
-							}
-							if ( ! empty( $mobile_video_ogg ) ) {
-								?>
-								<source src="<?php echo $mobile_video_ogg; // phpcs:ignore ?>" type="video/ogg">
-								<?php
-							}
-							if ( ! empty( $mobile_video_webm ) ) {
-								?>
-								<source src="<?php echo $mobile_video_webm; // phpcs:ignore ?>" type="video/webm">
-								<?php
-							}
-							?>
+					</div>
+				<?php
+				} 
+				if ( ! empty( $mobile_video_mp4 ) ) {
+				?>
+					<div class="mobile-video w-embed">
+						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted >
+							<source src="<?php echo $mobile_video_mp4; // phpcs:ignore ?>" type="video/mp4">
 						</video>
-					<?php
-					} else {
-						if ( ! empty( $mobile_embeded_url ) ) {
-							?>
-							<div class="video-wrapper">
-								<?php echo $mobile_embeded_url; ?>
-							</div>
-							<?php
-						}
-					}
-					?>
-				</div>
+					</div>
+				<?php
+				} 
+				?>
+				
 			</section>
 			<?php
-	} elseif($layout == 'awards'){
+	}elseif($layout == 'awards'){
 		?>
 		<section class="module module-awards">
 			<p class="module-title font-h1"><?=get_sub_field('title')?></p>
