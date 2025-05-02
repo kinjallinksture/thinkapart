@@ -678,6 +678,12 @@
     display: flex;
     position: static;
 }
+.gif-title-container {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  z-index: 2;
+}
 .module-bg-image-scale .sticky-div {
     justify-content: center;
     align-items: center;
@@ -687,6 +693,7 @@
     position: sticky;
     top: 0;
     overflow: hidden;
+    z-index: 1;
 }
 .module-bg-image-scale .scale__image-wrapper {
     border-radius: 4rem;

@@ -114,7 +114,6 @@
 
 		scaleAnimation();
 	})
-
 	function moduleSwiperinit() {
 		/****** Swiper slider using params ******/
 		let swiperObjs = [];
@@ -277,8 +276,8 @@
 				tl.fromTo(
 				targetElement,
 				{
-					width: "545px",
-					height: "343px",
+					width: "34em",
+					height: "22em",
 					borderRadius: "4rem",
 					duration: 1
 				},
