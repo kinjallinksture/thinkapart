@@ -114,6 +114,7 @@
 
 		scaleAnimation();
 	})
+
 	function moduleSwiperinit() {
 		/****** Swiper slider using params ******/
 		let swiperObjs = [];

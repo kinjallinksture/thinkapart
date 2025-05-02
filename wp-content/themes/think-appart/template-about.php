@@ -157,12 +157,12 @@ while (have_rows('content')) {
 		$image = get_sub_field('image');
 		?>
 		<section class="module module-bg-image-scale">
+			<div class="row gif-title-container">
+				<p class="module-title font-h1"><?php echo $gif_title; ?></p>
+			</div>
 			<div class="scale-animation">
 				<div class="sticky-div">
 					<div class="scale__image-wrapper">
-						<div class="row gif-title-container">
-							<p class="module-title font-h1"><?php echo $gif_title; ?></p>
-						</div>
 						<img src="<?php echo $image;?>" class="scale-image">
 					</div>
 				</div>
