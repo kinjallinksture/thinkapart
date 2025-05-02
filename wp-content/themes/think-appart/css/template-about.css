@@ -789,6 +789,10 @@
     padding: 80px 19px 80px 19px;
     width: auto; 
   }
+  .module-bg-image-scale .gif-title-container {
+    top: 5vh;
+    left: 19px;
+  }
   .module-video .mobile-video {
     display: block;
   }
