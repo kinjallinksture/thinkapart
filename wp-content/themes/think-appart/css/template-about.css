@@ -1,3 +1,21 @@
+body {
+  font-size: 1vw;
+}
+@media (min-width: 240px) {
+  html {font-size: calc(8.42px + 7.58 * ((100vw - 240px) / 210));}
+}
+@media (min-width: 768px) {
+  html {font-size: calc(13.29px + 2.71 * ((100vw - 768px) / 223));}
+}
+@media (min-width: 1024px) {
+  html {font-size: calc(11.8px + 4.2 * ((100vw - 1024px) / 488));}
+}
+@media (min-width: 1512px) {
+  html {font-size: calc(16px + 1.8 * ((100vw - 1512px) / 408));}
+}
+@media (min-width: 1920px) {
+  html {font-size: 17.8px;}
+}
 .module-awards {
   padding: 150px var(--lateral-space) 250px;
 }
@@ -710,7 +728,7 @@
     overflow: hidden;
 }
 .module-bg-image-scale .scale__image-wrapper {
-    border-radius: 4rem;
+    border-radius: 3rem;
     justify-content: center;
     align-items: center;
     width: 35em;
@@ -728,7 +746,7 @@
     position: relative;
     inset: 0%;
     overflow: hidden;
-   object-fit: cover;
+    object-fit: cover;
     width: 100%;
     max-width: 100%;
     height: 100%;

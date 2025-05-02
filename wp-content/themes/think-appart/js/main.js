@@ -279,7 +279,7 @@
 				{
 					width: "35em",
 					height: "35em",
-					borderRadius: "4rem",
+					borderRadius: "3rem",
 					duration: 1
 				},
 				{
