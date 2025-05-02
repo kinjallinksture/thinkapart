@@ -61,7 +61,7 @@ while (have_rows('content')) {
 				if ( ! empty( $video_mp4 ) ) {
 				?>
 					<div class="desktop-video w-embed">
-						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted >
+						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted playsinline>
 							<source src="<?php echo $video_mp4; // phpcs:ignore ?>" type="video/mp4">
 						</video>
 					</div>
@@ -70,7 +70,7 @@ while (have_rows('content')) {
 				if ( ! empty( $mobile_video_mp4 ) ) {
 				?>
 					<div class="mobile-video w-embed">
-						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted >
+						<video poster="<?php echo $image; ?>" width="320" height="240" loop="loop" autoplay="autoplay" muted playsinline>
 							<source src="<?php echo $mobile_video_mp4; // phpcs:ignore ?>" type="video/mp4">
 						</video>
 					</div>
