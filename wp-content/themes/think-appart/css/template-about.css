@@ -685,6 +685,12 @@
   width: 100%;
    height: auto;
 }
+.module-bg-image-scale .gif-title-container {
+  position: absolute;
+  top: 7vh;
+  left: 114px;
+  z-index: 1;
+}
 .module-bg-image-scale .scale-animation {
     justify-content: center;
     align-items: flex-start;
@@ -782,6 +788,9 @@
   .module-team-table {
     padding: 80px 19px 140px 19px; 
   }
+  .module-bg-image-scale .gif-title-container {
+    top: 0vh;
+  }
 }
 @media (max-width: 800px) {
   .module-team-table {
@@ -793,6 +802,10 @@
   }
   .module-video .desktop-video {
     display: none;
+  }
+  .module-bg-image-scale .gif-title-container {
+    top: 2vh;
+    left: 19px;
   }
 }
 @media (max-width: 575px) {
