@@ -41,6 +41,7 @@ body {
   max-height: 130px;
   margin: 0 10px;
 }
+ 
 @media (max-width: 800px) {
   .module-awards {
     padding: 90px var(--lateral-space);
@@ -758,6 +759,14 @@ body {
   padding: 0 var(--lateral-space);
 }
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .module-bg-image-scale .module-title {
+    padding: 0 0 0 60px;
+    top: -50px;
+    left: 0;
+  }
+}
+
 /* New Team table */
 .module-team-table {
   display: flex;
@@ -766,7 +775,6 @@ body {
   margin: 0 auto !important;
   width: 790px;
   padding: 80px 0 160px 0;
- 
 }
 .module-team-table .team-table-container .item {
   display: flex;
