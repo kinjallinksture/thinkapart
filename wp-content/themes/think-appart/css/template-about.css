@@ -685,12 +685,6 @@
   width: 100%;
    height: auto;
 }
-.module-bg-image-scale .gif-title-container {
-  position: absolute;
-  top: 7vh;
-  left: 114px;
-  z-index: 1;
-}
 .module-bg-image-scale .scale-animation {
     justify-content: center;
     align-items: flex-start;
@@ -733,6 +727,11 @@
     max-width: 100%;
     height: 100%;
     display: inline-block;
+}
+.module-bg-image-scale .module-title {
+  position: absolute;
+  top: 65px;
+  padding: 0 var(--lateral-space);
 }
 
 /* New Team table */
@@ -783,18 +782,11 @@
   .module-team-table {
     padding: 80px 19px 140px 19px; 
   }
-  .module-bg-image-scale .gif-title-container {
-    top: 0vh;
-  }
 }
 @media (max-width: 800px) {
   .module-team-table {
     padding: 80px 19px 80px 19px;
     width: auto; 
-  }
-  .module-bg-image-scale .gif-title-container {
-    top: 5vh;
-    left: 19px;
   }
   .module-video .mobile-video {
     display: block;

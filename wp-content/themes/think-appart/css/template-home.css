@@ -673,7 +673,8 @@
   border-radius: 25px;
   margin-bottom: 24px;
   scale: 1;
-  transition: .3s;
+  transition: .4s;
+  will-change: transform;
 }
 .module-grid-latest-works .home-project-grid-wrap .image:hover {
   scale: 0.97;
