@@ -674,7 +674,7 @@
   margin-bottom: 24px;
   scale: 1;
   transition: .4s;
-  will-change: transform;
+  will-change: transform; 
 }
 .module-grid-latest-works .home-project-grid-wrap .image:hover {
   scale: 0.97;

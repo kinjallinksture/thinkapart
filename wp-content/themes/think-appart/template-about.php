@@ -28,7 +28,7 @@ while (have_rows('content')) {
 		$text_class = (empty($text)) ? 'empty' : '';
 		?>
 		<section class="module module-title-text">
-			<<?=$tag?> class="title font-h2 <?=$title_class?>"><?=$title?></<?=$tag?>>
+			<<?=$tag?> class="title font-h1 <?=$title_class?>"><?=$title?></<?=$tag?>>
 			<p class="text font-p2 <?=$text_class?>"><?=get_sub_field('text')?></p>
 		</section>
 		<?php

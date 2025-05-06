@@ -233,19 +233,17 @@ body {
   padding: 0 var(--lateral-space);
 }
 .module-title-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   padding: 0 var(--lateral-space);
 }
 .module-title-text .title {
-  width: 50%;
+  width: 80%;
 }
 .module-title-text .text {
   width: 45%;
@@ -263,7 +261,7 @@ body {
 }
 .module-image .image-container {
   width: auto;
-  max-width: 80%;
+  max-width: 100%;
 }
 .module-image .image-container .image {
   border-radius: 20px;
@@ -380,6 +378,12 @@ body {
   }
 }
 
+@media (max-width: 1199px) {
+  .module-title-text .title {
+    width: 90%;
+  }
+}
+
 /* Achievements */
 .modules-about .module-our-achievements-box,
 .modules-about .module-our-work-industries  {
@@ -390,14 +394,15 @@ body {
 }
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
   flex-wrap: wrap;
 }
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box {
   padding: 0 48px;
   border-right: 1px solid rgb(0, 0, 0, 0.5);
   width: 33.33%;
+  display: flex;
+  flex-direction: column;
 }
 .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:first-child {
   padding-left: 0;
@@ -592,6 +597,7 @@ body {
   }
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:last-child {
     margin-bottom: 0;
+    padding-left: 0;
   }
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box:nth-of-type(2) {
     border-right: 0;
@@ -663,6 +669,10 @@ body {
   .module-process .process-container-misson .title {
     font-size: 35px;
     width: 100%;
+    padding-left: 50px;
+  }
+  .module-process .process-container-misson p {
+    padding-left: 50px;
   }
   .modules-about .module-our-achievements-box .our-achievements-box-wrapper .our-achievements-box span {
     font-size: 32px;
@@ -686,16 +696,25 @@ body {
     padding: 16px 25px;
     margin-bottom: 15px;
   }
-  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after,
   .module-process .process-container-misson .title::after {
-    left: 15px;
-    top: 20px;
+    left: 8px;
+    top: 23px;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+  }
+  .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after {
     width: 32px;
     height: 32px;
-    background-size: 32px;
+    top: 15px;
   }
   .modules-about .module {
     margin: 70px 0;
+  }
+  .module-process .process-container-misson .title::before {
+    width: 32px;
+    height: 32px;
+    top: 15px;
   }
 }
 
