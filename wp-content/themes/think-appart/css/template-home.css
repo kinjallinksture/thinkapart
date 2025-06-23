@@ -762,6 +762,13 @@
   .module-grid-latest-works .project-home-grid {
     width: 100%;
   }
+  .module-grid-latest-works .title {
+    padding-left: 15px;
+  }
+  .module-grid-latest-works .home-project-grid-wrap .image {
+	 height: auto;
+	 background-size:contain;
+  }
 }
 
 @media (max-width: 767px) {

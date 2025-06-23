@@ -667,6 +667,7 @@ body {
     font-size: 32px;
     line-height: 42px;
   }
+  
   .module-process .process-container-misson,
   .modules-about .module-our-work-industries .our-work-industries-wrapper {
     padding: 30px;
@@ -694,6 +695,7 @@ body {
     font-size: 24px;
     width: 100%;
     line-height: 36px;
+	padding-left: 50px;
   }
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon {
     margin-bottom: 25px;
@@ -710,10 +712,17 @@ body {
     background-size: 16px;
   }
   .modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::after {
-    width: 32px;
-    height: 32px;
-    top: 15px;
+    left: 8px;
+	  top: 23px;
+	  width: 16px;
+	  height: 16px;
+	  background-size: 16px;
   }
+	.modules-about .module-our-work-industries .our-work-industries-wrapper .title-with-icon h2::before {
+		width: 32px;
+		height: 32px;
+		top: 15px;
+	}
   .modules-about .module {
     margin: 70px 0;
   }
