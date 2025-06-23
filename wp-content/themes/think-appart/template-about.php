@@ -26,10 +26,18 @@ while (have_rows('content')) {
 		}
 		$text = get_sub_field('text');
 		$text_class = (empty($text)) ? 'empty' : '';
+		$title_text_class = get_sub_field('about_add_class');
+		
 		?>
-		<section class="module module-title-text">
+		<section class="module module-title-text <?=$title_text_class?>">
 			<<?=$tag?> class="title font-h2 <?=$title_class?>"><?=$title?></<?=$tag?>>
-			<p class="text font-p2 <?=$text_class?>"><?=get_sub_field('text')?></p>
+			<?php
+			if ( get_sub_field('text') ) {
+				?>
+				<p class="text font-p2 <?=$text_class?>"><?=get_sub_field('text')?></p>
+				<?php
+			}
+			?>
 		</section>
 		<?php
 	} elseif ( $layout == 'our_achievements' ) {
