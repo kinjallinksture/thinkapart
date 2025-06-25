@@ -789,7 +789,7 @@ body {
 }
 .module-bg-image-scale .module-title {
   position: absolute;
-  top: 65px;
+  top: -15px;
   padding: 0 var(--lateral-space);
 }
 
