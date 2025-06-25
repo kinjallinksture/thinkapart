@@ -99,7 +99,7 @@ if ( ! empty( $carousel_blogs ) ) {
 			$link_target = $carousel_button['target'] ? $carousel_button['target'] : '_self';
 			?>
 			<div class="blog-carousel-button">
-				<a href="<?php echo esc_url( $link_url ); ?>" class="button button-small button-white" target="<?php echo esc_attr( $link_target ); ?>">
+				<a href="<?php echo esc_url( $link_url ); ?>" class="button button-white" target="<?php echo esc_attr( $link_target ); ?>">
 					<?php echo esc_html( $link_title ); ?>
 					<span></span>
 				</a>

@@ -694,10 +694,6 @@
 .module-grid-latest-works .buttons-container {
   text-align: center;
 }
-.module-grid-latest-works .buttons-container .button-black {
-  line-height: 20px;
-  padding: 20px 30px;
-}
  
 
 @media (max-width: 1399px) {

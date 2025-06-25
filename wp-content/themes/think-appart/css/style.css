@@ -1691,9 +1691,6 @@ body .background-black *::selection {
 .module-blog-carousel-block .blog-carousel-button {
   margin-top: 60px;
 }
-.module-blog-carousel-block .blog-carousel-button .button-small {
-  padding: 20px 48px;
-}
 .module-blog-carousel-block .blog-carousel-wrapper .swiper-button-wrap .swiper-button-next::after {
   content: "";
   background-image: url('../assets/img/home-slider-left-arrow.svg');
@@ -1758,9 +1755,6 @@ body .background-black *::selection {
   }
   .module-blog-carousel-block .blog-carousel-wrapper .swiper-button-wrap .swiper-button-next {
     right: 5px;
-  }
-  .module-blog-carousel-block .blog-carousel-button .button-small {
-    padding: 16px 34px;
   }
   .module-blog-carousel-block  {
     padding: 90px var(--lateral-space);
