@@ -43,21 +43,66 @@
 			}
 		});
 
-		$('.budget-text, .budget').on('input', function () {
-			const budgetTextValue = parseFloat($('.budget-text').val());
-			const estimateValue = parseFloat($('.budget').val());
-			if (budgetTextValue === 0 || estimateValue === 0 && (!isNaN(budgetTextValue) || !isNaN(estimateValue)) ) {
-				$(this).next('.wpcf7-not-valid-tip').remove();
-				$(this).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
-			} else if (budgetTextValue < estimateValue) {
-				// If budget-text is less than budget-estimate, show error message
-				if ($(this).next('.wpcf7-not-valid-tip').length === 0) {
-					$(this).after('<span class="wpcf7-not-valid-tip">Value cannot be more than budget estimate.</span>');
-				}
-			} else {
-				$(this).next('.wpcf7-not-valid-tip').remove(); // Remove error if valid
-			}
+		$('form.wpcf7-form select.from-lang').on('change', function() {
+			var from_lang = $( this ).val();
+			$( 'select.to-lang' ).val( from_lang );
 		});
+
+		const $currency = $('select[name="budget-estimate"]');
+		const $price = $('input[name="budget-text"]');
+		const $price_to = $('input[name="budget-estimate-text"]');
+		
+		if ( $currency.length > 0 ) {
+			$('.budget-text, .budget').on('input change', function () {
+				const budgetTextValue = parseFloat($('.budget-text').val());
+				const estimateValue = parseFloat($('.budget').val());
+				const currency = $currency.val();
+				const max = currencyLimits[currency] || '';
+
+				if (budgetTextValue === 0 || estimateValue === 0 && (!isNaN(budgetTextValue) || !isNaN(estimateValue)) ) {
+					if ($(this).next('.wpcf7-not-valid-tip').length) {
+						$(this).next('.wpcf7-not-valid-tip').html('');
+						$(this).next('.wpcf7-not-valid-tip').html('Value cannot be zero.');
+					} else {
+						$(this).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
+					}
+				} else if (budgetTextValue >= estimateValue) {
+					if ($(this).next('.wpcf7-not-valid-tip').length) {
+						$(this).next('.wpcf7-not-valid-tip').html('');
+						$(this).next('.wpcf7-not-valid-tip').html('Please enter the greater for budget estimate value.');
+					} else {
+						$(this).after('<span class="wpcf7-not-valid-tip">Please enter the greater for budget estimate value.</span>');
+					}	
+				} else {
+					$(this).next('.wpcf7-not-valid-tip').remove();
+				}
+
+				if ( budgetTextValue > max) {
+					alert(`Maximum price for ${currency} is ${max}`);
+					$price.val( max );
+				}
+			});
+
+			const currencyLimits = {
+				'THB': 200000,
+				'USD': 6500,
+				'HKD': 5000,
+				'SGD': 8000
+			};
+
+			function updateLimit() {
+				const currency = $currency.val();
+				const max = currencyLimits[currency] || '';
+
+				$price_to.val('');
+				if ( parseFloat( $price.val() ) > max ) {
+					$price.val('');
+				}
+			}
+
+			$currency.on('change', updateLimit);
+			updateLimit();
+		}
 		
 	})
 
