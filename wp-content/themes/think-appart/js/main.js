@@ -46,9 +46,10 @@
 		const $currency = $('select[name="budget-estimate"]');
 		const $price = $('input[name="budget-text"]');
 		const $price_to = $('input[name="budget-estimate-text"]');
+		let valid = true;
 		
 		if ( $currency.length > 0 ) {
-			$('.budget-text, .budget').on('input change', function () {
+			$('.budget-text, .budget').on('input change blur', function () {
 				const budgetTextValue = parseFloat($('.budget-text').val());
 				const estimateValue = parseFloat($('.budget').val());
 				const currency = $currency.val();
@@ -56,26 +57,31 @@
 
 				if (budgetTextValue === 0 || estimateValue === 0 && (!isNaN(budgetTextValue) || !isNaN(estimateValue)) ) {
 					if ($(this).next('.wpcf7-not-valid-tip').length) {
-						$(this).next('.wpcf7-not-valid-tip').html('');
 						$(this).next('.wpcf7-not-valid-tip').html('Value cannot be zero.');
 					} else {
 						$(this).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
 					}
+					valid = false;
 				} else if (budgetTextValue >= estimateValue) {
 					if ($(this).next('.wpcf7-not-valid-tip').length) {
-						$(this).next('.wpcf7-not-valid-tip').html('');
 						$(this).next('.wpcf7-not-valid-tip').html('Please enter the greater for budget estimate value.');
 					} else {
 						$(this).after('<span class="wpcf7-not-valid-tip">Please enter the greater for budget estimate value.</span>');
-					}	
+					}
+					valid = false;
 				} else {
 					$(this).next('.wpcf7-not-valid-tip').remove();
+					valid = true;
 				}
 
 				if ( budgetTextValue > max) {
 					alert(`Maximum price for ${currency} is ${max}`);
 					$price.val( max );
+					valid = false;
 				}
+				
+				console.log( valid  );
+				$('input[type="button"]').prop('disabled', !valid);
 			});
 
 			const currencyLimits = {
