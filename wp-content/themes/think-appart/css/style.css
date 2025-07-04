@@ -1297,11 +1297,6 @@ body .background-black *::selection {
 .footer-container .legal-info .mail-link:hover {
   color: #FFFFFF;
 }
-select[name="budget-estimate-to"] {
-	pointer-events: none;
-	color: gray;
-	opacity: 0.5;
-}
 @media (min-width: 801px) {
   .only-mobile {
     display: none !important;

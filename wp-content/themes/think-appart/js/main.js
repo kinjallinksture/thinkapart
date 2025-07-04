@@ -43,11 +43,6 @@
 			}
 		});
 
-		$('form.wpcf7-form select.from-lang').on('change', function() {
-			var from_lang = $( this ).val();
-			$( 'select.to-lang' ).val( from_lang );
-		});
-
 		const $currency = $('select[name="budget-estimate"]');
 		const $price = $('input[name="budget-text"]');
 		const $price_to = $('input[name="budget-estimate-text"]');
