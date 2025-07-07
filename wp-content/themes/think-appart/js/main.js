@@ -49,20 +49,31 @@
 		let valid = true;
 		
 		if ( $currency.length > 0 ) {
+			const currencyLimits = {
+				'THB': 200000,
+				'USD': 6500,
+				'HKD': 5000,
+				'SGD': 8000
+			};
+
 			$('.budget-text, .budget').on('input change blur', function () {
 				const budgetTextValue = parseFloat($('.budget-text').val());
 				const estimateValue = parseFloat($('.budget').val());
 				const currency = $currency.val();
 				const max = currencyLimits[currency] || '';
+				const min = currencyLimits[currency] || 0;
+				
+				console.log( budgetTextValue );
+				console.log( estimateValue );
 
-				if (budgetTextValue === 0 || estimateValue === 0 && (!isNaN(budgetTextValue) || !isNaN(estimateValue)) ) {
-					if ($(this).next('.wpcf7-not-valid-tip').length) {
-						$(this).next('.wpcf7-not-valid-tip').html('Value cannot be zero.');
+				if ( estimateValue === 0 && !isNaN(estimateValue) ) {
+					if ($($price_to).next('.wpcf7-not-valid-tip').length) {
+						$($price_to).next('.wpcf7-not-valid-tip').html('Value cannot be zero.');
 					} else {
-						$(this).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
+						$($price_to).after('<span role="alert" class="wpcf7-not-valid-tip">Value cannot be zero.</span>');
 					}
 					valid = false;
-				} else if (budgetTextValue >= estimateValue) {
+				} else if ( budgetTextValue >= estimateValue && $(this).is( $price_to ) ) {
 					if ($(this).next('.wpcf7-not-valid-tip').length) {
 						$(this).next('.wpcf7-not-valid-tip').html('Please enter the greater for budget estimate value.');
 					} else {
@@ -74,9 +85,12 @@
 					valid = true;
 				}
 
-				if ( budgetTextValue > max) {
-					alert(`Maximum price for ${currency} is ${max}`);
-					$price.val( max );
+				if ( budgetTextValue < min ) {
+					if ($($price).next('.wpcf7-not-valid-tip').length) {
+						$($price).next('.wpcf7-not-valid-tip').html( `Minimum value for ${currency} is ${min}` );
+					} else {
+						$price.after(`<span class="wpcf7-not-valid-tip" role="alert">Minimum value for ${currency} is ${min}</span>`);
+					}
 					valid = false;
 				}
 				
@@ -84,21 +98,14 @@
 				$('input[type="button"]').prop('disabled', !valid);
 			});
 
-			const currencyLimits = {
-				'THB': 200000,
-				'USD': 6500,
-				'HKD': 5000,
-				'SGD': 8000
-			};
-
 			function updateLimit() {
 				const currency = $currency.val();
 				const max = currencyLimits[currency] || '';
 
 				$price_to.val('');
-				if ( parseFloat( $price.val() ) > max ) {
-					$price.val('');
-				}
+				$price.val('');
+				$($price_to).next('.wpcf7-not-valid-tip').html('');
+				$($price).next('.wpcf7-not-valid-tip').html('');
 			}
 
 			$currency.on('change', updateLimit);
