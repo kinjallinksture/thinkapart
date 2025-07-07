@@ -62,9 +62,7 @@
 				const currency = $currency.val();
 				const max = currencyLimits[currency] || '';
 				const min = currencyLimits[currency] || 0;
-				
-				console.log( budgetTextValue );
-				console.log( estimateValue );
+
 
 				if ( estimateValue === 0 && !isNaN(estimateValue) ) {
 					if ($($price_to).next('.wpcf7-not-valid-tip').length) {
@@ -94,7 +92,15 @@
 					valid = false;
 				}
 				
-				console.log( valid  );
+				if ( estimateValue <= budgetTextValue ) {
+					if ($($price_to).next('.wpcf7-not-valid-tip').length) {
+						$($price_to).next('.wpcf7-not-valid-tip').html('Please enter the greater for budget estimate value.');
+					} else {
+						$($price_to).after('<span class="wpcf7-not-valid-tip">Please enter the greater for budget estimate value.</span>');
+					}
+					valid = false;
+				}
+
 				$('input[type="button"]').prop('disabled', !valid);
 			});
 
