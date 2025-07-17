@@ -8,9 +8,11 @@ define('THINK_APPART_THEME_VERSION', '1.0.0');
 include 'includes/config.php';
 //include 'includes/duplicate-posts.php';
 
-if(function_exists('get_field') && get_field('customizar_menu_wordpress', 'option')){
-	include 'includes/custom-wp.php';
-}
+add_action( 'init', function() {
+	if(function_exists('get_field') && get_field('customizar_menu_wordpress', 'option')){
+		include 'includes/custom-wp.php';
+	}
+});
 
 add_filter('upload_mimes', 'jg_custom_upload_mimes');
 function jg_custom_upload_mimes($mimes = array()) {
