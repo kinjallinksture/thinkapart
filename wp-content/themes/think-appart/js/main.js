@@ -133,6 +133,8 @@
 
 		videoContainer();
 
+		videoContainerBlcok();
+
 		parallax();
 
 		typedText();
@@ -311,6 +313,56 @@
 		})
 
 		function moveIconPause(event){
+			var bounding = $currentVideoContainer[0].getBoundingClientRect();
+			var x = event.clientX - bounding.x;
+			var y = event.clientY - bounding.y;
+			gsap.to($currentIconPause, .2, {top: y + 'px', left: x + 'px', ease: Power0.easeNone})
+		}
+	}
+
+	function videoContainerBlcok(){
+		var $currentVideoContainer = null;
+		var $currentIconPause = null;
+		$('.video-container-block .video').each(function(i, video) {
+			var $video = $(video);
+			var $videoContainer = $video.closest('.video-container-block');
+			var $iconPause = $videoContainer.find('.icon-pause');
+			//var $iconVolume = $videoContainer.find('.icon-volume');
+
+			$videoContainer.css('--height', $videoContainer.innerHeight()+'px');
+			$video.on('play', function(event){
+				// $videoContainer.addClass('playing');
+				if($(window).innerWidth() > 800 && $videoContainer.closest('.module-cover-home').length > 0 && !$video.attr('autoplay')){
+					animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
+				}
+			})
+			// $video.on('pause', function(event) {
+			// 	$videoContainer.removeClass('playing');
+			// })
+			$videoContainer.find('.icon-play').on('click', function(){
+				if( $videoContainer.hasClass('play-without-sound') ){
+					video.currentTime = 0;
+					$videoContainer.removeClass('play-without-sound');
+				}
+				video.play();
+				video.muted = false;
+				$currentVideoContainer = $videoContainer;
+				$currentIconPause = $iconPause;
+				$videoContainer.addClass('playing');
+				$videoContainer.removeClass('icon-play-default');
+				$(window).on('mousemove', moveIconPauseBlock);
+			})
+
+			$iconPause.on('click', function(){
+				video.pause();
+				video.muted = true;
+				$videoContainer.removeClass('playing');
+				$videoContainer.addClass('icon-play-default');
+				$(window).off('mousemove', moveIconPauseBlock);
+			})
+		})
+
+		function moveIconPauseBlock(event){
 			var bounding = $currentVideoContainer[0].getBoundingClientRect();
 			var x = event.clientX - bounding.x;
 			var y = event.clientY - bounding.y;

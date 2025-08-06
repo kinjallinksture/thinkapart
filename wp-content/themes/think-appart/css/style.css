@@ -790,41 +790,50 @@ body .background-black *::selection {
 .button.active .svg-copy .stroke {
   stroke: var(--button-hover-font-color, #181818);
 }
-.video-container {
+.video-container,
+.video-container-block {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
 }
-.video-container.full-screen-video {
+.video-container.full-screen-video,
+.video-container-block.full-screen-video {
   height: var(--height);
   max-height: calc((100 * var(--vh)) - var(--menu-height));
   border-radius: 20px;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
-.video-container.full-screen-video.playing {
+.video-container.full-screen-video.playing,
+.video-container-block.full-screen-video.playing {
   border-radius: 0;
   max-height: calc(100 * var(--vh));
   height: calc(100 * var(--vh));
   z-index: 30;
 }
 .video-container.full-screen-video.playing .video,
-.video-container.full-screen-video.playing .image {
+.video-container.full-screen-video.playing .image,
+.video-container-block.full-screen-video.playing .video,
+.video-container-block.full-screen-video.playing .image {
   border-radius: 0;
 }
 .video-container.full-screen-video .video,
-.video-container.full-screen-video .image {
+.video-container.full-screen-video .image,
+.video-container-block.full-screen-video .video,
+.video-container-block.full-screen-video .image {
   border-radius: 20px;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
-.video-container:not(.height-auto):after {
+.video-container:not(.height-auto):after,
+.video-container-block:not(.height-auto):after {
   content: '';
   display: block;
   padding-bottom: 56.25%;
 }
-.video-container:not(.height-auto) .video {
+.video-container:not(.height-auto) .video,
+.video-container-block:not(.height-auto) .video {
   position: absolute;
   top: 0;
   left: 0;
@@ -832,15 +841,18 @@ body .background-black *::selection {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.video-container .video {
+.video-container .video,
+.video-container-block .video {
   display: block;
   width: 100%;
 }
-.video-container .image {
+.video-container .image,
+.video-container-block .image {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
-.video-container .icons-container {
+.video-container .icons-container,
+.video-container-block .icons-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -848,7 +860,9 @@ body .background-black *::selection {
   height: 100%;
 }
 .video-container .icons-container .icon-play,
-.video-container .icons-container .icon-pause {
+.video-container .icons-container .icon-pause,
+.video-container-block .icons-container .icon-play,
+.video-container-block .icons-container .icon-pause {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -859,21 +873,34 @@ body .background-black *::selection {
   transition: opacity 0.4s;
 }
 .video-container .icons-container .icon-pause,
-.video-container .icons-container .icon-volume {
+.video-container .icons-container .icon-volume,
+.video-container-block .icons-container .icon-pause,
+.video-container-block .icons-container .icon-volume {
   opacity: 0;
   pointer-events: none;
 }
-.video-container.playing .image {
+.video-container.playing .image,
+.video-container-block.playing .image {
   opacity: 0;
 }
-.video-container.playing .icons-container .icon-play {
+.video-container.playing .icons-container .icon-play,
+.video-container-block.playing .icons-container .icon-play {
   opacity: 0;
   pointer-events: none;
 }
 .video-container.playing .icons-container .icon-pause:not(.hide),
-.video-container.playing .icons-container .icon-volume:not(.hide) {
+.video-container.playing .icons-container .icon-volume:not(.hide),
+.video-container-block.playing .icons-container .icon-pause:not(.hide),
+.video-container-block.playing .icons-container .icon-volume:not(.hide) {
   pointer-events: auto;
   opacity: 1;
+}
+.video-container-block.playing.icon-play-default .icons-container .icon-play {
+  opacity: 1;
+}
+.video-container-block.playing.icon-play-default .icons-container .icon-pause,
+.video-container-block.playing.icon-play-default .icons-container .icon-volume {
+  opacity: 0;
 }
 .icon-play {
   width: 122px;
@@ -1315,11 +1342,13 @@ body .background-black *::selection {
     font-size: 14px;
     line-height: 15px;
   }
-  .video-container.full-screen-video.playing {
+  .video-container.full-screen-video.playing,
+  .video-container-block.full-screen-video.playing {
     max-height: calc((100 * var(--vh)) - var(--menu-height));
     height: calc((100 * var(--vh)) - var(--menu-height));
   }
-  .video-container .icons-container .icon-pause {
+  .video-container .icons-container .icon-pause,
+  .video-container-block .icons-container .icon-pause {
     -webkit-transform: none;
             transform: none;
     top: initial !important;

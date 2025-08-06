@@ -251,6 +251,9 @@ while ( have_rows( 'content' ) ) {
 	} elseif($layout == 'blog_carousel'){
 		$template_name = 'blog-carousel';
 		get_template_part( 'template-parts/acf-flexible/' . $template_name );
+	} elseif($layout == 'home_video_block'){
+		$template_name = 'home-video-block';
+		get_template_part( 'template-parts/acf-flexible/' . $template_name );
 	} elseif($layout == 'about_us'){
 		$images = get_sub_field('images');
 		?>
