@@ -329,16 +329,17 @@
 			var $iconPause = $videoContainer.find('.icon-pause');
 
 			$videoContainer.css('--height', $videoContainer.innerHeight()+'px');
-			$video.on('play', function(event){
-				if($(window).innerWidth() > 800 && $videoContainer.closest('.module-cover-home').length > 0 && !$video.attr('autoplay')){
-					animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
-				}
-			})
+			// $video.on('play', function(event){
+			// 	if($(window).innerWidth() > 800 && $videoContainer.closest('.module-cover-home').length > 0 ){
+			// 		animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
+			// 	}
+			// })
 			$videoContainer.find('.icon-play').on('click', function(){
 				if( $videoContainer.hasClass('play-without-sound') ){
 					video.currentTime = 0;
 					$videoContainer.removeClass('play-without-sound');
 				}
+				animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
 				video.play();
 				video.muted = false;
 				$currentVideoContainer = $videoContainer;

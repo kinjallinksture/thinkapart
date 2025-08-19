@@ -11,21 +11,23 @@ while ( have_rows( 'cover' ) ) {
 	the_row();
 	$video = get_sub_field( 'video' );
 	$image = get_sub_field( 'image' );
-	?>
-	<section class="module module-cover-home">
-		<div class="video-container full-screen-video">
-			<video src="<?=$video['url']?>" class="video"></video>
-			<div class="mask-container background-image">
-				<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+	if ( ! empty( $video ) && ! empty( $image ) ) {
+		?>
+		<section class="module module-cover-home">
+			<div class="video-container full-screen-video">
+				<video src="<?=$video['url']?>" class="video"></video>
+				<div class="mask-container background-image">
+					<img src="<?=$image['url']?>" alt="<?=$image['alt']?>" class="image">
+				</div>
+				<div class="icons-container">
+					<?=jg_icon_play()?>
+					<?=jg_icon_pause()?>
+					<?=jg_icon_volume()?>
+				</div>
 			</div>
-			<div class="icons-container">
-				<?=jg_icon_play()?>
-				<?=jg_icon_pause()?>
-				<?=jg_icon_volume()?>
-			</div>
-		</div>
-	</section>
-	<?php
+		</section>
+		<?php
+	}
 }
 
 while ( have_rows( 'content' ) ) {
