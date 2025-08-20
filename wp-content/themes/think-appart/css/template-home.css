@@ -399,6 +399,11 @@
 .module-cover-home .video-container-block.playing {
   margin-left: calc(var(--lateral-space-extra-small) * -1);
   width: calc(100% + var(--lateral-space-extra-small) * 2);
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+body.playing-video {
+  padding-top: 0 !important
 }
 .module-approach {
   padding: 170px var(--lateral-space);

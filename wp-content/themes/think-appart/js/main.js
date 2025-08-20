@@ -339,12 +339,13 @@
 					video.currentTime = 0;
 					$videoContainer.removeClass('play-without-sound');
 				}
-				animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
+				//animateScrollY($(window).scrollTop()+$videoContainer[0].getBoundingClientRect().top);
 				video.play();
 				video.muted = false;
 				$currentVideoContainer = $videoContainer;
 				$currentIconPause = $iconPause;
 				$videoContainer.addClass('playing');
+				$('body').addClass('playing-video');
 				$videoContainer.removeClass('icon-play-default');
 				$(window).on('mousemove', moveIconPauseBlock);
 			})
@@ -352,6 +353,7 @@
 				video.pause();
 				video.muted = true;
 				$videoContainer.removeClass('playing');
+				$('body').removeClass('playing-video');
 				$videoContainer.addClass('icon-play-default');
 				$(window).off('mousemove', moveIconPauseBlock);
 			})
