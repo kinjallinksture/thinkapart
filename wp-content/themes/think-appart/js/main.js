@@ -320,6 +320,7 @@
 		}
 	}
 
+	/*
 	function videoContainerBlcok(){
 		var $currentVideoContainer = null;
 		var $currentIconPause = null;
@@ -365,6 +366,81 @@
 			var y = event.clientY - bounding.y;
 			gsap.to($currentIconPause, .2, {top: y + 'px', left: x + 'px', ease: Power0.easeNone})
 		}
+	}
+	*/
+	function openFullscreen(video) {
+		if (video.requestFullscreen) {
+			video.requestFullscreen();
+		} else if (video.mozRequestFullScreen) { // Firefox
+			video.mozRequestFullScreen();
+		} else if (video.webkitRequestFullscreen) { // Chrome, Safari, Opera
+			video.webkitRequestFullscreen();
+		} else if (video.msRequestFullscreen) { // IE/Edge
+			video.msRequestFullscreen();
+		}
+	}
+
+	function videoContainerBlcok() {
+		$('.video-container-block .video').each(function (i, video) {
+			var $video = $(video);
+			var $videoContainer = $video.closest('.video-container-block');
+
+			$videoContainer.css('--height', $videoContainer.innerHeight() + 'px');
+
+			$videoContainer.find('.icon-play').on('click', function () {
+
+				$videoContainer.find('.video-remove').remove();
+				$videoContainer.find('.video').removeClass('hide-video');
+
+				if ($videoContainer.hasClass('play-without-sound')) {
+					video.currentTime = 0;
+					$videoContainer.removeClass('play-without-sound');
+				}
+
+				$video.removeAttr('playsinline');
+
+				video.play();
+				video.muted = false;
+
+				if ( $(window).width() < 768 ) {
+					openFullscreen(video);
+				}
+
+				$currentVideoContainer = $videoContainer;
+				
+				$videoContainer.addClass('playing');
+				$('body').addClass('playing-video');
+				$videoContainer.removeClass('icon-play-default');
+				$(window).on('mousemove', moveIconPauseBlock);
+			});
+
+			function stopVideo($container, v) {
+				v.pause();
+				v.muted = true;
+				$container.removeClass('playing');
+				$('body').removeClass('playing-video');
+				$container.addClass('icon-play-default');
+				$(window).off('mousemove', moveIconPauseBlock);
+			}
+
+			video.addEventListener('webkitendfullscreen', () => {
+				stopVideo($videoContainer, video);
+			});
+
+			video.addEventListener('pause', () => {
+				stopVideo($videoContainer, video);
+			});
+
+			['fullscreenchange', 'mozfullscreenchange', 'msfullscreenchange'].forEach(evt => {
+				document.addEventListener(evt, () => {
+					if (!document.fullscreenElement) {
+						stopVideo($videoContainer, video);
+					}
+				});
+			});
+		});
+
+		
 	}
 
 	function scaleAnimation() {

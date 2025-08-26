@@ -6,11 +6,10 @@ if ( ! empty( $home_video_autoplay ) ) {
 	?>
 	<section class="module module-cover-home">
 		<div class="video-container-block full-screen-video icon-play-default play-without-sound">
-			<video autoplay muted loop playsinline src="<?php echo esc_url( $home_video_autoplay['url'] ); ?>" class="video"></video>
+			<video autoplay playsinline muted loop src="<?php echo esc_url( $home_video_autoplay['url'] ); ?>" class="video-remove"></video>
+			<video muted loop src="<?php echo esc_url( $home_video_autoplay['url'] ); ?>" class="video hide-video"></video>
 			<div class="icons-container">
-				<?=jg_icon_play()?>
-				<?=jg_icon_pause()?>
-				<?=jg_icon_volume()?>
+				<?=jg_icon_play()?>				
 			</div>
 		</div>
 	</section>
