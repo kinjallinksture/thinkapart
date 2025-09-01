@@ -805,6 +805,9 @@ body .background-black *::selection {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
+.video-container-block.full-screen-video .video-remove {
+  width: 100%;
+}
 .video-container.full-screen-video.playing,
 .video-container-block.full-screen-video.playing {
   border-radius: 0;

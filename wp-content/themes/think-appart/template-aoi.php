@@ -480,10 +480,12 @@ while (have_rows('content')) {
 		if($info_color['color'] == 'white'){
 			$button_color = 'black';
 		}
+		$link_id = get_sub_field('link');
+		$button_text = get_sub_field('button_text');
 		?>
 		<section class="module module-banner-text-button background-<?=$info_color['color']?> font-color-<?=$info_color['font_color']?>" <?=$info_color['other_color_style']?>>
 			<p class="title font-h1"><?=get_sub_field('text')?></p>
-			<a href="<?=get_permalink($id_projects_main_page)?>" class="button button-<?=$button_color?>"><?=__('View all projects', 'think-appart')?></a>
+			<a href="<?=get_permalink($link_id)?>" class="button button-<?=$button_color?>"><?php echo esc_html( $button_text ); ?></a>
 		</section>
 		<?php
 	}elseif($layout == 'form'){

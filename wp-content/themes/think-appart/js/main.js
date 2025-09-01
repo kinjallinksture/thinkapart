@@ -381,9 +381,12 @@
 	}
 
 	function videoContainerBlcok() {
+		var $currentVideoContainer = null;
+		var $currentIconPause = null;
 		$('.video-container-block .video').each(function (i, video) {
 			var $video = $(video);
 			var $videoContainer = $video.closest('.video-container-block');
+			var $iconPause = $videoContainer.find('.icon-pause');
 
 			$videoContainer.css('--height', $videoContainer.innerHeight() + 'px');
 
@@ -407,12 +410,20 @@
 				}
 
 				$currentVideoContainer = $videoContainer;
-				
+				$currentIconPause = $iconPause;
 				$videoContainer.addClass('playing');
 				$('body').addClass('playing-video');
 				$videoContainer.removeClass('icon-play-default');
 				$(window).on('mousemove', moveIconPauseBlock);
 			});
+			$iconPause.on('click', function(){
+				video.pause();
+				video.muted = true;
+				$videoContainer.removeClass('playing');
+				$('body').removeClass('playing-video');
+				$videoContainer.addClass('icon-play-default');
+				$(window).off('mousemove', moveIconPauseBlock);
+			})
 
 			function stopVideo($container, v) {
 				v.pause();
@@ -438,6 +449,13 @@
 					}
 				});
 			});
+
+			function moveIconPauseBlock(event){
+				var bounding = $currentVideoContainer[0].getBoundingClientRect();
+				var x = event.clientX - bounding.x;
+				var y = event.clientY - bounding.y;
+				gsap.to($currentIconPause, .2, {top: y + 'px', left: x + 'px', ease: Power0.easeNone})
+			}
 		});
 
 		

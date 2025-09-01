@@ -9,7 +9,9 @@ if ( ! empty( $home_video_autoplay ) ) {
 			<video autoplay playsinline muted loop src="<?php echo esc_url( $home_video_autoplay['url'] ); ?>" class="video-remove"></video>
 			<video muted loop src="<?php echo esc_url( $home_video_autoplay['url'] ); ?>" class="video hide-video"></video>
 			<div class="icons-container">
-				<?=jg_icon_play()?>				
+				<?=jg_icon_play()?>
+				<?=jg_icon_pause()?>
+				<?=jg_icon_volume()?>			
 			</div>
 		</div>
 	</section>
